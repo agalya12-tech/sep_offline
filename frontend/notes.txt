@@ -230,4 +230,3 @@ Selector:
 
 
 
-https://github.com/bhaskarradha123/sep_offline
