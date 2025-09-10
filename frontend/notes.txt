@@ -1,0 +1,233 @@
+Frontend:
+---------
+    The technology used to develop webpages/websites/web application.
+    1.Html(Hypertext Markup Language)
+    2.CSS(Cascading Style Sheets)
+    3.JS(javascript)
+
+Html:
+-----
+   - It is a markup language. 
+   - It is used for structuring/layout the webpage.
+Css:
+----
+   - it is used for styling the webpage.
+   - It is a style sheet language.
+Javascript:
+-----------
+   - It is a programming/scripting language.
+   - It is used for adding functionality to the webpage.
+
+
+Backend:
+--------
+   - It is the server side of the web application.
+   - It is used to handle the data and logic of the web application.
+   - It is used to connect the frontend with the database.
+
+   ex: Java , PHP , Python, Node js etc .,
+
+Database:
+---------
+    - It is a container for storing/managing/retrieving the data.
+   ex: MySQL , MongoDB , Oracle etc .
+
+FullStack:
+----------
+   - It is a combination of frontend and backend development
+     (server side+database).
+
+static website/web pages:
+------------------------
+          - the webpage/website is same for all the users.
+          - It is static in nature.
+          ex: wikipedia ,blogs etc.
+dynamic website/web pages:
+-------------------------
+          - the webpage/website is different for all the users.
+          - It is dynamic in nature.
+          ex: facebook , youtube , amazon etc.
+
+
+Single page application:(SPA)
+-------------------------
+          - It is a web application that has only one html page.
+    ex: amazon , gmail ,netflix etc.
+
+Multi page application:(MPA)
+-----------------------
+         - It is a web application that has multiple html pages.
+     ex: flipkart , youtube etc.
+
+Library:
+---------
+          - It is a collection of reusable code.
+          - The code can be used in multiple projects.
+          - can call library into our project whenever required.
+          ex: jQuery , Bootstrap , React etc.
+
+Framework:
+---------
+          - It is a collection of libraries.
+          - The code can be used in multiple projects.
+          ex: Angular , Spring , Hibernate etc.
+          - Our code will be called into the framework.
+
+Deployment:(Production Deployment)
+-----------
+       - It is the process of deploying/releasing the web application
+         to every one in web(internet).
+steps:
+-----
+   1.develop the web application.(frontend+backend)
+   2.Integrate the web application with the database.
+   3.compress project into zip or tar or rar file.
+   4.upload the zip/tar/rar file to the server.
+    (ex: AWS , Digital Ocean,Netlify,render,Heroku,Github pages etc.)
+   5.access the web application from the browser.
+
+-----------------------------------------------------------------------------------------
+
+structure of a web page:
+--------------------------
+
+tag:
+   -it is a keyword in html, 
+   - which is used to describe the content of the webpage.
+   - and enclosed in angle brackets.
+    ex: <html> , <head> , <body> , <h1> , <p> , <a> , <img> etc.
+
+paired tag/container tag:
+   - The content is enclosed with the help of opening and closing tag.
+    ex: <div> , <span> , <table> , <tr> , <td> , <th> etc.
+
+unpaired tag/self closing tag/non container tag:
+   - The content is enclosed with the help of opening tag only.
+    ex: <br> , <hr> , <meta> , <link> , <input> , <img> etc.
+
+element:
+   - The content is enclosed with the help of paired tag.
+    ex: <h1> , <p> , <a> , <img> etc. 
+
+
+Tags:
+-----
+   1.heading tags: used to describe the heading of the webpage.
+       ex: <h1> , <h2> , <h3> , <h4> , <h5> , <h6> 
+   2.paragraph tags: used to describe the paragraph of the webpage.
+       ex: <p></p>
+   3.Italic tags: used to describe the italics of the webpage.
+       ex: <i></i>   <em></em>---emphasis
+   4.Bold tags: used to describe the bold of the webpage.
+       ex: <b></b>   <strong></strong>
+   5.Underline tags: used to describe the underline of the webpage.
+       ex: <u></u>
+   6.del tags: used to describe the delete content of the webpage.
+       ex: <del></del> <strike></strike>
+   7.pre tags: used to describe the preformatted text of the webpage.
+       ex: <pre></pre>
+   8.mark tags: used to describe the marked content of the webpage.
+       ex: <mark></mark>
+   9.small tags: used to describe the small content of the webpage.
+       ex: <small></small>
+   10.details tags: used to describe the details of the webpage.
+       ex: <details></details>
+   11.summary tags: used to describe the summary of the webpage.
+       ex: <summary></summary>
+   12.break tags: used to  the break  the content.
+       ex: <br>
+   13.horizontal rule tags: used to have the horizontal rule line.
+       ex: <hr>
+   14.subscript tags: used to have the subscript of the text.
+       ex: <sub></sub>
+   15.superscript tags: used to have the superscript of the text.
+       ex: <sup></sup>
+   16.quote tags: used to have the quote of the text.
+       ex: <q></q>
+   17.blockquote tags: used to have the blockquote of the text.
+       ex: <blockquote></blockquote>
+   
+   
+
+
+CSS:(Cascading Style Sheets)
+----
+   - It is a style sheet language.
+   - It is used to style the webpage.
+   - element can style in three ways
+                 1.inline style
+                 2.internal style
+                 3.external style
+Inline style:
+-------------
+   - style element with the help of style attribute.
+   syntax: <element style="property1: value1;property2: value2">
+           </element>
+
+    - used for styling one element only.
+Internal style:
+---------------
+      - style element with the help of style tag.
+      syntax: <style>
+                   selector{
+                       property1: value1;
+                       property2: value2;
+                   }
+              </style>
+
+    - used for styling multiple elements in one go with in same page.
+External style:
+---------------
+     - style element with the help of external style sheet.
+     - style sheet file is created with ____.css(extension)
+     syntax: <link rel="stylesheet" href="style.css">
+            rel: relationship
+            href: hyper reference(file path)
+     - used for styling multiple elements in one go with in 
+       multiple pages.
+
+Selector:
++++++++++
+         - selector is used to select the element to style.
+         Types:
+            1.element selector
+            2.id selector
+            3.class selector
+            4.grouping selector
+            5.attribute selector
+            6.universal selector
+            7.combined selector
+                     1.child selector
+                     2.descendant selector
+                     3.adjacent sibling selector
+                     4.general sibling selector
+            8.pseudo class selector
+            9.pseudo element selector
+
+1.element selector:
+-------------------
+        - selector is used to select the element based on tagName
+        syntax: tagName{
+                    property1: value1;
+                    property2: value2;
+                }
+2.id selector:
+-------------------
+        - selector is used to select the element based on id
+        <element id="idName"></element>
+        syntax: #idName{
+            
+        }
+        - id name should be unique.
+3.class selector:
+-------------------
+        - selector is used to select the element based on class
+        <element class="className"></element>
+        syntax: .className{
+        }
+        - class name can be used multiple times irrespective of tagName.
+        
+
+
+
+https://github.com/bhaskarradha123/sep_offline

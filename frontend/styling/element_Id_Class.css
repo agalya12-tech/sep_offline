@@ -1,0 +1,13 @@
+h1{  
+/* element selector */
+    color: red;
+}
+/* id selector */
+#style1{
+    border: 1px solid black;
+}
+/* class selector */
+.style2{
+   background-color: yellow;
+   padding: 40px;
+}
