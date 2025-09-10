@@ -1,0 +1,19 @@
+git commands:
+--------------
+
+   for the first time :
+            1. git init
+            2. git add .
+            3. git commit -m "message"
+            5. git remote add origin githubURL
+            6. git push origin master
+   for the second time to same repo:
+           1.git add .
+           2.git commit -m "message"
+           3.git push origin master
+
+   for authentication:
+            1. git config --global user.name "username"
+    to remove credentials:
+        control panel- user accounts-credentials manager-
+        windows credentials - github.com - remove credentials
