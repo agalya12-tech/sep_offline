@@ -230,3 +230,20 @@ Selector:
 
 
 
+
+
+--------------------------------------------------------------------------------------
+font-awesome:
+------------
+      - it is a library of icons.
+       url: https://fontawesome.com/icons
+       cdnLink : https://cdnjs.com/libraries/font-awesome
+       cdn means content delivery network.,
+       which is used to deliver the content to the user from the server.
+syntax:
+  link cdn link in html file
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <i class="fa fa-home"></i>
+
+------------------------------------------------------------------------------------------------------------------
