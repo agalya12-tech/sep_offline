@@ -170,6 +170,15 @@ width and height can be                width and height can be
 applicable                             applicable
 -------------------------------------------------------------------------
 
+to convert block level element to inline element :
+
+    syntax:   
+    display:inline
+    display:inline-block // can act like block level element and inline
+    
+to convert inline element to block level element:
+    syntax:
+    display:block
 
 CSS:(Cascading Style Sheets)
 ----
