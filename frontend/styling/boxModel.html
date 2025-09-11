@@ -1,67 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Box Model</title>
     <style>
-        #box1{
-          background-color: lightcoral; 
-          width: 200px; 
-          height: 50px;
-          /* border: 1px solid black;  shorthand property/structure  */
-          border-style: solid;
-          border-color: black;
-          border-width: 1px;
-          margin: 30px;
-          /* box-sizing: content-box;---default */
-          box-sizing: border-box;
-          
-          
-          
-          /* padding-top: 15px;
+      #box1 {
+        background-color: lightcoral;
+        width: 200px;
+        height: 50px;
+        /* border: 1px solid black;  shorthand property/structure  */
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+        margin: 30px;
+        /* box-sizing: content-box;---default */
+        box-sizing: border-box;
+
+        /* padding-top: 15px;
           padding-right: 20px;
           padding-bottom: 5px;
           padding-left: 10px; */
-          
-          /* padding: 10px 20px 5px 15px; top right bottom left */
-          
-          padding: 10px 20px; /* vertical horizontal */
-          /* padding: 20px;  for all sides */
-        }
-        
-        img{
-            width: 300px;
-            height: 200px;
-        }
 
+        /* padding: 10px 20px 5px 15px; top right bottom left */
+
+        padding: 10px 20px; /* vertical horizontal */
+        /* padding: 20px;  for all sides */
+      }
+
+      img {
+        width: 300px;
+        height: 200px;
+      }
     </style>
-</head>
+  </head>
 
-
-<body>
+  <body>
     <!-- <h1 id="box1">Box Model</h1> -->
     <!-- <h1 id="box1">Box Model</h1> -->
-
-
 
     <h1><u>Box Model</u></h1>
-       <blockquote>
-        <p>Box model is a layout model for HTML elements</p>
-        <p>Which describes the content, padding, border and margin of the element</p>
-        <img src="image.png" alt="box model image">
-       </blockquote>
+    <blockquote>
+      <p>Box model is a layout model for HTML elements</p>
+      <p>
+        Which describes the content, padding, border and margin of the element
+      </p>
+      <img src="image.png" alt="box model image" />
+    </blockquote>
 
-       <hr>
-       <h2><u>Content</u></h2>
-       <blockquote>
-        <p>The content area is where the text and images and videos appear</p>
-       </blockquote>
-       <h2><u>Padding</u></h2>
-       <blockquote>
-        <p>The padding area is the space between the content and the border</p>
-        <p>To change the padding, use the padding property in the CSS</p>
-        <pre>
+    <hr />
+    <h2><u>Content</u></h2>
+    <blockquote>
+      <p>The content area is where the text and images and videos appear</p>
+    </blockquote>
+    <h2><u>Padding</u></h2>
+    <blockquote>
+      <p>The padding area is the space between the content and the border</p>
+      <p>To change the padding, use the padding property in the CSS</p>
+      <pre>
             #box1{
             padding: 20px; /* for all sides */
             padding: 10px 20px; /* vertical horizontal */
@@ -71,31 +67,64 @@
             padding-top: 15px;
             padding-bottom: 5px;
             }
-        </pre>
-       </blockquote>
+        </pre
+      >
+    </blockquote>
 
-       <h2><u>Border</u></h2>
-         <blockquote>
-          <p>The border area is the line/layout around the content</p>
-          <p>To change the border, use the border property in the CSS</p>
-          <pre>
+    <h2><u>Border</u></h2>
+    <blockquote>
+      <p>The border area is the line/layout around the content</p>
+      <p>To change the border, use the border property in the CSS</p>
+      <pre>
                 #box1{
                 border: 1px solid black;  /* shorthand property/structure  */
                 border-style: solid;
                 border-color: black;
                 border-width: 1px;
                 }
-          </pre>
-         </blockquote>
-         <h2><u>Margin</u></h2>
-         <blockquote>
-          <p>The margin area is the space outside the border</p>
-          <p>To change the margin, use the margin property in the CSS</p>
-          <pre>
+          </pre
+      >
+    </blockquote>
+    <h2><u>Margin</u></h2>
+    <blockquote>
+      <p>The margin area is the space outside the border</p>
+      <p>To change the margin, use the margin property in the CSS</p>
+      <pre>
                 #box1{
                 margin: 30px;
                 }
-          </pre>
-         </blockquote>
-</body>
-</html> 
+          </pre
+      >
+    </blockquote>
+
+    <h3>Note :</h3>
+    <blockquote>
+      <p>
+        box-sizing property is used to include the margin and border in the
+        total width and height
+      </p>
+      <p>the default value is <q><b>content-box</b></q></p>
+      <pre>
+                #box1{
+                box-sizing: border-box;
+                }
+      </pre>
+
+      <ul>
+        <li>content box- width and height includes content only</li>
+        <li>border box- width and height includes padding and border</li>
+      </ul>
+
+      <pre>
+        #box{
+         width:200px;
+         height:100px;
+         padding:20px;
+         border:4px;
+         box-sizing:content-box; /* total width= 200+20+20+4+4=248px, total height=100+20+20+4+4=148px */
+         box-sizing:border-box; /* total width=200px, total height=100px */
+        }
+      </pre>
+    </blockquote>
+  </body>
+</html>
