@@ -175,7 +175,7 @@ to convert block level element to inline element :
     syntax:   
     display:inline
     display:inline-block // can act like block level element and inline
-    
+
 to convert inline element to block level element:
     syntax:
     display:block
@@ -257,9 +257,23 @@ Selector:
         }
         - class name can be used multiple times irrespective of tagName.
         
+4.grouping selector:
+--------------------
+    - selector is used for group of selectors
+    syntax:
+      selector1, selector2,selector3{
 
+      }
 
-
+5.universal selector:
+---------------------
+      - selector is used to select all the elements.
+      syntax:
+       *{
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+      }
 
 
 --------------------------------------------------------------------------------------
