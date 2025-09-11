@@ -146,8 +146,29 @@ Tags:
        ex: <q></q>
    17.blockquote tags: used to have the blockquote of the text.
        ex: <blockquote></blockquote>
-   
-   
+   18.div tags: used to have the div of the text.
+       ex: <div></div>
+   19.span tags: used to have the span of the text.
+       ex: <span></span>
+
+----------------------------------------------------------------------
+    div                                      span
+----------------------------------------------------------------------
+block level element                         inline element
+
+width and height can be                    width and height cannot be
+applicable                                    applicable
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+block level element                         inline element
+------------------------------------------------------------------------
+It occupies the full                   It Occupies required space
+width of the page.   
+
+width and height can be                width and height can be
+applicable                             applicable
+-------------------------------------------------------------------------
 
 
 CSS:(Cascading Style Sheets)
