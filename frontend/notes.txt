@@ -319,7 +319,7 @@ Table and its tags and its attributes
 
 
 rowspan and colspan -- these are the properties of th and td tags
-rowspan-- used to merge the rowspan
+rowspan-- used to merge the rows
 colspan--used to merge the column
 
 attributes of table:
