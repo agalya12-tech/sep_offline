@@ -327,7 +327,7 @@ attributes of table:
       -border 
       -cellpadding: used to add space between the cells 
       -cellspacing: used to add space between the content of the cells
-      -background
+      -bgcolor: used to add  background color to the table
       -width
       -height
       -align: used to align the table horizontally
