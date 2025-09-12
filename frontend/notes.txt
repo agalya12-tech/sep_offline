@@ -276,6 +276,19 @@ Selector:
       }
 
 
+pseudo element :
+-----------------
+       used to select an  specific part of an element 
+       indicating ::(double colon)
+       ex :   
+          ::first-letter  , ::first-line  , ::selection  ,:: before  , ::after , ::marker
+pseudo class  :
+--------------
+      used to select based on its state
+      indicating with :(colon)
+      ex :
+       :link  , :active , :visited , :hover 
+
 --------------------------------------------------------------------------------------
 font-awesome:
 ------------
@@ -291,3 +304,33 @@ syntax:
    <i class="fa fa-home"></i>
 
 ------------------------------------------------------------------------------------------------------------------
+
+Table and its tags and its attributes 
+-------------------------------------
+
+<table></table -- used to create table
+<caption></caption>-- to provide caption of the table
+<thead></thead> -- used to create head of the table
+<tbody></tbody> -- used to create body of the table
+<tfoot></tfoot> --used to create footer of the table
+
+<th></th>  --used to write head content(strong text)
+<td></td>  --used to write body content
+
+
+rowspan and colspan -- these are the properties of th and td tags
+rowspan-- used to merge the rowspan
+colspan--used to merge the column
+
+attributes of table:
+-------------------
+      -border 
+      -cellpadding: used to add space between the cells 
+      -cellspacing: used to add space between the content of the cells
+      -background
+      -width
+      -height
+      -align: used to align the table horizontally
+      -valign : used to align the table vertically
+
+-----------------------------------------------------------
