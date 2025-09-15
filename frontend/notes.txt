@@ -334,3 +334,44 @@ attributes of table:
       -valign : used to align the table vertically
 
 -----------------------------------------------------------
+
+anchor tag:
+-----------
+      - it is used to link one page to another page.
+      - it is used to navigate between the pages.
+      - it is used to create hyperlinks.
+    syntax:
+       <a href="url">
+       
+       </a>
+
+attributes of anchor tag:
+-------------------------
+      -href: used to provide the link of the page.
+      -target: used to open the link in new tab.
+             :_blank - used to open the link in new tab.
+             :_self - used to open the link in same tab.
+      -download: used to download the file.
+
+states of anchor tag:
+---------------------
+1.UnVisted state: when the link is not visited.
+                : a:link{
+                    
+                }
+                : default color is blue.
+2.visited state: when the link is visited.
+                : a:visited{
+                    
+                }
+                : default color is purple/violet.
+3.active state: when the link is active.
+                : a:active{
+                    
+                }
+                : default color is red.
+4.hover state: when the link is hovered.
+                : a:hover{
+                    
+                }               
+------------------------------------------------------------
