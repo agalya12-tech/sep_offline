@@ -378,4 +378,44 @@ states of anchor tag:
 MultiMedia Tags:
 ----------------
 
-img tag : 
+img tag :   used for image 
+        : attributes:
+            src: used to provide the source of the image.
+            alt: used to provide the alternative text of the image.
+            width: used to provide the width of the image.
+            height: used to provide the height of the image.
+            title: used to provide the title of the image.
+            border: used to provide the border of the image.
+            align: used to align the image.
+video tag : used for video
+        : attributes:
+            src,width,height,autoplay,loop,muted
+            controls: used to provide the controls of the video.
+            poster: used to provide the poster of the video.
+audio tag: used for audio
+        : attributes:
+            src,autoplay,controls,loop,muted
+
+embed tag: used for image , audio and video 
+        : attributes:
+            src,type,width,height
+
+iframe tag: used for embedding other content
+        : attributes:
+            src,width,height,frameborder,allowfullscreen
+-------------------------------------------------------------------
+marquee tag: used for scrolling content
+           attributes:
+           behavior: used to provide the behavior of the marquee
+                   : scroll - default
+                   : slide
+                   : alternate
+                   
+           direction: used to provide the direction of the marquee
+                    : left-default
+                    : right
+                    : up
+                    : down
+            scrollamount, scrolldelay, loop, bgcolor, width, height
+
+----------------------------------------------------------------------

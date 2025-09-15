@@ -7,16 +7,13 @@ class Container2{
   
     value1=20; //re -assign or re-initliziation
     System.out.println(value1);//20
-    
+   
     String value2;  // variable declaration
     //  System.out.println(value2);--Error value2 is not assigned
     value2="radha";  // variable initliziation
    System.out.println(value2);
    value2="bhaskar"; // variable re-initlization
    System.out.println(value2);
-
-
-
 
  }
 
