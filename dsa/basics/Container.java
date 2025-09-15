@@ -1,7 +1,7 @@
 class Container{
    public static void main(String[]args){
       String name ="Radha";
-      int age=34;
+      int age=34; 
       long  phone=623456352632l;
       double height =5.4;
       char gender='F';
@@ -16,6 +16,11 @@ class Container{
 
 
 /*
+   DataType        stores/assign      
+   String     name    =         "radha";
+        container/VariableName    value/data
+
+     
    1.javac FileName.java  
    compiler will compile the code and gives       bytecode as ____.clas
    it will check syntax error
