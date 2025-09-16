@@ -4,8 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form2 Task</title>
-</head>
+    <style>
+        form{
+            width: 400px;
+            border: 1px solid black;
+        }
+
+        input[type="text"], input[type="number"]{
+          background-color: rgb(178, 170, 170);
+          padding:2px;
+          border: none; 
+          border-radius: 5px; 
+        }
+    </style>
+</head> 
 <body>
-    
+    <form action="#" >
+     <fieldset>
+        <legend>Basic Details</legend>
+                    <label for="name">Name : </label>
+                    <input type="text" id="name" name="name" placeholder="Enter Your Name" required> <br><br>
+                    <label for="fName">Father Name : </label>
+                    <input type="text" id="fName" name="fName" placeholder="Enter Your Father Name"> <br><br>
+                    <label for="mName">Mother Name : </label>
+                    <input type="text" id="mName" name="mName" placeholder="Enter Your Mother Name"> <br><br>
+                    <label for="age">Age : </label>
+                    <input type="number" id="age" name="age" placeholder="Enter Your Age" min="18" max="45"> <br><br>
+                    <label for="gender">Gender :</label>
+                    <input type="radio" id="gender" name="gender" value="male">Male
+                    <input type="radio" id="gender" name="gender" value="female">Female
+                    <input type="radio" id="gender" name="gender" value="other">Other
+                    <br><br>
+     </fieldset>
+
+     <fieldset>
+        <legend>Contact Details</legend>
+     </fieldset>
+     
+     
+     <button type="submit">Submit</button>
+     <button type="reset">Reset</button>
+    </form>
 </body>
 </html>
