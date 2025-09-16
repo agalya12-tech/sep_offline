@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Selectors</title>
+    <style>
+     /* div p{ descendent selector it will select both direct and indirect children
+        color: red;
+     }
+     div>p{ child selector it will select only direct children
+        color:blue;
+     } */
+      /* div{
+        background-color: red;
+      }
+      div~p{ general sibling selector
+        background-color: green;
+      }
+      div+p{ adjacent sibling selector
+        background-color: green;
+      } */
+    </style>
+</head>
+<body>
+
+
+          
+    <div>
+        <p>this is a child inside a div</p>
+        <p>this is a child inside a div</p>
+        <span>
+            <p>this is a child inside a span inside a div</p>
+        </span>
+    </div>
+    <i>It is in italic</i>
+    <p>this a paragraph outside div</p>
+    <p>this a paragraph outside div</p>
+    <p>this a paragraph outside div</p>
+
+
+</body>
+</html>
