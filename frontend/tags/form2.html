@@ -41,6 +41,8 @@
           id="fName"
           name="fName"
           placeholder="Enter Your Father Name"
+          autofocus
+          autocomplete
         />
         <br /><br />
         <label for="mName">Mother Name : </label>
@@ -66,6 +68,8 @@
         <input type="radio" id="gender" name="gender" value="female" />Female
         <input type="radio" id="gender" name="gender" value="other" />Other
         <br /><br />
+        <label for="profile">Profile : </label>
+        <input type="file" id="profile" name="profile" accept="image/*" />
       </fieldset>
 
       <fieldset>
@@ -107,16 +111,16 @@
         <br /><br />
 
         <label for="food">Favorite Food : </label>
-        <select name="food" id="food">
+        <select name="food" id="food" multiple>
           <option value="">----select food----</option>
           <optgroup label="Tiffins">
-            <option value="upma">UPMA</option>
+            <option value="upma" selected>UPMA</option>
             <option value="dosa">Dosa</option>
             <option value="idli">Idli</option>
             <option value="vada">Vada</option>
           </optgroup>
           <optgroup label="Non Veg">
-            <option value="biriyani">Biriyani</option>
+            <option value="biriyani" disabled>Biriyani</option>
           </optgroup>
         </select>
       </fieldset>
@@ -126,5 +130,17 @@
       <input type="submit" value="Submit" />
       <input type="reset" value="Reset" />
     </form>
+
+
+    <figure>
+            <img src="../styling/image.png" alt="" width="200px" height="200px" />
+            <figcaption>it is an image</figcaption>
+    </figure>    
+
+    <address>
+        <p>Contact us at:</p>
+        <p>Email: info@example.com</p>
+        <p>Phone: +1234567890</p>
+    </address>
   </body>
 </html>
