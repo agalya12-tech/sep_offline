@@ -274,7 +274,33 @@ Selector:
            padding: 0;
            box-sizing: border-box;
       }
+6.attribute selector:
+---------------------
+        - selector is used to select the element based on attribute.
+        syntax: [attributeName="attributeValue"]{
 
+          }
+7.Combined selector:
+-------------------
+        - selector is used to select the element based on combined selector.
+         Types:
+            1.child selector: used to select the direct child of the element.
+                            : selector1 > selector2{
+                                
+                            }  
+            2.descendant selector: used to select the direct and indirect child of the element.
+                            : selector1 selector2{
+                
+                            } 
+            3.adjacent sibling selector: used to select the adjacent sibling of the element.
+                            : selector1 + selector2{
+                
+                            }
+            4.general sibling selector: used to select the general sibling of the element.
+                            : selector1 ~ selector2{
+                
+                            }
+             
 
 pseudo element :
 -----------------
@@ -419,3 +445,53 @@ marquee tag: used for scrolling content
             scrollamount, scrolldelay, loop, bgcolor, width, height
 
 ----------------------------------------------------------------------
+Form Tags:
+------------
+    1. <form> tag - used to add a form in the web page
+         form attributes:
+                  action - used to specify the action of the form
+                  method - used to specify the method of the form(get/post--default is get)
+
+    2. <input> tag - used to add an input in the form
+         input attributes:
+                  type - used to specify the type of the input
+                       - type can be text, password, email, number, date, time, url, search, tel, color, range, file, submit , reset, checkbox, radio
+                  name - used to specify the name of the input
+                  value - used to specify the value of the input
+                  placeholder - used to specify the placeholder of the input
+                  required - used to specify the required of the input
+                  disabled - used to specify the disabled of the input
+                  checked - used to specify the checked of the input
+                  readonly - used to specify the readonly of the input
+                  autofocus - used to specify the autofocus of the input
+                  autocomplete - used to specify the autocomplete of the input
+                  min - used to specify the min of the input
+                  max - used to specify the max of the input
+                  pattern - used to specify the pattern of the input
+                  step - used to specify the step of the input
+                  size - used to specify the size of the input
+                  list - used to specify the list of the input
+
+    3. <label> tag - used to add a label to the input
+    4. <select> tag - used to add a select in the form
+    5. <option> tag - used to add an option to the select
+    6. <textarea> tag - used to add a textarea in the form
+    7. <button> tag - used to add a button in the form
+    8. <fieldset> tag - used to add a fieldset in the form
+    9. <legend> tag - used to add a legend to the fieldset
+    10. <datalist> tag - used to add a datalist in the form
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+            
