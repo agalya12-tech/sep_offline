@@ -1,49 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form2 Task</title>
     <style>
-        form{
-            width: 400px;
-            border: 1px solid black;
-        }
+      form {
+        width: 400px;
+        border: 1px solid black;
+        background: linear-gradient(to left, #e99445, #6d53df);
+      }
 
-        input[type="text"], input[type="number"]{
-          background-color: rgb(178, 170, 170);
-          padding:2px;
-          border: none; 
-          border-radius: 5px; 
-        }
+      input[type="text"],
+      input[type="number"] {
+        background-color: rgb(178, 170, 170);
+        padding: 2px;
+        border: none;
+        display: inline-block;
+        width: 200px;
+        border-radius: 5px;
+      }
     </style>
-</head> 
-<body>
-    <form action="#" >
-     <fieldset>
+  </head>
+  <body>
+    <form action="#">
+      <fieldset>
         <legend>Basic Details</legend>
-                    <label for="name">Name : </label>
-                    <input type="text" id="name" name="name" placeholder="Enter Your Name" required> <br><br>
-                    <label for="fName">Father Name : </label>
-                    <input type="text" id="fName" name="fName" placeholder="Enter Your Father Name"> <br><br>
-                    <label for="mName">Mother Name : </label>
-                    <input type="text" id="mName" name="mName" placeholder="Enter Your Mother Name"> <br><br>
-                    <label for="age">Age : </label>
-                    <input type="number" id="age" name="age" placeholder="Enter Your Age" min="18" max="45"> <br><br>
-                    <label for="gender">Gender :</label>
-                    <input type="radio" id="gender" name="gender" value="male">Male
-                    <input type="radio" id="gender" name="gender" value="female">Female
-                    <input type="radio" id="gender" name="gender" value="other">Other
-                    <br><br>
-     </fieldset>
+        <label for="name">Name : </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter Your Name"
+          required
+        />
+        <br /><br />
+        <label for="fName">Father Name : </label>
+        <input
+          type="text"
+          id="fName"
+          name="fName"
+          placeholder="Enter Your Father Name"
+        />
+        <br /><br />
+        <label for="mName">Mother Name : </label>
+        <input
+          type="text"
+          id="mName"
+          name="mName"
+          placeholder="Enter Your Mother Name"
+        />
+        <br /><br />
+        <label for="age">Age : </label>
+        <input
+          type="number"
+          id="age"
+          name="age"
+          placeholder="Enter Your Age"
+          min="18"
+          max="45"
+        />
+        <br /><br />
+        <label for="gender">Gender :</label>
+        <input type="radio" id="gender" name="gender" value="male" />Male
+        <input type="radio" id="gender" name="gender" value="female" />Female
+        <input type="radio" id="gender" name="gender" value="other" />Other
+        <br /><br />
+      </fieldset>
 
-     <fieldset>
+      <fieldset>
         <legend>Contact Details</legend>
-     </fieldset>
-     
-     
-     <button type="submit">Submit</button>
-     <button type="reset">Reset</button>
+        <label for="email">Email : </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter Your Email"
+        />
+        <br /><br />
+
+        <label for="phone">Phone : </label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Enter Your Phone Number"
+        />
+        <br /><br />
+
+        <label for="address">Address : </label>
+        <textarea name="address" id="address" cols="25" rows="5"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Choice and Preferences</legend>
+        <label for="lang">Language : </label>
+        <input type="checkbox" id="lang" name="lang" value="java" checked />JAVA
+        <input type="checkbox" id="lang" name="lang" value="python" />python
+        <input
+          type="checkbox"
+          id="lang"
+          name="lang"
+          value="javascript"
+        />JavaScript
+        <input type="checkbox" id="lang" name="lang" value="c++" disabled />C++
+        <br /><br />
+
+        <label for="food">Favorite Food : </label>
+        <select name="food" id="food">
+          <option value="">----select food----</option>
+          <optgroup label="Tiffins">
+            <option value="upma">UPMA</option>
+            <option value="dosa">Dosa</option>
+            <option value="idli">Idli</option>
+            <option value="vada">Vada</option>
+          </optgroup>
+          <optgroup label="Non Veg">
+            <option value="biriyani">Biriyani</option>
+          </optgroup>
+        </select>
+      </fieldset>
+
+      <!-- <button type="submit">Submit</button>
+     <button type="reset">Reset</button> -->
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
     </form>
-</body>
+  </body>
 </html>
