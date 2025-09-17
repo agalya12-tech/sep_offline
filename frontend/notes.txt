@@ -315,6 +315,18 @@ pseudo class  :
       ex :
        :link  , :active , :visited , :hover 
 
+
+   +-----------------------------------------------------------------------------------+
+   |  Css Specificity Rule:                                                            |
+   |  ---------------------                                                            |
+   |  Inline > ID > Class/Attribute/Pseudo-class > Element/Pseudo-element > Universal  |                                                              |
+   |                                                                                   |       
+   +-----------------------------------------------------------------------------------+
+
+Note:
+  !important overrides normal specificity, but should be used sparingly.
+
+
 --------------------------------------------------------------------------------------
 font-awesome:
 ------------
@@ -479,9 +491,71 @@ Form Tags:
     7. <button> tag - used to add a button in the form
     8. <fieldset> tag - used to add a fieldset in the form
     9. <legend> tag - used to add a legend to the fieldset
-    10. <datalist> tag - used to add a datalist in the form
+------------------------------------------------------------------------------
+ flex
+ +++++
+    - it is used to align elements
+    - it is used to distribute space between/around elements
+    - It will arrange elements in cross axis and main axis
+    - flex container is main division of flex
+    - flex items are child of flex container
+    - flex container is used to wrap the flex items
 
 
+    "display : flex" is used to make flex container
+    the default direction is row(left to right) 
+    "flex-direction : row-reverse; row; column; column-reverse" is used to change the direction
+  
+
+
+row (left to right)  x axis(main axis)  y axis(cross axis)
+column(top to bottom) y axis(main axis) x axis(cross axis)
+
+
+
+parent properties :
+-------------------
+
+flex-direction : it is used to change the direction of the flex container
+                 row(default) ; row-reverse; column; column-reverse
+
+justify-content : it is used to align main axis
+                 flex-start(default) ; flex-end; centre; space-around; space-between;space-evenly 
+
+
+align items : it is used to align cross axis
+                 flex-start(default) ; flex-end; centre; 
+
+align-content: It is used to align when there is extra space in the cross axis ,similar to 'justify-content' aligns individual items 
+                 flex-start(default) ; flex-end; centre; space-around; space-between;space-evenly 
+
+gap: it used to provide gap between the elements 
+row-gap: it is used to provide gap between row elements
+column-gap: it is used to provide gap between column elements
+
+
+child properties/flex items:
+---------------------------
+
+flex-shrink:  it is used to shrink elements according to width
+    default-1
+    0-items wont shrink
+flex-grow: it is used to grow element size according to width
+    default-0
+    
+order:it is used to re arrange the order of flex-items
+
+justify-self - to provide justify content property , specifically to a flex item
+align-self - to provide align items property , specifically to a flex item
+
+---------------
+play and Learn:    https://codingfantasy.com/games/flexboxadventure/play
+                   https://flexboxfroggy.com/?utm_source=chatgpt.com
+----------------
+
+
+
+----------------------------------------------------------------------------------
 
 
 
