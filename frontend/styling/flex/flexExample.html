@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nav Bar Example</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .navbar {
+        background-color: black;
+      }
+      ul {
+        display: flex;
+        justify-content: flex-end;
+        list-style: none;
+        align-items: center;
+        border: 1px solid white;
+        height: 50px;
+        /* gap:20px */
+      }
+      li {
+        color: white;
+        padding: 0 30px;
+        cursor: pointer;
+      }
+      #profile {
+        margin-right: auto;
+      }
+      img {
+        height: 40px;
+        border-radius: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <ul>
+        <li id="profile">
+          <img src="../../tags/multimedia/profile.jpg" alt="" />
+        </li>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+  </body>
+</html>
