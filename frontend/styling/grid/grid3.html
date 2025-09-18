@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Task3</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(4,1fr);
+            border: 1px solid black;
+            min-height: 100vh;
+            gap:10px;
+        }
+        .navbar{
+            background-color: red;
+            grid-column: 1/6;
+        }
+        .section{
+            background-color: yellow;
+            /* grid-column: 1/4; */
+            /* grid-row:2/4; */
+            grid-area:2/1/4/4 ;
+        }
+        .article1{
+            background-color: lightgreen;
+            grid-column: 4/6;
+        }
+        .article2{
+            background-color: rgb(6, 122, 161);
+            grid-column: 4/6;
+        }
+        .footer{
+            background-color: rgb(20, 4, 59);
+            grid-column: 1/6;
+        }
+        
+    </style>
+</head>
+<body>
+     <div class="container">
+        <div class="navbar"></div>
+        <div class="section"></div>
+        <div class="article1"> </div>
+        <div class="article2"> </div>
+        <div class="footer"> </div>
+     </div>
+</body>
+</html>
+ 
