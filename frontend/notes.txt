@@ -557,8 +557,66 @@ play and Learn:    https://codingfantasy.com/games/flexboxadventure/play
 
 ----------------------------------------------------------------------------------
 
+Grid:
+-----
+
+    CSS Grid:
+    --------
+        CSS Grid is a two-dimensional layout system for the web. It allows you to create 
+        complex layouts on the web easily by dividing a page into rows and columns, 
+        and placing content into grid cells.
+
+                    Flex                         Grid
+    -------------------------------------------------------------------------
+    Feature     	Flexbox                  	CSS Grid
+    Axis	   One-dimensional (row or col)	    Two-dimensional (row & column)
+    Layout	    Content-driven	                Layout-driven
+    Use Case	Aligning items in a line	    Building full page layouts
+    Overlap	    Not possible	                Possible (items can overlap)
+    ----------------------------------------------------------------------------
+    Grid Properties
+    ++++++++++++++++
+
+    Container Properties:
+    ---------------------
+    display: grid;
+    grid-template-rows : used to define the number of rows in a grid layout
+                    : 10px 10px 10px
+                    : 10% 10% 10%
+                    : 1fr 1fr 1fr (fr-fraction)
+                    : repeat(3, 10px)
+    grid-template-columns: used to define the number of columns in a grid layout
+    grid-template-areas: used to define named areas in a grid layout
+                    : "header header header"
+                        "sidebar content content"
+                        "footer footer footer"
+    grid-gap / gap: used to set the gap between grid items
+    Note : flex box properties can be used inside grid
+
+    Item Properties:
+    --------------
+    grid-row-start, grid-row-end
+    grid-column-start, grid-column-end
+    grid-area
+    justify-self, align-self
 
 
+    Applications in Grid
+    ---------------------
+            Responsive web layouts
+            Dashboards with multiple panels
+            Image galleries
+            Complex magazine-style layouts
+            Overlapping content (e.g., cards over images)
+            Aligning forms and controls in two dimensions
+            
+            
+            
+            
+---------------
+play and Learn:    https://cssgridgarden.com/
+                  
+----------------
 
 
 
