@@ -26,6 +26,23 @@
                 height: 300px;  
             }
         }
+
+/* width<height */
+        @media screen and ( orientation: portrait){
+             .div1{
+                background: linear-gradient(to right, rgb(76, 0, 255) , yellow);
+                width: 200px;   
+                height: 200px;
+             }
+        }
+        /* width>height */
+        @media screen and ( orientation: landscape){
+             .div1{
+                background:url(./image.png);
+                width: 400px;   
+                height: 400px;
+             }
+        }
     </style>
 </head>
 <body>
