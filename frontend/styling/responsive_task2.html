@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Task2</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-areas:"navbar  navbar  navbar  navbar  navbar"
+                                "section section section article1 article1"
+                                "section section section article2 article2"
+                                "footer  footer  footer  footer  footer" ;
+            border: 1px solid black;
+            min-height: 100vh;
+            gap:10px;
+        }
+        .navbar{
+            background-color: red;
+            grid-area: navbar;
+        }
+        .section{
+            background-color: yellow;
+           grid-area: section;
+        }
+        .article1{
+            background-color: lightgreen;
+            grid-area: article1;
+        }
+        .article2{
+            background-color: rgb(6, 122, 161);
+            grid-area: article2;
+        }
+        .footer{
+            background-color: rgb(20, 4, 59);
+            grid-area: footer;
+        }
+        
+
+        .container>div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+             color: white;
+             font-size: 40px;
+             font-weight: bolder;
+             font-family: fantasy;
+        }
+        @media  screen and (max-width:700px) {
+             .container{
+                    grid-template-areas:"navbar "
+                                        " article1"
+                                        "section "
+                                        " article2"
+                                         "footer " ; 
+             }
+             .navbar{
+                background-color: orange;
+             }
+             
+        }
+    </style>  
+</head>
+<body>
+     <div class="container">
+        <div class="navbar">Navbar</div>
+        <div class="section">Section</div>
+        <div class="article1">Article 1</div>
+        <div class="article2">Article 2</div>
+        <div class="footer">Footer</div>
+     </div>
+</body>
+</html>
+ 
