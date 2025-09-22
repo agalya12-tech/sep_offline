@@ -690,6 +690,91 @@ Syntax:
 }
 
 
+==================================================================================================
+Semantic Elements:
+==================
+             Semantic tags are HTML elements that clearly describe their meaning 
+             and purpose in the structure of a web page. They make the code more 
+             readable and accessible, both for developers and browsers.
+
+Examples of semantic tags:
+----------------------------
+<header>: Defines the header section of a page or section.
+<nav>: Represents navigation links.
+<main>: Specifies the main content of the document.
+<section>: Groups related content.
+<article>: Represents a self-contained piece of content.
+<aside>: Contains content aside from the main content (like a sidebar).
+<footer>: Defines the footer section.
+
+Benefits:
+----------
+        Improves accessibility for screen readers.
+        Enhances SEO.
+        Makes code easier to understand and maintain.
+
+
+
+=============================================================================================================
+
+
+Css Positions:
+=============
+    1.static
+    2.relative
+    3.absolute
+    4.fixed
+    5.sticky
+
+
+1.static:
+    position: static;
+    -default value
+    -top,right,left,bottom are not set
+
+2.relative:
+    position: relative;
+    -relative to its normal positions
+    -top,right,left,bottom are set
+    -other elements are not affected by this element
+    -can be used to move an element from its normal position
+
+z-index:it is used to specify the stacking order of elements
+    when overlapping each other
+    default-0
+    higher value means higher z-index
+    - used for relative, absolute, fixed, sticky
+
+3.fixed
+    position: fixed;
+    -fixed to the browser window
+    -top,right,left,bottom are set
+    -other elements are not affected by this element
+    -can be used to move an element from its normal position
+    -the element remains in the same position even if the page is scrolled
+4.sticky
+    position: sticky;
+    -sticky to the browser window
+    -top,right,left,bottom are set
+    -other elements are not affected by this element
+    -can be used to move an element from its normal position
+    -the element remains in the same position even if the page is scrolled
+    -it is a combination of relative and fixed
+5.absolute
+    position: absolute;
+    -absolute to its normal positions
+    -top,right,left,bottom are set
+    -other elements are not affected by this element
+    -can be used to move an element from its normal position
+    -it depends on inherited element
+    -it need to assign for child elements when the parent is relative, 
+    if parent position is not relative then it set with root element  
+
+
+
+
+
+
 
 
 
