@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            font-size: 40px;
+        }
+        .static{
+            background-color: yellowgreen;
+            position:static ;
+            /* top:30px; top bottom left right won't work with static position 
+            right: 40px;; */
+        }
+        .relative{
+            background-color: red;
+            position: relative;
+            top:30px;
+            left: 40px;
+            z-index:5;
+        }
+        .relative2{
+            background-color: blue;
+            position: relative;
+            left: 70px;
+            bottom: 30px;
+            z-index: 2;
+        }
+        .relative3{
+            background-color: orchid;
+            position: relative;
+            left: 100px;
+            bottom: 60px;
+            z-index:9 ;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="static">Static</div>
+
+
+    <div class="relative">Relative</div>
+    <div class="relative2">Relative2</div>
+    <div class="relative3">Relative3</div>
+</body>
+</html>
