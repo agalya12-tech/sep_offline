@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    border: 1px solid black;
+    display: grid;
+    grid-template-areas: "nav nav nav"
+                          "main main main"
+                          "main main main"
+                          "footer footer footer";
+} 
+nav{
+    grid-area: nav;
+    background-color: rgb(120, 123, 212);
+} 
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-areas: "section section figure";
+}
+
+
+
+section{
+    grid-area: section;
+    display: grid;
+    grid-template-areas: "one one"
+                         "two two";
+   
+}
+section article{
+    border: 2px solid black;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow:  2px 2px 5px rgba(0,0,0,0.8);
+    font-size: 30px;
+}
+.one{
+    grid-area: one;
+    background-color: rgb(240, 204, 204);
+}
+.two{
+    grid-area: two;
+    background-color: rgb(157, 122, 122);
+}
+
+figure{
+    grid-area: figure;
+    border: 1px solid black;
+}
+
+img{
+    width: 100%;
+    height: 90%;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 2px 0px 0px rgba(95, 78, 78, 0.9);
+}
+footer{
+    grid-area: footer;
+    background-color: rgb(62, 58, 58);
+}
