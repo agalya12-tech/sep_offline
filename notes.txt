@@ -22,4 +22,10 @@ git commands:
 Task :
       https://spiffy-salmiakki-9dd19f.netlify.app/
 
-      
+Task2:
+        https://excelrfs.netlify.app/
+        https://wowfolio.netlify.app/
+        https://headless-pizza.netlify.app/
+        https://e-commerce-chi-five.vercel.app/
+        https://responsive-e-commerce-website-with-html-css-js.vercel.app/    
+
