@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Transitions</title>
-</head>
-<body>
-    
-</body>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+        font-size: 40px;
+      }
+
+      .without {
+        background-color: lightblue;
+      } 
+
+      .with     {
+        background-color: lightsalmon;
+        /* transition: all 2s ease 1s; */
+        transition-duration: 2s;
+        transition-property: all;
+        transition-timing-function: ease;
+        transition-delay: 1s;
+      }
+
+      .with:hover{
+        background-color: rgb(131, 199, 131);
+        transform: rotate(180deg);
+        width: 400px;
+        height: 400px;
+      }
+      .without:hover{
+        background-color: rgb(14, 6, 73);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="with">With</div>
+    <div class="without">WithOut</div>
+  </body>
 </html>
