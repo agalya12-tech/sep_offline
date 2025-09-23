@@ -770,7 +770,35 @@ z-index:it is used to specify the stacking order of elements
     -it need to assign for child elements when the parent is relative, 
     if parent position is not relative then it set with root element  
 
+==================================================================================
+    Transition
+    -----------
+    
+    it is used to animate the elements
+    it is used to change the style,position of the elements
+    it will apply when hover is using 
+   
+        1.transition-property: it provide information on properties
+        2.transition-duration:it is used to provide duration
+        3.transition-timing-function:it is used to apply timings
+        4.transition-delay:it is used to delay the transition
 
+        shorthand structure:
+        transition : property duration timing-function delay;
+        transition : property duration;
+ 
+Transition -timing function:
+---------------------------
+linear: Transition at a constant speed.
+ease: Starts slow, speeds up, then slows down (default).
+ease-in: Starts slow, then speeds up.
+ease-out: Starts fast, then slows down.
+ease-in-out: Starts and ends slow, speeds up in the middle.
+cubic-bezier(x1, y1, x2, y2): Custom timing curve.
+steps(n, start|end): Jumps in steps instead of a smooth transition.
+
+
+  
 
 
 
