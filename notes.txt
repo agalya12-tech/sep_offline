@@ -12,6 +12,16 @@ git commands:
            2.git commit -m "message"
            3.git push origin master
 
+   for cloning - git clone repo_link
+                 cd repo_Name(open repo folder in vscode)
+                 git add .
+                 git commit -m "message"
+                 git push origin branch_Name
+
+   to change branchName : git checkout -b branchName(for new)
+                          git checkout branchName(for existing)
+
+
    for authentication:
             1. git config --global user.name "username"
     to remove credentials:
