@@ -1,4 +1,3 @@
-package dsa.numberPrograms;
 
 public class Alphabets {
     public static void main(String[] args) {

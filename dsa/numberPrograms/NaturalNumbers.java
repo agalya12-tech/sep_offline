@@ -1,4 +1,3 @@
-package dsa.numberPrograms;
 public class NaturalNumbers {
     public static void main(String[] args) {
         int start=1;
