@@ -797,6 +797,210 @@ ease-in-out: Starts and ends slow, speeds up in the middle.
 cubic-bezier(x1, y1, x2, y2): Custom timing curve.
 steps(n, start|end): Jumps in steps instead of a smooth transition.
 
+==================================================================================
+Javascript:
+--------------
+      - it is a scripting language
+      - it is used to add interactivity and functionality to the web pages
+      - the file will save with .js extension
+      - the current version of javascript is ECMAScript 2023
+        (European Computer Manufacturers Association) 
+      - it can be client side or server side scripting language
+      - it is a synchronous programming language, it will execute the code line by line
+      - it is case sensitive
+
+
+Javascript integration into html pages:
+---------------------------------------
+     1.inline javascript
+     2.internal javascript
+     3.external javascript
+ 
+1.inline javascript: it is applying the javascript to the web pages
+                     through element attribute in html file
+    ex: <p onclick="alert('hello world');">Lorem ipsum dolor sit amet.</p>
+
+2.internal javascript: it is applying the javascript to the web pages
+                       through script tag in html file
+    ex: <script>
+            alert('hello world');
+        </script>
+
+3.external javascript: it is applying the javascript to the web pages
+                       through script tag in html file.
+                       need to create the external javascript file
+    ex: <script src="external.js"></script>
+
+
+Tokens in javascript:
+---------------------
+      -tokens are used to define the javascript statements
+      -tokens are building blocks in javascript
+      
+      1.keywords
+      2.identifiers
+      3.literals(value/data)
+      4.operators
+      5.Variables and data types
+
+1.keywords: keywords are reserved/predefined words in javascript
+          : all keywords are case sensitive (lowercase)
+   ex: var, let, const, function, return, break, continue, etc
+
+2.identifiers: identifiers are used to provide names to the variables,
+               functions, objects, etc
+             : keywords are not allowed as identifiers
+   ex: name, age, address, city, state, country, etc
+
+Rules:
+-------
+     1.keywords cannot be used as identifiers
+     2.identifiers cannot start with a number and special characters
+     3.identifiers cannot contain special characters(other than _ and $)
+conventions:
+------------
+     1.identifiers should be meaningful names
+     2.identifiers should be short and descriptive
+     3.identifiers should be lowercase and use camelCase convention 
+     ex: firstName 
+
+3.literals: literals are used to provide values/data to the variables
+         types of literals:
+                1.string literals - ""  or  ''  or template literals(``)
+                2.numeric literals  10 , 10.0
+                3.boolean literals - true or false
+                4.null literals    -null
+                5.undefined literals - undefined
+                6.function literals
+                7.Date literals
+                8.Symbol literals
+
+4.operators: operators are used to perform operations on the operands
+         types of operators:
+                1.arithmetic operators
+                2.relational/Comparison operators
+                3.logical operators
+                4.assignment operators
+                5.conditional operators
+                6.bitwise operators
+                7.typeOf operators
+
+
+1.arithmetic operators:  binary operators
+----------------------
+   - used to perform arithmetic/Mathematical operations
+        + addition
+        - subtraction
+        * multiplication
+        / division (quotient)
+        % modulus (remainder)
+        ** exponent (power)
+
+
+   increment operator: increase the value by 1
+                     : unary operator
+                   1. Post increment operator : value++
+                                              : use the value first and then increment
+                   2. Pre increment operator  : ++value
+                                              : increment the value first and then use
+   decrement operator: decrease the value by 1
+                     : unary operator
+                   1. Post decrement operator : value--
+                                              : use the value first and then decrement
+                   2. Pre decrement operator  : --value
+                                              : decrement the value first and then use
+     
+
+2.Relational Operator:(Comparison) - binary operators
+---------------------------------
+         -used to compare the operands
+         -returns boolean value
+                == equals to (it check values)
+                != not equals to
+                <  less than
+                > grater than
+                <= less than or equals
+                >= grater than or equals
+                === strict equality operator(it checks values along with data type)
+                !== not strict equality operator
+
+3.logical operators:
+-------------------
+      - used to perform logical operations on the operands(boolean values)
+      - returns boolean value
+        && and  - binary operator
+        || or  - binary operator
+        ! not - unary operator
+------------------------------------------------------------------------
+      &&                         ||                        !
+------------------------------------------------------------------------
+true  && true = true       true  || true = true       !true = false
+true  && false = false     true  || false = true      !false = true
+false && true = false      false || true = true     
+false && false = false     false || false = false  
+-----------------------------------------------------------------------
+  
+
+4. assignment operators:(compound assignment operators)
+--------------------------------------------------------
+   - used to assign values to the variables by performing Mathematical operations
+   += addition
+   -= subtraction
+   *= multiplication
+   /= division (quotient)
+   %= modulus (remainder)
+   **= exponent (power)
+
+5. conditional operators:(ternary operator)
+-------------------------------------------
+        - used to perform conditional operations
+        - returns boolean value
+
+syntax: operand1? operand2:operand3
+        
+        condition ? expression1/value1/variable1 : expression2;
+                       true                           false
+
+
+6. bitwise operators:
+--------------------
+      - used to perform bitwise operations on the operands(binary values-bits)
+      - returns integer value
+        & and  - binary operator
+        | or  - binary operator
+        ~ not  - unary operator
+        ^ xor  - binary operator
+        << left shift  - binary operator
+        >> right shift  - binary operator
+       useCases:  
+             1. In low level programming, it is used to perform bit operations 
+              on the operands
+             2. Data encryption
+
+
+
+-------------------------------------
+A      1     0    0     1
+
+B      0     1    0     1
+-------------------------------------               
+&      0     0    0     1
+
+|      1     1    0     1
+
+~      1     0    1     0   (B)
+
+^      1     1    0     0
+
+-----------------------------------------
+
+  
+
+7. typeOf operators:
+-------------------
+   - used to get the data type of the variable
+
+---------------------------------------------------------------------------------------------------------------------
 
   
 
