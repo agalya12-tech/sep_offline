@@ -35,3 +35,24 @@ console.log(res);
 
 // console.log(value6%2==0?"even number":"odd number");
 
+
+num1=4; //100
+num2=5; //101
+
+/**
+ * 4= 0100
+ * 5= 0101
+ * ---------
+ *  4 =0100
+ */
+console.log(num1&num2);//4
+/**
+ * 4= 0100
+ * 5= 0101
+ * ---------
+ *  5=0101
+ *  
+ */
+
+console.log(num1|num2);//5
+

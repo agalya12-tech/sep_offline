@@ -1002,6 +1002,158 @@ B      0     1    0     1
 
 ---------------------------------------------------------------------------------------------------------------------
 
+Variables:
++++++++++
+     - used to store the values/data
+     - variables can be declared using var, let, const keywords
+variable declaration:
+---------------------
+     - variables can be declared using var, let, const keywords
+variable initialization:
+-------------------------
+      - values are assigning to the variables using = operator
+variable re-initialization:
+--------------------------
+     - re assigning the values to the existing variables 
+variable re declaration:
+-------------------------
+     - re declaring the variables using var, let, const keywords
+variable hoisting:
+------------------
+     - variables are using before  declaring and initialization
+-----------------------------------------------------------------
+                        var                let              const
+-----------------------------------------------------------------
+declaration without    yes                 yes              no
+initialization         
+
+re-initialization       yes                 yes             no
+
+re-declaration          yes                 no              no
+
+hoisting                yes                 no              no
+
+scope                function scope      block scope     block scope
+-----------------------------------------------------------------
+
+Data types:
++++++++++++
+     - used to define the type of data stored in the variable
+     - type of operator is used to get the data type of the variable
+     - types of data types:
+       1. primitive data types
+       2. reference data types
+1.primitive data type:
+------------------------
+      - used to store the primitive values
+      - primitive data types are:
+        1. number- ex: 10, 20, 30 , 50.5
+        2. string - ex: "hello", 'world',`hello world`
+        3. boolean- ex: true, false
+        4. null 
+        5. undefined
+        6. symbol - ex: Symbol()
+
+2.Non primitive data types/reference data types:
+-----------------------------------------------
+      - used to store the non primitive values
+      - non primitive data types are:
+        1. array - ex: [10, 20, 30, 40, 50]
+        2. object - ex: {name: "john", age: 30, address: "new york"}
+                  - ex: new ClassName();
+        3. function- ex: function(){}
+        4. regex- ex: /hello/
+=========================================================================
+
+Conditional statements:
+++++++++++++++++++++++
+   - the statements that are executed based on the condition
+   - the condition can be true or false
+   - if conditions returns true , then block of code will be executed
+     or else block of code will be skipped
+  Types:
+  -----
+      1.if 
+      2.if-else/else-if
+      3.else if ladder 
+      4.switch case
+      5.nested if
+
+if condition:
+-------------
+  syntax:   if(condition){
+               // block of code
+             }
+   - the condition can be true or false
+   - if conditions returns true , then block of code will be executed
+     or else block of code will be skipped
+
+if - else condition:
+-------------------
+   syntax:   if(condition){
+               // block of code
+             }
+             else{
+               // block of code
+             }
+   - the condition can be true or false
+   - if conditions returns true , then if block will execute 
+     or else else block will execute
+
+else if ladder / if -else - if condition:
+-----------------------------------------
+   syntax:   if(condition){
+               // block of code
+             }
+             else if(condition){
+               // block of code
+             }
+             . . . . .
+             else{
+               // block of code
+             }
+   - the condition can be true or false
+   - it consist multiple if conditions , if any condition returns true
+     then block of code will be executed or
+     else block of code will be skipped
+   - if none of the conditions returns true , 
+     then else block of code will be executed(it is optional)
+
+
+switch case:
+-------------
+   syntax:   switch(expression/value/variable){
+               case value1:
+                 // block of code
+                 break;
+               case value2:
+                 // block of code
+                 break;
+               .  .  .  .
+               default:
+                 // block of code
+             }
+   - the expression can be any value
+   - the case can be any value
+   - the default case is optional , when none of the cases matches
+     then default block of code will be executed
+   - switch case is used to perform multiple conditional operations
+     by comparing the expression with the each case values
+
+
+
+nested if condition:
+-------------------
+     - condition statements used in another condition statements
+     syntax:
+              if(condition1){
+                if(condition2){
+                  // block of code
+                }
+              }
+      - if the outer condition1 returns true then it will check  inner condition2 
+=========================================================================================================
+
   
 
 

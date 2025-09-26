@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function varOperation() {
+        console.log(varValue); //hoisting - printing value before declaration
+        var varValue; //declaration
+        console.log(varValue);
+        varValue = 10; //initialization
+        console.log(varValue);
+        varValue = 20; //reinitialization
+        console.log(varValue);
+        var varValue; //redeclaration
+        console.log(varValue);
+      }
+      varOperation();
+
+      function letOperation() {
+        let letValue; //declaration
+        console.log(letValue);
+        letValue = 10; //initialization
+        console.log(letValue);
+        letValue = 20; //reinitialization
+        console.log(letValue);
+      }
+      letOperation();
+
+      function constOperation() {
+        const constValue = 10; //declaration and initialization
+        console.log(constValue);
+      }
+      constOperation();
+    </script>
+  </body>
+</html>
