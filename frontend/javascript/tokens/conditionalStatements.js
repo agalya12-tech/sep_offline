@@ -1,5 +1,5 @@
 let age=18;
-gender="female";
+let gender="female";
 // if statement
 // if(age>=18){
 //     console.log("eligible to vote");
@@ -17,15 +17,28 @@ gender="female";
 
 
 //  nested if statements
-if(age>=18){
-   if(gender=='male'){
-    console.log('enter into Q 1');
-   }
-   else{
-    console.log('enter into Q 2');
-   }
-}
-else{
-    console.log("not eligible to vote");
-}
+// if(age>=18){
+//    if(gender=='male'){
+//     console.log('enter into Q 1');
+//    }
+//    else{
+//     console.log('enter into Q 2');
+//    }
+// }
+// else{
+//     console.log("not eligible to vote");
+// }
+
+
+
+//  else if ladder
+let weekday="oneday";
+if(weekday=="sunday"){ console.log("today is sunday...yummy yummy chicken biriyani");}
+else if(weekday=='monday'){console.log("today is monday...idly....!!!!!");}
+else if(weekday=='tuesday'){ console.log("today is tuesday...Dosa...!!!!");}
+else if(weekday=='wednesday'){console.log("today is wednesday....pulihora....!!!");}
+else if(weekday=='thursday'){console.log("today is thursday...Uttapam...!!!");}
+else if(weekday=='friday'){console.log("today is friday...pongal...!!!");}
+else if(weekday=='saturday'){console.log("today is saturday...poori");}
+else{console.log("invalid day");}
 
