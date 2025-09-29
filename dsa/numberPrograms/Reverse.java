@@ -1,6 +1,7 @@
 public class Reverse {
     public static void main(String[] args) {
-        int num=123;
+        int num=121;
+        int temp=num;
         int rev=0;
         while(num>0){
             int rem=num%10;
@@ -8,5 +9,8 @@ public class Reverse {
             num/=10;
         }
         System.out.println(rev);
+        if(temp==rev){
+            System.out.println(temp+" is a palindrome number");
+        }
     }
 }
