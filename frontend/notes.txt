@@ -1153,8 +1153,96 @@ nested if condition:
               }
       - if the outer condition1 returns true then it will check  inner condition2 
 =========================================================================================================
+looping statements:(iterations)
+++++++++++++++++++
+          - the statements(block or code) that are executed multiple times until the condition become false
+          - the condition can be true or false
+          types:
+          1. while loop
+          2. do while loop
+          3. for loop
+          4. for in loop
+          5. for of loop
+          6. nested loop
+          
+     
 
-  
+
+
+
+============================================================================================================
+  function:
+++++++++++
+         - function is a block of code , which performs a particular task
+         - function will executed when it is called
+         - use: to perform a particular task
+              : code reusability
+              : to avoid code duplication
+              : to avoid code complexity
+
+
+Types based on arguments:
+--------------------------
+      1. with arguments
+      2. without arguments
+
+types based on return value:
+----------------------------
+      1. with return value
+      2. without return value
+
+
+Types of functions:
+-------------------
+      1.function declaration
+      2.function expression
+      3.arrow function
+      4.function constructor
+      5.self invoking function
+      6.call back function
+      7.generator function
+      8.IIFE function
+
+1.function declaration::
+========================
+          - also known as function statement/named function/general function
+          syntax:
+                  function functionName(parameters){
+                    // block of code
+                    return value;
+                  }
+            - parameters and return value are optional
+            - functionName can be any name
+            - without function call the function will not execute
+            - function can be called multiple times
+            - function can be hoisted(can be called before function declaration)
+          
+2.Function expression:
+=====================
+            - also known as anonymous function(a function without name)
+            syntax:
+                    var functionReferenceName = function(parameters){
+                      // block of code
+                      return value;
+                    }
+            - parameters and return value are optional
+            - function can be called with functionReferenceName
+            - function can't be hoisted(can't be called before function 
+                                           declaration and initialization)
+
+3.arrow function:
+================
+            - also known as fat arrow function/anonymous function
+            - it is a shorter syntax of function expression
+            syntax:
+                    var functionReferenceName = (parameters) => {
+                      // block of code
+                      return value;
+                    }
+            - parameters and return value are optional
+            - arrow function can call with functionReferenceName
+            - arrow function can't be hoisted(can't be called before function 
+                                               declaration and initialization)
 
 
 
