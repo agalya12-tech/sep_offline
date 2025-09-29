@@ -1119,6 +1119,8 @@ else if ladder / if -else - if condition:
    - if none of the conditions returns true , 
      then else block of code will be executed(it is optional)
 
+Note: if condition is mandatory for if - else - if ladder, but 
+      else block of code is optional
 
 switch case:
 -------------
