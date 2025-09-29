@@ -32,13 +32,29 @@ let gender="female";
 
 
 //  else if ladder
-let weekday="oneday";
-if(weekday=="sunday"){ console.log("today is sunday...yummy yummy chicken biriyani");}
-else if(weekday=='monday'){console.log("today is monday...idly....!!!!!");}
-else if(weekday=='tuesday'){ console.log("today is tuesday...Dosa...!!!!");}
-else if(weekday=='wednesday'){console.log("today is wednesday....pulihora....!!!");}
-else if(weekday=='thursday'){console.log("today is thursday...Uttapam...!!!");}
-else if(weekday=='friday'){console.log("today is friday...pongal...!!!");}
-else if(weekday=='saturday'){console.log("today is saturday...poori");}
-else{console.log("invalid day");}
+// let weekday=prompt("enter the weekday");
 
+// if(weekday=="sunday"){ console.log("today is sunday...yummy yummy chicken biriyani");}
+// else if(weekday=='monday'){console.log("today is monday...idly....!!!!!");}
+// else if(weekday=='tuesday'){ console.log("today is tuesday...Dosa...!!!!");}
+// else if(weekday=='wednesday'){console.log("today is wednesday....pulihora....!!!");}
+// else if(weekday=='thursday'){console.log("today is thursday...Uttapam...!!!");}
+// else if(weekday=='friday'){console.log("today is friday...pongal...!!!");}
+// else if(weekday=='saturday'){console.log("today is saturday...poori");}
+// else{console.log("invalid day");}
+
+
+let choice = prompt("enter the choice \n1.Kids Wear"+ 
+   " \n2.Mens Wear \n3.Womens Wear \n4.Sports Wear ");
+
+let key = parseInt(choice);//converts string into integer
+console.log(choice , typeof choice );
+console.log(key , typeof key);
+switch (key) {
+    case 1:console.log('kids wear ....!!!');break;
+    case 2:console.log('mens wear ....!!!');break;
+    case 3: console.log('womens wear ....!!!');break;
+    case 4: console.log('sports wear ....!!!');break;
+    default:console.log('invalid choice');break;
+    
+}
