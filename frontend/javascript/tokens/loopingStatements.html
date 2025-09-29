@@ -37,17 +37,24 @@
 
 //   let value1="hello world";
 // let value1=[10,20,30,40,50]; - array
-//  let value1={"name":"raj","age":20,"gender=":"male"};  - object
-console.log("------for in -------");
+//   let value1={"name":"raj","age":20,"gender=":"male"};  
+// console.log("------for in -------");
+// for (const key in value1) {
+//     console.log(key, value1[key]);
+// }
+// console.log("-------for of -------");
+// for (const value of value1) {
+//     console.log(value);
+// }
 
-for (const key in value1) {
-    console.log(key);
-}
-console.log("-------for of -------");
-for (const value of value1) {
-    console.log(value);
-}
 
+
+for(let i=0;i<4;i++){ //outer loop -row
+  for(let j=0;j<=5;j++){ //inner loop- column
+    document.write("* ");
+  } 
+  document.write("<br>");
+}
 
 
 
