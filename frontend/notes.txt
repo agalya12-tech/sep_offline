@@ -1218,6 +1218,15 @@ why functions
     5.Scalability
  
 --------------------------------------------------
+Based on arguments:
+      1.with arguments
+      2.without arguments
+Based on return type:
+      1.with return type
+      2.without return type
+
+--------------------------------------------------
+
 types:
         function declaration
         function expression
