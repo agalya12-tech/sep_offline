@@ -1241,7 +1241,7 @@ types:
 
 1.function declaration/named function/general function
 -----------------------------------------------------
-
+      - can be hoisted
 syntax:
  function functionName/Identifier(){
      //set of sentences that performs a task
