@@ -34,14 +34,14 @@ table(19);
 
 function isPrime(num) {
   let count = 0;
-  for (let i = 1; i <= num; i++) {
-    if (num % i == 0) {
-      count++;
+    for (let i = 1; i <= num; i++) {
+            if (num % i == 0) {
+            count++;
+            }
     }
-  }
   return count == 2;
 }
-// let res=isPrime(4);
+// let res=isPrime(4); 
 // console.log(res, typeof res);
 isPrime(3)? console.log("prime"):console.log("not prime");
 isPrime(4)? console.log("prime"):console.log("not prime");
