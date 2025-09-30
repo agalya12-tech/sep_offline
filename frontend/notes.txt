@@ -1205,9 +1205,144 @@ looping statements:(iterations)
    - loop can be nested inside another loop
 ============================================================================================================
  
+Functions:
+    --it is a block of code that performs a specific task
+    --it is a re-usable block of code
+    --it is a collection of statements that performs a task
+------------------------------------------------------
+why functions
+    1.code reusability
+    2.code maintainability
+    3.code readability
+    4.code Organization
+    5.Scalability
+ 
+--------------------------------------------------
+types:
+        function declaration
+        function expression
+        arrow functions
+        callback functions
+        constructor functions
+        generator functions
+        IIFE
+        higher order functions
+
+==============================================================
+
+1.function declaration/named function/general function
+-----------------------------------------------------
+
+syntax:
+ function functionName/Identifier(){
+     //set of sentences that performs a task
+ }
 
 
+ //passing arguments 
+ function funct_Name(arg1, arg2.......){
+     
+ }
+ funct_Name(arg1, arg2.......);
 
+
+ //return statement
+ function funct_Name(arg1, arg2.......){
+     return result;
+ }
+ let result=funct_Name(arg1, arg2.......);
+
+==============================================================
+
+2.function expression
+------------------
+
+syntax: 
+       let result = function(arg1, arg2.......){
+
+          return result;  
+        }
+
+        result(arg1,arg2.....);
+       
+===============================================================
+3.arrow functions:
+------------------
+          shorter syntax than regular function
+syntax:
+
+    let data=  ()=>{
+
+         }
+
+ex:   (ar1,ar2)=>{
+       //specific task
+      }
+
+=============================================================
+4.constructor function:
+    -it is a special function that is used to create objects
+
+syntax:
+ 
+        function Person(name, age){
+            this.name=name;
+            this.age=age;
+        }
+
+      const  data=new Person('ram',20);
+
+=============================================================
+5.Call back function :
+    -it is a function that is passed as an argument to another function
+    -it is a function that is called by another function
+
+
+syntax:
+
+    function functionName(arg1, arg2 , func_2 , func_3){
+        //set of sentences that performs a task
+    }
+
+    functionName(arg1,arg2, func_2, func_3);
+
+=============================================================
+6.Generator function:
+    -it is a function that is used to create iterators/generators
+
+syntax:
+
+    function* functionName(){
+    yield 1;
+    .
+    .
+    .
+    yield n;
+}
+
+========================================================================
+7.IIFE:
+    -immediately invoked function expression
+    -it is a function that is called immediately after it is defined
+
+syntax:
+
+   (
+       function(){
+          //set of sentences that performs a task 
+       }
+   )();
+
+=============================================================
+8.higher order functions:
+    -it is a function that is passed as an argument to another function
+    -takes a function as an argument and returns a function
+    
+syntax:
+    function functionName(arg1, arg2 , func_2 ){
+        //set of sentences that performs a task
+        return func_2(arg1,arg2);
+    }
 
 
 
