@@ -64,6 +64,19 @@ function mul(a,b){
 function div(a,b){
     return a/b;
 }
-    
+ 
+
+
+//  operation function taking another function as arguments 
+//  and returning function as a result
+function operations(num1,num2,task){
+  return task(num1,num2);
+}
+let sum=operations(10,20,add);
+console.log(sum);
+let minus=operations(10,20,sub);
+console.log(minus);
+let multiplication=operations(10,20,mul);
+console.log(multiplication);
 
 
