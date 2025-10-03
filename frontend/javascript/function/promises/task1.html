@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <script>
+      document.write("<h1>preparing Upma </h1>");
+
+      function cuttingVegetables() {
+        setTimeout(() => {
+          document.write("cutting vegetables like onion, beans, tomatoes<br>");
+        }, 3000);
+      }
+      function roastingRava() {
+        setTimeout(() => {
+          document.write("roasting rava <br>");
+        }, 2000);
+      }
+      function mixing() {
+        setTimeout(() => {
+          document.write("mixing all the vegetables <br>");
+          document.write("pouring water and boiling <br>");
+          document.write("adding Rava and stirring <br>");
+        }, 5000);
+      }
+
+      cuttingVegetables();
+      roastingRava();
+      mixing();
+    </script>
+  </body>
 </html>
