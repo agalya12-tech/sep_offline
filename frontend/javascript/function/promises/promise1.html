@@ -39,10 +39,17 @@
 
     //   promises--->pending(start)---->success(resolved/fulfilled)---->failure(rejected)
 
-      cuttingVegetables()
-      .then( ()=>{roastingRava()})
-      .then( ()=>{mixing()})
-      .catch();
+    //   cuttingVegetables()
+    //   .then( ()=>{roastingRava()})
+    //   .then( ()=>{mixing()})
+    //   .catch();
+
+   async function preparingUpma(){
+       await cuttingVegetables();
+       await roastingRava();
+       await mixing();
+    }
+    preparingUpma();
       
      
     </script>
