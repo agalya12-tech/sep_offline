@@ -7,20 +7,37 @@
   </head>
   <body>
     <script>
-      let p1 = new Promise((resolve) => {
-        setTimeout(() => {
-          console.log("person1 is completed in 3 seconds");
-        }, 3000);
-      });
-      let p2 = new Promise(() => {
-        setTimeout(() => {
-          console.log("person2 is completed in 2 seconds");
-        }, 2000);
-      });
-      let result=Promise.race([p1,p2]);
-       result.then(
-        (value)=>console.log(value),
-       )
+    //   let p1 = new Promise((resolve) => {
+    //     setTimeout(() => {
+    //       console.log("person1 is completed in 3 seconds");
+    //     }, 3000);
+    //   });
+    //   let p2 = new Promise(() => {
+    //     setTimeout(() => {
+    //       console.log("person2 is completed in 2 seconds");
+    //     }, 2000);
+    //   });
+    //   let result=Promise.race([p1,p2]);
+    //    result.then(
+    //     (value)=>console.log(value),
+    //    )
+
+
+
+
+    let p1=Promise.resolve("person1 ");
+    let p2=Promise.reject("person2 is rejected ");
+    let p3=Promise.resolve("person3 ");
+
+    console.log("-----all------");
+     Promise.all([p1,p2,p3])
+    .then((value)=>console.log(value))
+    .catch((value)=>console.log(value))
+
+    // console.log("-----allSettled------");
+    //  Promise.allSettled([p1,p2,p3])
+    // .then((value)=>console.log(value))
+    // .catch((value)=>console.log(value))
     </script>
   </body>
 </html>
