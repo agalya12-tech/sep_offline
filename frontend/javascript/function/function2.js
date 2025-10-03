@@ -80,3 +80,42 @@ let multiplication=operations(10,20,mul);
 console.log(multiplication);
 
 
+
+//  constructor function - represents a real world entity
+function Person(name,age,phone){
+    this.name1=name;
+    this.age1=age;
+    this.phone1=phone;
+}
+let p1=new Person('raj',34,1234567890);
+console.log(p1);
+
+//generator function
+function* generator(){
+    yield 1;
+    yield 2;
+    yield 3;
+    yield 4;
+}
+let gen=generator();
+console.log(gen);
+console.log(gen.next().value); //1
+console.log(gen.next());//[value: 2, done: false]
+console.log(gen.next());//[value: 3, done: false]
+console.log(gen.next());//[value: 4, done: false]
+console.log(gen.next());//[value: undefined, done: true]
+
+
+
+function* idGenerator(){
+   let id=1;
+   while(id<=50){
+    yield "ExcelR "+id;
+    id++;
+   }
+}
+let id=idGenerator();
+for (let i=1;i<=50;i++){ 
+    console.log(id.next().value);
+  
+}

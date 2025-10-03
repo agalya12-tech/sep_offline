@@ -1354,7 +1354,54 @@ syntax:
     }
 
 
+-----------------------------------------------------------------------------------------------------------------
+    
+  call back hell:(nested functions/pyramid of functions)
+  =======================================================
+         - it is a situation where multiple functions are nested inside each other,
+           which makes the code complex , difficult to understand and debug
+        - it is a traditional way of writing code to achieve a particular task
+        - it is not recommended to use call back hell in real time projects
+        - to avoid we can use promises(async/await or then/catch)
 
+Promises:
+==========
+    - Promises is an object that represents the result of an asynchronous operation
+    - it is used to handle asynchronous operations
+    - Creation of Promises:
+                     1.through new keyword and constructor function
+                     2.through Promise.resolve()
+                     3.through Promise.reject()
+    - Promise states:
+                     1.pending
+                     2.fulfilled/Success/resolved
+                     3.rejected
+    - can handle promises using then/catch
+      -then() method is used to handle the success case
+      -catch() method is used to handle the error case
+      -finally() method is used to handle the final case
+    -can handle promises using async/await
+    -async keywords need to declare before the function
+    -await keyword need to use inside the function
+      syntax: async function functionName(){
+               try{
+                 await functionName1();
+               }
+               catch(error){
+                 // block of code
+               }
+             }
+
+----------------------------------------------------------------------------------------------
+feature                     .all                   .race               .allSettled   
+----------------------------------------------------------------------------------------------
+wait for all promises    yes                     no                   yes
+fails fast               on first reject         if first rejects     never fails
+use case                 all must succeed        first win            get all outcomes
+return                   array                   first value          all results with
+                                                                      status and value/reason
+
+----------------------------------------------------------------------------------------------
 
 
 
