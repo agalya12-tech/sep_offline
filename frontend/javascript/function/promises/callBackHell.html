@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function cuttingVegetables(callback) {
+        setTimeout(() => {
+          document.write("cutting vegetables like onion, beans, tomatoes<br>");
+          callback();
+        }, 3000);
+      }
+      function roastingRava(callback) {
+        setTimeout(() => {
+          document.write("roasting rava <br>");
+          callback();
+        }, 2000);
+      }
+      function mixing() {
+        setTimeout(() => {
+          document.write("mixing all the vegetables <br>");
+          document.write("pouring water and boiling <br>");
+          document.write("adding Rava and stirring <br>");
+        }, 5000);
+      }
+//  call back hell or pyramid of hell
+      cuttingVegetables(() => {
+        roastingRava(() => {
+          mixing();
+        });
+      });
+    </script>
+  </body>
+</html>
