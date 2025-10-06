@@ -23,7 +23,37 @@
         console.log(key," - ",mobile[key]);    
       }
 
-     
+
+//  object creation - constructor function
+        function Person(name ,age , phone){
+            this.name=name;
+            this.age=age;
+            this.phone=phone;
+        }
+
+        let p1=new Person('raj',34,1234567890);
+        let p2=new Person('rani',34,1234567890);
+        console.log(p1);
+        console.log(p2);
+        
+        
+
+
+
+class Laptop{
+    constructor(brand,price,color){
+        this.brand=brand;
+        this.price=price;
+        this.color=color;
+    }
+}
+let l1=new Laptop('lenovo',40000,'black');
+console.log(l1);
+let l2=new Laptop('Hp',40000,'grey');
+console.log(l2);
+      
+
+    
       
       
     </script>
