@@ -1403,6 +1403,77 @@ return                   array                   first value          all result
 
 ----------------------------------------------------------------------------------------------
 
+Object:
+++++++
+    - Object is a real world entity, which is a non primitive data type
+    - Object is a collection of key-value pairs
+    - Object is a collection of properties and methods/functions
+
+real world entity : Laptop
+        
+        Laptop: properties/behaviors-> color, model , price , name..etc 
+        
+        Laptop: actions/functions-> turnOn, turnOff, charge, watchingVideo, playingGame..etc
+
+  creation of Object:
+  ===================    
+                 1.constructor function
+                 2.object literal
+                 3.object.create()
+                 4.class and constructor
+
+  1.constructor function:
+  ------------------------
+           - it is a function that is used to create an object
+           syntax:
+                   function ClassName(){
+                     // block of code
+                   } 
+                   new ClassName();-- creating object through new keyword and constructor function
+  2.object literal:
+  ------------------
+           - it is a way to create an object
+           syntax:
+                   var objectName = {
+                      key1=value1,
+                      key2=value2,
+                      .......
+                      keyN=valueN
+                    }   
+
+
+prototype:
+++++++++++
+    - prototype is a property of an object that is used to create a new object
+    - to create new object we need to use Object.create() method
+    - prototype is used to add properties and methods to an object
+    - prototype is used to inherit properties and methods from a parent object
+
+prototype chaining:
+++++++++++++++++++
+      - is a process of inheriting properties and methods from a parent object 
+        to a child object
+      - it helps to share properties and methods between objects
+      - prototype chaining is used to create a hierarchy of objects
+
+4.Class:
+==========
+     - class is a template/blueprint for creating objects
+     - it is a combination of constructor function and prototype
+     - it is a combination of properties and functions
+     creation of class:
+                       1. class declaration
+                       2. class expression
+    syntax:
+         class ClassName{  // class declaration
+           constructor(){
+
+           }
+         }
+         let ClassName = class{  // class expression
+
+         }
+
 
 
 
