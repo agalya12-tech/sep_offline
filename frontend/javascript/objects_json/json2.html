@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     
+     let obj1={
+        "name":"vishal",
+        "age":22
+     }
+
+     let obj2={
+        "phone":1234567,
+        "city":"pune",
+        "name":"Raj"
+     }
+     console.log(obj1);
+     console.log(obj2);
+     
+    //  let merge=Object.assign(obj1,obj2);
+    let merge={...obj1,...obj2}; //spread operator
+     console.log(merge);
+     
+    //  obj1.state="maharashtra";
+    //  obj1["state"]="maharashtra";
+    Object.assign(obj1,{state:"maharashtra"});
+
+     delete obj1.state;
+     console.log(obj1);
+
+//   converting javascript object into json object
+      let json=JSON.stringify(obj1);
+     console.log(json);
+
+//  converting json object into javascript object
+     let javascriptObj=JSON.parse(json);
+     console.log(javascriptObj);
+     
+//  destructing 
+      let {userName , userAge}=javascriptObj;
+       userName=javascriptObj.name;
+       userAge=javascriptObj.age;
+       console.log(userName);
+       console.log(userAge);
+       
+
+
+
+
+    </script>
+</body>
+</html>
