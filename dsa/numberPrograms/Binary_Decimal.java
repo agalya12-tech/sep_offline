@@ -5,7 +5,7 @@ public class Binary_Decimal {
         
         for(int i=0;num>0;i++){
             int rem=num%10;
-           decimal+=rem*Math.pow(8,i);
+           decimal+=rem*Math.pow(2,i);
             num/=10;
         }
         
