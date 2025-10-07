@@ -1474,9 +1474,123 @@ prototype chaining:
 
          }
 
+============================================================================================= 
+
+JSON :(JavaScript Object Notation)
+======
+      - json is a plain text format for storing and transmitting data
+      - json is a lightweight data interchange format
+Rules:
+------
+     1.json object is a collection of key-value pairs
+     2.key and value are separated by a colon(:)
+     3.key and value pairs are separated by a comma(,)
+     4.key must be a string
+     5.value can be a string, number, boolean, null, object, array
+     6.json array is an array of json objects which is enclosed by square brackets([])
+     7.nested json object is an object that is a property of another json object
 
 
+JSON Objects:
+++++++++++++++
+        syntax:  {
+                   "key1":value1,
+                   "key2":value2,
+                   ......
+                   "keyN":valueN
+                 }
 
-            
+    ------------------------------------------------------------------------------
+  feature             JavaScript Object                           JSON Object
+    ------------------------------------------------------------------------------
+  keys                key can be string or                  keys must be string
+                      can indicates directly
 
+  values            value can be any data type            value can be any data type
+
+    ------------------------------------------------------------------------------
+ 
+JSON Arrays: collection of similar values/json objects
++++++++++++
+  syntax: [10,20,30,40]
+          ["apple","banana","mango","orange"]
+          [{"name":"john","age":30},{"name":"jane","age":25}]
+
+
+Object Methods:
+++++++++++++++
+      1.Object.keys(): used to get the keys of the object
+      2.Object.values(): used to get the values of the object
+      3.Object.entries(): used to get the key-value pairs of the object     
+
+  Note: it returns array of data .   
+
+Merge JSON Objects:
+++++++++++++++++++
+          - merging or concatenating two json objects
+          - it is used to add the properties of one object to another object
+          syntax: obj1 = {...obj1,...obj2} --->(...) is called spread operator
+                       or
+                  obj1 = Object.assign(obj1,obj2)
+Note: -if keys are same then the value of the second object will be
+      assigned to the first object
+      -keys must be unique
+      
+Access JSON Properties:
+++++++++++++++++++++++
+          - with dot notation and bracket notation
+Add JSON Properties:
+++++++++++++++++++
+          - can add new properties to a json object with dot notation and bracket notation
+          - Object.assign() method can be used to add new properties to a json object
+Delete JSON Properties:
++++++++++++++++++++++
+          - can delete properties from a json object with dot notation and bracket notation
+          - using delete keyword
+      syntax: delete objName.keyName
+Iterate JSON Objects:
+++++++++++++++++++++
+         - for iterating , we can use forEach loop , for of loop , for in loop 
+           and basics loops.
+
+forEach loop:
+--------------
+       - it is a function that is used to iterate over the elements of an array
+       - it takes a callback function as an argument
+      syntax:
+                arrName.forEach(functionName);
+                 
+for of loop:
+------------
+       - it is used to iterate over the elements of an array
+       - it returns the value of the elements of the array
+      syntax:
+                for(let value of arrName){
+                  // block of code
+                }                
+for in loop:
+------------
+       - it is used to iterate over the properties of an object
+       - it returns the key of the properties of the object
+      syntax:
+                for(let key in objName){
+                  // block of code
+                }                
+  
+
+Destructuring JSON Objects:
+++++++++++++++++++++++++++
+       - it is a way to extract the properties of an object and assign them 
+         to variables
+       - it is used to assign the properties of an object to variables
+      syntax:
+                let {key1,key2,key3} = objName;
+
+  Destructuring with default values:
+  -----------------------------------
+                let {key1,key2,key3="value3"} = objName;
+  Destructuring with new variable names:
+  -------------------------------------
+                let {key1:keyName1,key2:keyName2,key3:keyName3} = objName;
+  ==================================================================================================================
             
