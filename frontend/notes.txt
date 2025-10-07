@@ -1509,7 +1509,21 @@ JSON Objects:
   values            value can be any data type            value can be any data type
 
     ------------------------------------------------------------------------------
- 
+ Json websites:
+      
+
+         1. https://jsonexamples.com/
+
+         2. https://dummyjson.com/
+
+         3. https://jsonplaceholder.typicode.com/
+
+         4. https://jsonformatter.org/
+
+         5. https://fakestoreapi.com/
+
+
+
 JSON Arrays: collection of similar values/json objects
 +++++++++++
   syntax: [10,20,30,40]

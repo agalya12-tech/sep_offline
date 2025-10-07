@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function fetchData() {
+        fetch("https://jsonexamples.com/products") //promise - response
+          .then((result) => {
+            return result.json();
+          })
+          .then((body) => {
+            let arr = body.products;
+            for (let i = 0; i < arr.length; i++) {
+              console.log(arr[i].title);
+            }
+          })
+
+          .catch();
+      }
+      fetchData();
+    </script>
+  </body>
+</html>
