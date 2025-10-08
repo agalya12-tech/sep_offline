@@ -69,13 +69,24 @@ let arr3=[10,20,31,40,50];
         );
         console.log(every);//false 
         let some=arr3.some(
-             (element,index,array)=>{
+             (element)=>{
             return element%2==0
             }
         );
         console.log(some);//true
         
         
-
+        let find= arr3.find(
+            (element)=>{
+              return element%2==0;
+            }
+        )
+        console.log(find);//10
+        let findLastIndex= arr3.findLastIndex(
+            (element)=>{
+              return element%2==0;
+            }
+        )
+        console.log(findLastIndex);//4
 
 
