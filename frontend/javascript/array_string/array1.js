@@ -39,3 +39,26 @@ document.write("<br><br>");
 for (const element of arr) {
  document.write(element+"<br>");
 }
+
+
+
+
+
+//creating an array
+let arr4=[10,20,30]; //array literal
+console.log(arr4);
+
+let arr5=new Array(10,20,30,40,50);// array constructor
+console.log(arr5);//[10, 20, 30, 40, 50]
+
+let arr6=new Array(10); // considering it as a size
+console.log(arr6);//[10 empty]
+
+let arr7 =Array.from(arr5);
+console.log(arr7);//[10, 20, 30, 40, 50]
+
+let arr8=Array.of(10); // considering it as an element
+console.log(arr8);//[10]
+
+
+
