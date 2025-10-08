@@ -59,6 +59,6 @@ console.log(arr7);//[10, 20, 30, 40, 50]
 
 let arr8=Array.of(10); // considering it as an element
 console.log(arr8);//[10]
-
+       
 
 
