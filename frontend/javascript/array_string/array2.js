@@ -33,3 +33,49 @@ fruits.shift();//remove at the start
 console.log(fruits);//['apple', 'mango', 'orange']
 fruits.unshift('banana');//add at the start
 console.log(fruits);//['banana', 'apple', 'mango', 'orange']
+
+
+
+
+
+
+let colors=["red","green","blue",'yellow','black','white'];
+console.log(colors.reverse());
+console.log(colors.sort());
+
+console.log(colors.includes('red'));//true
+console.log(colors.includes('orange'));//false
+
+console.log(colors.indexOf('red'));//3
+console.log(colors.indexOf('orange'));//-1
+
+if("aeiou".indexOf('a')!=-1){
+    console.log("vowel");
+}else{
+    console.log("consonant");
+}
+
+
+let str="hello";
+console.log(str.indexOf('l'));//2
+console.log(str.lastIndexOf('l'));//3
+
+
+let arr3=[10,20,31,40,50];
+       let every= arr3.every(
+            (element,index,array)=>{
+            return element%2==0
+            }
+        );
+        console.log(every);//false 
+        let some=arr3.some(
+             (element,index,array)=>{
+            return element%2==0
+            }
+        );
+        console.log(some);//true
+        
+        
+
+
+
