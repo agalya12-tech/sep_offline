@@ -1607,4 +1607,417 @@ Destructuring JSON Objects:
   -------------------------------------
                 let {key1:keyName1,key2:keyName2,key3:keyName3} = objName;
   ==================================================================================================================
-            
+  
+    =================================================================================================================
+  Arrays:
+  ++++++++
+      - arrays are a collection of values
+      - arrays are used to store multiple values of different data types in a single variable
+      - arrays are non primitive data type
+      - arrays are denoted by square brackets([])
+      - arrays are mutable(can be changed)
+      - arrays are indexed (start from 0)
+
+creation of array:
+=================
+          1.array literal
+          2.array constructor
+          3.array.from()
+          4.array.of()
+
+
+1.array literal:
+----------------
+          - it is a way to create an array 
+          syntax:
+                  var arrayName = [value1,value2,value3];
+2.array constructor:
+-------------------
+          - by using new keyword and constructor function
+          syntax:
+                  var arrayName = new Array(value1,value2,value3);
+                               or
+                  var arrayName= new Array();// creating empty array
+                               or
+                  var arrayName = Array(7);// creating array with 7 empty elements
+
+3.Array.from():
+----------------
+          - it is a function that is used to create an array from another array
+          - by using Array.from() method 
+          syntax:
+                  var arrayName = Array.from(arrayName1);
+
+4.Array.of():
+----------------
+           - it is a function that is used to create an array from multiple values
+           - by using Array.of() method 
+           syntax:
+                   var arrayName = Array.of(value1,value2,value3);
+                        or 
+                   var arrayName = Array.of(10);//[10]-- it will consider it as a
+                    value and not as an size of array
+
+
+Iterating Arrays:
+=================
+              1.while or do while loop
+              2.for loop 
+              3.for of loop : iterates over the elements of an array
+              4.for in loop : iterates over the index position of an array
+              5.forEach method
+              6.map method
+              7.filter method
+map();
+------
+    -map is a function that is used to iterate over the elements of an array
+    -it returns a new array with the same length as the original array
+    -it takes a callback function as an argument
+    syntax:
+      array.map(
+        (element,index,array)=>{
+          //code 
+        }
+      );
+
+  note: index and array are optional parameters
+filter():
+---------
+    -filter is a function that is used to iterate over the elements of an array
+    -it predicates the elements of an array based on a condition
+    -it returns a new array , there is a possibility of changing the length of the array
+    -it takes a callback function as an argument
+    syntax:
+      array.filter(
+        (element,index,array)=>{
+          //code 
+        }
+      );
+
+  note: index and array are optional parameters
+
+  reduce():
+-----------
+    -reduce is a function that is used to iterate over the elements of an array
+    -it reduces the elements of an array to a single value
+    -it returns a single value
+    -it takes a callback function as an argument
+    syntax:
+      array.reduce(
+      
+        (accumulator,current_element,index,array)=>{
+          //code 
+        },initialValue
+      );
+    
+note: initialValue , index and array are optional parameter
+
+---------------------------------------------------------------------------
+             map()                  filter()                            reduce()
+----------------------------------------------------------------------------
+use       to process             to filter based on a condition       to reduce the elements of an 
+                                                                      array to a single value
+
+returns   a new array            a new array                          a single value
+
+return    same length            length may change                    single value
+size                                                                  size=1
+----------------------------------------------------------------------------
+
+pop(): 
+-------
+    -pop is a function that is used to remove the last element of an array
+    -it returns the removed element
+    syntax:
+      array.pop();
+
+shift():
+-------
+    -shift is a function that is used to remove the first element of an array
+    -it returns the removed element
+    syntax:
+      array.shift();
+
+Note: pop() and shift() will modify the original array
+
+push():
+-------
+    -push is a function that is used to add an element to the end of an array
+    -it returns the length of the array
+    syntax:
+      array.push(value1,value2,value3);
+
+unshift():
+-------
+    -unshift is a function that is used to add an element to the beginning of an array
+    -it returns the length of the array
+    syntax:
+      array.unshift(value1,value2,value3);
+  
+Note : unshift() and push() will modify the original array
+
+every():
+-------
+        - it is a function that is used to iterate over the elements of an array
+        - it returns true if all the elements of the array satisfy the condition
+        - it takes a callback function as an argument
+        syntax:
+          array.every(
+            (element,index,array)=>{
+              //code 
+            }
+          );
+some():
+-------
+      - it is a function that is used to iterate over the elements of an array
+      - it returns true if any of the elements of the array satisfy the condition
+      - it takes a callback function as an argument
+      syntax:
+        array.some(
+          (element,index,array)=>{
+            //code 
+          }
+        );
+
+includes():
+----------
+        - it is a function that is used to check if an element is present in an array
+        - it returns true if the element is present in the array
+        - it takes an element as an argument
+        syntax:
+          array.includes(element);
+Note: if we want to check if an element is present in an array from a certain index then we can use includes()
+       syntax: 
+         array.includes(element,index);
+
+find():
+-------
+       - it is a function that is used to iterate over the elements of an array
+       - it returns the first element of the array that satisfies the condition
+       - it takes a callback function as an argument
+       syntax:
+         array.find(
+           (element,index,array)=>{
+             //code 
+           }
+         );
+
+
+Note : find() will return undefined if the element is not present in the array
+
+findIndex():
+------------
+      - it is a function that is used to iterate over the elements of an array
+      - it returns the index of the first element of the array that satisfies the condition
+      - it takes a callback function as an argument
+      syntax:
+        array.findIndex(
+          (element,index,array)=>{
+            //code 
+          }
+      )
+
+findLastIndex():
+---------------
+        - it is a function that is used to iterate over the elements of an array
+        - it returns the index of the last element of the array that satisfies the condition
+        - it takes a callback function as an argument
+        syntax:
+          array.findLastIndex(
+            (element,index,array)=>{
+              //code 
+            }
+          )
+
+
+Note:  findIndex() and findLastIndex() will return -1 if the element is not present in the array
+
+
+slice():
+--------
+       - it is a function that is used to extract a part of an array
+       - it returns a new array
+       - it takes a start index and an end index as arguments
+       syntax:
+         array.slice(startIndex,endIndex);
+
+Note: startIndex is including and endIndex is excluding,
+     if we are not specifying end index then it will return all the elements 
+     from startIndex to the end of the array
+
+concat():
+--------
+       - it is a function that is used to concatenate two or more arrays
+       - it returns a new array
+       - it takes one or more arrays as arguments
+       syntax:      
+         array.concat(array1,array2,array3);
+
+splice():
+--------
+      - it is a function that is used to add or remove elements from an array
+      - it returns a new array
+      - it takes a start index and an end index as arguments
+      syntax:
+        array.splice(startIndex,endIndex,value1,value2,value3);
+
+note:- startIndex and endIndex are including
+     - values are optional , if we want to add elements to the array then we can use values 
+     - array.splice(startIndex);- from startIndex to the end of the array elements will remove
+    
+
+
+reverse():
+--------
+      - it is a function that is used to reverse the elements of an array
+      - it returns a new array
+      syntax:
+        array.reverse();
+
+sort():
+------
+      - it is a function that is used to sort the elements of an array
+      - it returns a new array
+      - it takes a callback function as an argument
+      syntax:
+        array.sort(
+          (element1,element2)=>{
+            //code 
+          }
+      )
+
+join():
+------
+    - it is a function that is used to join the elements of an array
+    - it returns a string
+    - it takes a separator as an argument
+    syntax:
+      array.join(separator);
+
+String methods:
+++++++++++++++++
+
+charAt(): 
+--------
+      - it is a function that is used to get the character at a specific index of a string
+      - it returns the character at the specified index
+      - it takes an index as an argument
+      syntax:
+        string.charAt(index);
+
+note: if character is not present in the string then it will return an
+       empty string/whitespace
+
+match():
+----------
+       - it is a function that is used to match a regular expression against a string
+       - it returns an array of matches
+       - it takes a regular expression as an argument
+       syntax:
+         string.match(regularExpression);
+
+padEnd():
+--------
+     - it is a function that is used to add padding to the end of a string
+     - it returns a new string
+     - it takes a length and a character as arguments
+     syntax:
+       string.padEnd(length,character);
+
+padStart():
+--------
+     - it is a function that is used to add padding to the start of a string
+     - it returns a new string
+     - it takes a length and a character as arguments
+     syntax:
+       string.padStart(length,character);
+
+repeat():
+--------
+     - it is a function that is used to repeat a string
+     - it returns a new string
+     - it takes a number as an argument
+     syntax:
+       string.repeat(number);
+
+replace():
+----------
+      - it is a function that is used to replace a substring in a string
+      - it returns a new string
+      - it takes a regular expression and a replacement string as arguments
+      syntax:
+        string.replace(regularExpression,replacementString);
+
+
+
+split():
+--------
+       - it is a function that is used to split a string into an array
+       - it returns a new array
+       - it takes a separator as an argument
+       syntax:
+         string.split(separator);
+
+startsWith():
+------------
+      - it is a function that is used to check if a string starts with a substring
+      - it returns true if the string starts with the substring
+      - it takes a substring as an argument
+      syntax:
+        string.startsWith(substring);
+
+endsWith():
+-----------
+       - it is a function that is used to check if a string ends with a substring
+       - it returns true if the string ends with the substring
+       - it takes a substring as an argument
+       syntax:
+         string.endsWith(substring);
+
+toLowerCase():
+--------------
+       - it is a function that is used to convert a string to lowercase
+
+toUpperCase():
+--------------
+        - it is a function that is used to convert a string to uppercase
+trim():
+------
+        - it is a function that is used to remove whitespace from the start and end of a string
+trimStart():
+-----------
+        - it is a function that is used to remove whitespace from the start of a string
+
+trimEnd():
+----------
+       - it is a function that is used to remove whitespace from the end of a string
+
+valueOf():
+----------
+       - it is a function that is used to convert a string to a primitive value
+       - it returns the string
+       syntax:
+         string.valueOf();
+
+indexOf():
+----------
+       - it is a function that is used to get the index of a substring in a string
+       - it returns the index of the first occurrence of the substring
+       - it takes a substring as an argument
+       syntax:
+         string.indexOf(substring);
+lastIndexOf():
+--------------
+        - it is a function that is used to get the index of the last occurrence of a substring in a string
+        - it returns the index of the last occurrence of the substring
+        - it takes a substring as an argument
+        syntax:
+          string.lastIndexOf(substring);
+
+substring():
+------------
+        - it is a function that is used to get a substring from a string
+        - it returns a new string
+        - it takes a start index and an end index as arguments
+        syntax:
+          string.substring(startIndex,endIndex);
