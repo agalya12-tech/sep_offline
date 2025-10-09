@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let input = "Hello Welcome to Javascript programming session";
+      // Output:HellO WelcomE TO JavascripT ProgramminG SessioN;
+
+      let arr = input.split(" ");
+      let output = "";
+      for (let i = 0; i < arr.length; i++) {
+        let str = arr[i];
+        let first = str.charAt(0).toUpperCase();
+        let last = str.charAt(str.length - 1).toUpperCase();
+        let middle = str.slice(1, str.length - 1);
+        output += first + middle + last + " ";
+      }
+      console.log(output);
+    </script>
+  </body>
+</html>
