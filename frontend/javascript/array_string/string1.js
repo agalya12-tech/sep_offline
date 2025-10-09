@@ -86,3 +86,59 @@ console.log(arr4);
 console.log(arr2.slice(1,4));//[2,3,4]
 
 
+let arr5=[101,102,103,104,105];
+console.log("original",arr5); //[101,102,103,104,105]
+
+let copied=Array.from(arr5);
+console.log("copied",copied);//[101,102,103,104,105]
+
+let res4=copied.splice(0,3,'T',"T","T");
+console.log(res4);//[101,102,103]
+console.log(copied);//['T', 'T', 'T', 104,105]
+
+
+console.log([10,20,30,40].splice(0,2));//[10,20]
+console.log([10,20,30,40].splice(0,0));//[0]
+
+
+console.log(['A','B','C'].join(":"));
+
+
+
+
+
+
+
+
+
+
+
+let input=['orange','apple','banana','mango','grapes'];
+// let result=input.slice(0,3);
+// console.log(result);['orange', 'apple', 'banana']
+// console.log(input);['orange', 'apple', 'banana', 'mango', 'grapes']
+
+
+// let result=input.splice(0,3);
+// console.log(result);['orange', 'apple', 'banana']
+// console.log(input);['mango', 'grapes']
+
+// for replacing the last element
+
+// input.pop();// removes the last element
+// input.push('kiwi');// add kiwi at last
+// console.log(input);
+
+// input[input.length-1]='kiwi'; // replacing the last element
+// console.log(input);
+
+// input.splice(input.length-1,           1,                        'kiwi'); 
+//           starting index   number of elements to be removed   element to be added
+// console.log(input);
+
+//replacing an element in 2nd index position
+// input[2]='kiwi';
+let removed=input.splice(2,1,'kiwi');
+console.log(input);//['orange', 'apple', 'kiwi', 'mango', 'grapes']
+console.log(removed);//['banana']
+
