@@ -2021,3 +2021,100 @@ substring():
         - it takes a start index and an end index as arguments
         syntax:
           string.substring(startIndex,endIndex);
+
+================================================================================================================================================
+BOM(Browser Object Model):
++++++++++++++++++++++++
+    - it is a global object that is used to access the properties
+       and methods of the browser
+    - like window,screen,navigator,history,location, document etc..
+    - it is a read-only and predefined object
+         
+DOM(Document Object Model):
++++++++++++++++++++++++
+     - it is a global object that is used to access the properties
+       and methods of the document
+     - helps to add and remove elements from the document,
+       provides css styling to elements and functionalities to elements
+     - it is a read-only and predefined object
+  
+Note : to access the DOM elements we need to use the document object
+       to access the BOM elements we need to use the window object
+
+use of document object:
+-----------------------
+        1.Element Creation , Manipulation and Accessing
+        2.Css styling
+        3.Event Handling
+
+Element Accessing:
+===================
+          - can access elements by using the document object
+        1.getElementById(): used to access the element by id
+                          : returns the first element with the specified id
+        2.getElementsByClassName(): used to access the element by class
+                                  : returns an array of all the elements with the specified class
+                                    in the format of HtmlCollection
+        3.getElementsByTagName():used to access the element by tag name
+                                : returns an array of all the elements with the specified tag name
+                                  in the format of HtmlCollection
+
+        4.querySelector(): used to access the first element that matches the specified selector
+                         : returns the first element that matches the specified selector
+        5.querySelectorAll() : used to access all the elements that match the specified selector
+                             : returns an array of all the elements that match the specified selector
+                               in the format of NodeList
+
+Attribute Manipulation:
+=======================
+    1.setAttribute(): used to add an attribute to an element
+              syntax:
+                elementName.setAttribute(attributeName,attributeValue);
+    2.removeAttribute(): used to remove an attribute from an element
+              syntax:
+                elementName.removeAttribute(attributeName);
+    3.getAttribute(): used to get the value of an attribute of an element
+              syntax:
+                elementName.getAttribute(attributeName);
+    4.hasAttribute(): used to check if an element has an attribute
+                    : returns true if the element has the attribute and false otherwise
+              syntax:
+                elementName.hasAttribute(attributeName);
+
+Element Manipulation:
+=================
+            1.createElement(): used to create an element
+                      syntax:
+                        document.createElement(elementName);
+            2.adding the created element to the document
+            types:
+                1.append() : used to add the element to the end of the document
+                  syntax:  document.body.append(elementName);
+                2.prepend() : used to add the element to the start of the document
+                  syntax: document.body.prepend(elementName);
+                3.insertBefore() : used to add the element before the specified element
+                  syntax: document.body.insertBefore(elementName,elementName);
+                4.replaceChild() : used to replace the specified element with the new element
+                  syntax: document.body.replaceChild(elementName,elementName);
+                5.removeChild() : used to remove the specified element from the document
+                  syntax: document.body.removeChild(elementName);
+
+CSS styling:
+=============
+    1.style: used to add css styling to the element
+           : acts like an object , and work like inline css
+              syntax:
+                elementName.style.propertyName=propertyValue;
+            :getComputedStyle(): used to get the computed style of the element    
+    2.classList(): used to add css classes to the element
+                  syntax:
+                        - used to add css classes to the element
+                    elementName.classList.add(className);
+                         - used to remove css classes from the element
+                    elementName.classList.remove(className);
+                         - used to toggle css classes to the element(add or remove)
+                    elementName.classList.toggle(className);
+                         - used to check if the element has the css class
+                    elementName.classList.contains(className);
+
+
