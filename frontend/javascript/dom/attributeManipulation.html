@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" />
+
+    <script>
+      let input = document.querySelector("input");
+      input.setAttribute("placeholder", "enter your name");
+      input.setAttribute("name", "name"); //add an attribute
+      input.setAttribute("value", "Raj");
+      console.log(input.hasAttribute("name"), "before");//true
+
+      input.removeAttribute("name");//remove an attribute
+
+      console.log(input.hasAttribute("name"), "after");//false
+      console.log(input.getAttribute("type"));// get an attribute
+
+    </script>
+  </body>
+</html>

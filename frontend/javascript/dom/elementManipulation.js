@@ -18,3 +18,10 @@ parent.appendChild(child1); //add at end
 let child2 = document.createElement("div");
 child2.innerHTML = "child2";
 parent.prepend(child2); //add at starting position
+
+let child=document.getElementById('child');
+parent.removeChild(child);// removing child from parent
+
+let before=document.createElement('div');
+before.innerHTML='before';
+parent.insertBefore(before,child1);// adding before child1
