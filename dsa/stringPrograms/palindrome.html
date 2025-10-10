@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let input = "bob";
+      let reverse = "";
+      for (let i = 0; i < input.length; i++) {
+        let char = input.charAt(i);
+        reverse = char + reverse;
+      }
+      if (input == reverse) {
+        console.log("palindrome");
+      } else {
+        console.log("not a palindrome");
+      }
+    </script>
+  </body>
+</html>
