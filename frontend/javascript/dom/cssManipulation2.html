@@ -20,8 +20,23 @@
   </head> 
   <body>
     <div id="add"  onclick="addStyle()">Click Me To Add Style</div>
+    <div id="remove"  class="highlight" onclick="removeStyle()">Click Me To Delete Style</div>
+    <div id="toggle"   onclick="toggleStyle()">Click Me To Toggle Style</div>
 
     <script>
+    function toggleStyle() {
+        let toggle=document.getElementById('toggle');
+        toggle.classList.toggle('highlight');
+      }
+
+
+    function removeStyle() {
+        let remove=document.getElementById('remove');
+        remove.classList.remove('highlight');
+      }
+
+
+
       function addStyle() {
         let add=document.getElementById('add');
         add.classList.add('highlight');
