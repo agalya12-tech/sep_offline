@@ -13,7 +13,6 @@
         color: white;
         font-size: 20px;;
         width: 400px;
-        height: 200px;
       }
 
     </style>
@@ -27,6 +26,8 @@
     function toggleStyle() {
         let toggle=document.getElementById('toggle');
         toggle.classList.toggle('highlight');
+        alert(toggle.classList.contains('highlight') );
+
       }
 
 

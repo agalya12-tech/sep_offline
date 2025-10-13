@@ -2136,6 +2136,7 @@ example of events:
 
 Event creation:
 -----------------
+     
       - events can be created by using the document object
         syntax: document.createElement(eventName);
       - events can be given in elements by using the addEventListener() method
