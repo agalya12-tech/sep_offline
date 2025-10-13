@@ -6,6 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    
+     <button onclick="alert('hello')">Click ME</button>
+     <button onclick="m1()">Click Me </button>
+     <button id="btn">Click ME</button>
+     <script>
+
+        function m1(){
+            alert('hello');
+        }
+      let btn= document.getElementById('btn');
+      btn.addEventListener('click',()=>{
+        alert('hello from addEventListener');
+      })
+     </script>
 </body>
 </html>
