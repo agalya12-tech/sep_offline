@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+
+    <style>
+
+      .highlight{
+        background-color: black;
+        color: white;
+        font-size: 20px;;
+        width: 400px;
+        height: 200px;
+      }
+
+    </style>
+  </head> 
+  <body>
+    <div id="add"  onclick="addStyle()">Click Me To Add Style</div>
+
+    <script>
+      function addStyle() {
+        let add=document.getElementById('add');
+        add.classList.add('highlight');
+      }
+    </script>
+  </body>
+</html>
