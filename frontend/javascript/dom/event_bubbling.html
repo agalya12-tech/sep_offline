@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grand{
+            height: 400px;
+            width: 400px;
+            background-color: rgb(214, 111, 111);
+        }
+        .father{
+            height: 300px;
+            width: 300px;
+            background-color: rgb(16, 99, 126);
+        }
+        .son{
+            height: 200px;
+            width: 200px;
+            background-color: rgb(46, 12, 157);
+        }
+    </style>
+</head>
+<body>
+     <div class="grand">
+        <div class="father">
+            <div class="son"></div>
+        </div>
+     </div>
+
+
+    <script>
+
+        let grand=document.querySelector('.grand');
+        let father=document.querySelector('.father');
+        let son=document.querySelector('.son');
+        
+
+        // event propagation  from parent to child   event capturing
+        grand.addEventListener('click',()=>{
+            console.log('grand');
+        },true)
+        father.addEventListener('click',()=>{
+            console.log('father');
+        },true)
+        son.addEventListener('click',()=>{
+            console.log('son');
+        },true)
+
+
+
+
+
+
+        // stop event propagation
+        // grand.addEventListener('click',()=>{
+        //     console.log('grand');
+        // })
+        // father.addEventListener('click',()=>{
+        //     console.log('father');
+        // })
+        // son.addEventListener('click',(event)=>{
+        //     console.log('son');
+        //     event.stopPropagation();
+        // })
+
+
+        // event propagation  from child to parent -- son--->father-->grand  event bubbling
+        // grand.addEventListener('click',()=>{
+        //     console.log('grand');
+        // })
+        // father.addEventListener('click',()=>{
+        //     console.log('father');
+        // })
+        // son.addEventListener('click',()=>{
+        //     console.log('son');
+        // })
+    </script>
+
+
+</body>
+</html>
