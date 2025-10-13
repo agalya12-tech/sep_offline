@@ -2081,6 +2081,8 @@ Attribute Manipulation:
               syntax:
                 elementName.hasAttribute(attributeName);
 
+
+                
 Element Manipulation:
 =================
             1.createElement(): used to create an element
@@ -2118,3 +2120,71 @@ CSS styling:
                     elementName.classList.contains(className);
 
 
+
+function and event:
+===================
+    
+   function : it is a block of code that is used to perform a task
+   event : it is a trigger that is used to perform a task
+
+example of events:
+-------------------
+              click event
+              keypress event
+              mouseover event
+              mouseout event etc ,.
+
+Event creation:
+-----------------
+      - events can be created by using the document object
+        syntax: document.createElement(eventName);
+      - events can be given in elements by using the addEventListener() method
+        syntax: elementName.addEventListener(eventName, callBackFunction);
+      - events can be added to the element 
+        syntax <button eventName="">Click Me</button>
+
+Event Manipulation/Handling:
+=====================
+   1.addEventListener(): used to add an event listener to the element
+              syntax:
+                elementName.addEventListener(eventName, callBackFunction);
+   2.removeEventListener(): used to remove an event listener from the element
+              syntax:
+                elementName.removeEventListener(eventName, callBackFunction);
+   3.dispatchEvent(): used to dispatch an event on the element
+                     : means trigger the event when the event listener is added
+              syntax:
+                elementName.dispatchEvent(new Event(eventName));
+
+
+
+Event Bubbling:
+--------------
+      - it is a concept that is used to handle events in the DOM
+      - it helps to propagate the event from the child to the parent
+      - it is a default behavior
+ex: 
+    <div>
+        <p>Click Me</p>
+    </div>
+     
+     p---->div---->body : propagating the event from child to parent
+    
+Event Capturing:
+----------------
+        - it is a concept that is used to handle events in the DOM
+        - it helps to propagate the event from the parent to the child
+ex: 
+    <div>
+        <p>Click Me</p>
+    </div>
+     
+     body---->div---->p : propagating the event from parent to child
+
+Note : to achieve event bubbling we need to add event listener to the parent 
+   element and event capturing we need to add event listener to the child element
+    : need to add true as the second argument to the addEventListener() method
+    syntax: elementName.addEventListener(eventName, callBackFunction,true);
+
+-->to stop propagation of the event , we need to use stopPropagation() method
+    syntax: event.stopPropagation();
