@@ -2189,3 +2189,77 @@ Note : to achieve event bubbling we need to add event listener to the parent
 
 -->to stop propagation of the event , we need to use stopPropagation() method
     syntax: event.stopPropagation();
+
+==================================================================================================================
+
+Closures:
+==============
+    - it is a function that is used to create a new function, inside the parent function
+    - child function can access the variables of the parent function, because of lexical scoping
+    - this is used to create private variables and methods
+
+  syntax:
+  ------
+    function parent(){
+      let variableName = "value";
+     return   function child(){
+         // block of code can use variableName
+      }
+    }
+
+    let childFunction = parent();
+    childFunction();
+
+  note: outer function will return inner function ,
+     inner function will have access to the variables of the outer function
+    
+
+
+this keyword:
+==============
+      - it is a keyword refers to the current object
+      - if there is not object , then it refers to the window object
+      - this is used to access the current object values and methods
+      - this keyword can be used inside the object methods , functions and callbacks etc.,
+
+
+call() :
+------
+      - it is a method that is used to call the function
+      - it is used to call the function with the this keyword
+      - it takes the arguments as a values
+  
+apply():
+------
+      - it is a method that is used to call the function
+      - it is used to call the function with the this keyword
+      - it takes the arguments as an array
+bind():
+------
+      - it won't call the function immediately , it will return a new function
+      - it is used to call the function with the this keyword
+      - it takes the arguments as a values
+      - it returns a new function that is bound to the this keyword
+------------------------------------------------------------------
+           call()            apply()           bind()
+---------------------------------------------------------------------
+args       value             array             value
+this       current object    current object    current object
+           (invoked)         (invoked)         (return function)
+--------------------------------------------------------------------------
+=====================================================================================================
+=====================================================================================================
+
+JQuery:
+=======
+      - it is a library that is used to simplify the DOM manipulation
+      - it is used to select elements from the DOM
+      - it is used to add event listeners,css styling etc to the elements 
+
+Events are provided by jQuery 
+           -it will apply on the selected elements
+           syntax: 
+                $(selector).eventName(function(){
+                    // block of code
+                });
+
