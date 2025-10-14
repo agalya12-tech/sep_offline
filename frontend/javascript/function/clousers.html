@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // function m1(){
+        //     let a=10;
+        //     console.log(a);
+        // }
+        // function m2(){
+        //     console.log(a);   
+        // }
+        // m2();
+
+        function father(){
+            let property='in banglore';
+          return  function son(){
+                console.log(property, ' in son');
+            }
+        }
+        let child=father();
+        child();
+
+    </script>
+</body>
+</html>
