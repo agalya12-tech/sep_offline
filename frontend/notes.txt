@@ -2194,8 +2194,10 @@ Note : to achieve event bubbling we need to add event listener to the parent
 
 Closures:
 ==============
-    - it is a function that is used to create a new function, inside the parent function
-    - child function can access the variables of the parent function, because of lexical scoping
+    - it is a function that is used to create a new function, 
+       inside the parent function
+    - child function can access the variables of the parent function, 
+      because of lexical scoping
     - this is used to create private variables and methods
 
   syntax:
