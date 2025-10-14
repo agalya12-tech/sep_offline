@@ -12,16 +12,15 @@
     </style>
 </head> 
 <body>
-     <div></div> 
+     <div></div>  
      <script >
       let div=document.querySelector('div');
+      div.addEventListener('mouseover',mouseOperation);
 
-      div.addEventListener('mouseover',()=>{
-        div.innerHTML="mouseover event triggered";
-
-        div.removeEventListener('mouseover', mouseOverHandler);
-      })
-      
+      function mouseOperation(){
+      div.innerHTML="mouse over";
+      div.removeEventListener('mouseover',mouseOperation);
+      }
 
 
      </script>
