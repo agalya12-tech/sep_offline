@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>  
+      
+     function details(args1, args2){
+        console.log(args1, args2, `${this.name} to object session ` );
+     }
+
+     details('hi', 'hello'); 
+     let obj={
+        name:'Raj',
+        age: 24,
+     }
+     details.call(obj, 'hi', 'hello');
+     details.apply(obj, ['hi', 'hello']);
+     let newDetails=details.bind(obj, 'hi', 'hello');
+     newDetails();
+
+
+
+
+
+    //   console.log(this); // window object
+
+    //   let obj1 = {
+    //     name: "sachin",
+    //     age: 24,
+    //     getDetails: function () {
+    //       console.log(this); // obj1
+    //       console.log(this.name + " " + this.age);
+    //     },
+    //   };
+    //   obj1.getDetails();
+    </script>
+  </body>
+</html>
