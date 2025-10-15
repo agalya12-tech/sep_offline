@@ -1,7 +1,7 @@
 
 // function component
 
-function FunctionalComponent() {
+const FunctionalComponent= ()=> {
  return <h1>This is a Functional Component</h1>;
 }
 
