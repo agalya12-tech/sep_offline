@@ -45,13 +45,14 @@ Task2:
 
 Task3:
 
- 🌦️ 1. Weather APIs
+1. Weather APIs
+-------------------
 
 API Links:
 
-https://openweathermap.org/api
+        https://openweathermap.org/api
 
-https://www.weatherapi.com/
+        https://www.weatherapi.com/
 
 Project Ideas:
 
@@ -59,13 +60,13 @@ Weather dashboard (search city → show temperature, humidity, and forecast)
 
 Weather-based background app (changes theme by weather condition)
 
-📰 2. News & Information APIs
-
+2. News & Information APIs
+-------------------------
 API Links:
 
-https://newsapi.org/
+        https://newsapi.org/
 
-https://open-platform.theguardian.com/documentation/
+        https://open-platform.theguardian.com/documentation/
 
 Project Ideas:
 
@@ -73,17 +74,17 @@ News feed app by topic (sports, tech, business)
 
 Keyword-based news search app
 
-🐱 3. Fun / Random APIs
-
+3. Fun / Random APIs
+--------------------
 API Links:
 
-https://dog.ceo/dog-api/
+        https://dog.ceo/dog-api/
 
-https://catfact.ninja/
+        https://catfact.ninja/
 
-https://v2.jokeapi.dev/
+        https://v2.jokeapi.dev/
 
-https://api.adviceslip.com/
+        https://api.adviceslip.com/
 
 Project Ideas:
 
@@ -93,13 +94,13 @@ Random joke/advice generator
 
 Random cat facts web app
 
-🎥 4. Movie & TV APIs
-
+4. Movie & TV APIs
+------------------
 API Links:
 
-https://www.omdbapi.com/
+        https://www.omdbapi.com/
 
-https://developer.themoviedb.org/
+        https://developer.themoviedb.org/
 
 Project Ideas:
 
@@ -109,13 +110,13 @@ Favorite movie watchlist
 
 Trending movies dashboard
 
-🧑‍🚀 5. Space & Science APIs
-
+5. Space & Science APIs
+-----------------------
 API Links:
 
-https://api.nasa.gov/
+        https://api.nasa.gov/
 
-https://github.com/r-spacex/SpaceX-API
+        https://github.com/r-spacex/SpaceX-API
 
 Project Ideas:
 
@@ -123,13 +124,13 @@ NASA picture of the day viewer
 
 SpaceX launch history timeline
 
-💰 6. Finance & Crypto APIs
-
+6. Finance & Crypto APIs
+------------------------
 API Links:
 
-https://www.coingecko.com/en/api
+        https://www.coingecko.com/en/api
 
-https://www.exchangerate-api.com/
+        https://www.exchangerate-api.com/
 
 Project Ideas:
 
@@ -137,13 +138,13 @@ Crypto price tracker
 
 Currency converter
 
-🎧 7. Music APIs
+7. Music APIs
 
 API Links:
 
-https://developer.spotify.com/documentation/web-api/
+        https://developer.spotify.com/documentation/web-api/
 
-https://developers.deezer.com/api
+        https://developers.deezer.com/api
 
 Project Ideas:
 
@@ -151,13 +152,13 @@ Music search and preview player
 
 Top artists by genre dashboard
 
-🏛️ 8. Open Data APIs
-
+8. Open Data APIs
+-----------------
 API Links:
 
-https://restcountries.com/
+        https://restcountries.com/
 
-https://github.com/public-apis/public-apis
+        https://github.com/public-apis/public-apis
 
 Project Ideas:
 
@@ -165,13 +166,13 @@ Country info finder (flag, population, capital)
 
 Compare two countries (area, GDP, population)
 
-🚗 9. Travel & Places APIs
-
+9. Travel & Places APIs
+-----------------------
 API Links:
 
-https://opentripmap.io/product
+        https://opentripmap.io/product
 
-https://developers.teleport.org/api/
+        https://developers.teleport.org/api/
 
 Project Ideas:
 
@@ -179,13 +180,13 @@ Tourist attraction explorer
 
 City cost of living comparison
 
-👤 10. User & Placeholder APIs (for CRUD Practice)
+10. User & Placeholder APIs (for CRUD Practice)
 
 API Links:
 
-https://jsonplaceholder.typicode.com/
+        https://jsonplaceholder.typicode.com/
 
-https://reqres.in/
+        https://reqres.in/
 
 Project Ideas:
 
