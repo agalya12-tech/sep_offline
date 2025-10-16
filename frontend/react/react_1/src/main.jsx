@@ -10,6 +10,7 @@ import FunctionalComponent from './components/Functional.jsx'
 import ClassComponent from './components/ClassComponent.jsx'
 import State from './hooks/State.jsx'
 import Parent from './props/Parent.jsx'
+import Container from './components/Container.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -17,7 +18,8 @@ createRoot(document.getElementById('root')).render(
     {/* <FunctionalComponent />
     <ClassComponent/> */}
     {/* <State /> */}
-    <Parent/>
+    {/* <Parent/> */}
+    <Container/>
   </StrictMode>,
 )
 

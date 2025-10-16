@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Child = ( props) => {
-    let data=props.key;
+    let data=props.d1;    
   return (
    <div>
 

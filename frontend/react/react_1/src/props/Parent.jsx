@@ -7,7 +7,7 @@ const Parent = () => {
     return (
         <>
             <div>Parent</div>
-            <Child key={data} />
+            <Child d1={data} />
         </>
     )
 }
