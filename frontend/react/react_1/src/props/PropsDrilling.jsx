@@ -6,16 +6,26 @@ const GrandFather = () => {
     <><Father p1={p1} /></>
   )
 }
+
+
 const Father = (props) => {
   return (
     <Son p1={props.p1} />
   )
 }
+
+
+
 const Son = (props) => {
   return (
     <GrandSon p1={props.p1} />
   )
 }
+
+
+
+
+
 const GrandSon = (props) => {
   return (
     <>
@@ -23,3 +33,5 @@ const GrandSon = (props) => {
     </>
   )
 }
+
+export default GrandFather;
