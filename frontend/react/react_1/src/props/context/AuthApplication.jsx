@@ -1,5 +1,6 @@
 
 import React from 'react'
+import { LoginContext } from './LoginContext'
 const LoginPage = () => {
     let obj = {
         userName: "ramu@gmail.com",
@@ -8,7 +9,10 @@ const LoginPage = () => {
     return (
         <>
             <div>LoginPage</div>
+           <LoginContext.Provider value={obj}>
             <Dashboard />
+           </LoginContext.Provider>
+
         </>
     )
 }
@@ -22,22 +26,27 @@ const Dashboard = () => {
 }
 const Navbar = () => {
     return (
+        <>
         <div>Navbar</div>
+        <Profile />
+        <Edit />
+        <Delete />
+        </>
     )
 }
 const Edit = () => {
     return (
-        <span>Edit</span>
+        <span className='btn btn-outline-warning'>Edit</span>
     )
 }
 const Delete = () => {
     return (
-        <span>Delete</span>
+        <span className='btn btn-outline-danger'>Delete</span>
     )
 }
 const Profile = () => {
     return (
-        <span>Profile</span>
+        <span className='btn btn-outline-primary'>Profile</span>
     )
 }
 
