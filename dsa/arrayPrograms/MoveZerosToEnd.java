@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class MoveZerosToEnd {
     
     public static void main(String[] args) {
@@ -16,6 +18,9 @@ public class MoveZerosToEnd {
 	        for(int i=index;i<arr.length;i++){
 	          arr[i]=0;
 	        }
+
+
+            System.out.println(Arrays.toString(arr));
 
     }
 }
