@@ -25,4 +25,20 @@ const Navbar = () => {
         <div>Navbar</div>
     )
 }
+const Edit = () => {
+    return (
+        <span>Edit</span>
+    )
+}
+const Delete = () => {
+    return (
+        <span>Delete</span>
+    )
+}
+const Profile = () => {
+    return (
+        <span>Profile</span>
+    )
+}
+
 export default LoginPage
