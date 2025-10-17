@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React, { useContext } from 'react'
 import { LoginContext } from './LoginContext'
 const LoginPage = () => {
     let obj = {
@@ -9,9 +9,9 @@ const LoginPage = () => {
     return (
         <>
             <div>LoginPage</div>
-           <LoginContext.Provider value={obj}>
-            <Dashboard />
-           </LoginContext.Provider>
+            <LoginContext.Provider value={obj}>
+                <Dashboard />
+            </LoginContext.Provider>
 
         </>
     )
@@ -27,10 +27,10 @@ const Dashboard = () => {
 const Navbar = () => {
     return (
         <>
-        <div>Navbar</div>
-        <Profile />
-        <Edit />
-        <Delete />
+            <div>Navbar</div>
+            <Profile />
+            <Edit />
+            <Delete />
         </>
     )
 }
@@ -40,8 +40,13 @@ const Edit = () => {
     )
 }
 const Delete = () => {
+    const { userName } = useContext(LoginContext);
+    console.log(userName);
+    function handleDelete() {
+        alert(`User ${userName} your account is deleted`);
+    }
     return (
-        <span className='btn btn-outline-danger'>Delete</span>
+        <span className='btn btn-outline-danger' onClick={handleDelete}>Delete</span>
     )
 }
 const Profile = () => {
