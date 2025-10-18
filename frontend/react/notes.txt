@@ -1,158 +1,128 @@
 React:
------
-   - It is a library for building user interfaces
-   - It is used for building single page applications
-   - It is a javascript library developed by Facebook in 2013 by Jordan Walke.
-   - it is a open source  and free library
-use of react:
-------------
-    -it is used to create single page application
-    -used in front end development like netflix, amazon, flipkart
-    -used in mobile development
-    -helps to build interactive user interfaces
-performance of react:
---------------------
-   - it is fast
-   - it is easy to use
-   - it is easy to maintain
-   - it is easy to scale
-   - it is easy to debug
+     - React is a JavaScript library for building user interfaces.
+     - it is released by Facebook in 2013.(Jordan Walke)
+     - React is a declarative, efficient, and flexible JavaScript 
+       library for building user interfaces.
+     - it is used to develop single-page applications.
+     - React is a component-based front-end library.
+     - React makes it painless to create interactive UIs.
+     - React is used to develop web applications/mobile.
+       applications/desktop applications.
 
-single page application:
-------------------------
-   - A single page application is a web application that uses a single HTML
-     page to display all the content and functionality of the application.
-   - It is a web application that is built using a single HTML page
+---------------------------------------------------------------------------
+Who uses react:
+    -Facebook
+    -Netflix
+    -Airbnb
+    -Instagram
+    -Snapchat
+    -Youtube
+    -Spotify
+    -Tinder
+----------------------------------------------------------------
+Why use react:
+    -High performance with virtual DOM(document object model)
+    -Single page applications
+    -Easy to learn and implement
+    -It is free and open source
+    -Huge ecosystem of libraries(React Router, Redux, etc.)
+    -Easy to integrate with other existing projects
+    -It is fast and efficient
+------------------------------------------------------------------------
+how to create react project:
 
-creation of react project/application:
--------------------------------------
-    - open terminal and have cmd:
-         1.npx create-react-app app_name
-         2 cd app_name
-         3 npm start
+steps:
+   1. create a folder
+   2. open terminal for the folder(cmd)
+   3. npx create-react-app project_name
+npx: node package execution ,  it is a command line tool that
+  allows you to execute npm packages directly from the command line.
+   4.cd project_name
+   5.npm start
 
-npx: node package installer
-npm: node package manager
+----------------------or-------------------------------
+steps:
+   1. create a folder
+   2. open terminal for the folder(cmd)
+   3. npm create vite@latest
+                   project_name: name of the project
+                   framework :  react
+                   variant : JavaScript
+   4.cd project_name
+   5.npm install (installing dependencies /node packages) 
+    npm install bootstrap (installing bootstrap)
+    npm install react-router-dom (installing react router dom)
+    npm install axios (installing axios library)
+     (npm- node package manager)
+   6.npm run dev
 
-    - open terminal and have cmd:
-         1.npm create vite@latest
-                 projectName: provide name of project
-                 framework: react
-                 variant: javascript
-                 packageNme: package.json //optional
-        2.cd projectName
-        3.install node modules: npm install - to install node modules
-                                npm install bootstrap - to install bootstrap
-                                npm install react-router-dom  - to install react-router-dom for routing
-                                npm install axios - to install axios for making http requests
-                                 or 
-                                npm install bootstrap react-router-dom
-                                
-                                npm install @reduxjs/toolkit react-redux - to install redux library 
-                                npm install redux-thunk - to install redux thunk middleware
-                                npm install express mongoose cors nodemon dotenv
+--------------------------------------------------------------------------
+JSX - JavaScript XML(extension of js) 
+       (xml- eXtensible Markup Language)
+    -we can write html in js
+--------------------------------------------------------------------------                   
 
+components:
+   ex: header component , footer component , sidebar component etc ..
 
-        4.run app: npm run dev
+1.create jsx file
+2.declare the component( function)
+3.return the jsx code(encapsulate/wrap the jsx code)
+  -wrapping can be done 
+                 1. using div tag
+                 2. using fragment tag <></>
+                 3. using template string ``
+                 4. using react.fragment <React.Fragment></React.Fragment>
+4.export the component 
+5.use the component in remaining jsx file 
+          (import in main.jsx file)
 
-jsx: javascript xml  (EXTENSION OF JAVASCRIPT)
-   : can create html in javascript file
-   : can write html inside js and js inside html
-xml: extensible markup language
+------------------------------------------------------------------------
+component : (ui component)
+   ex: header component , footer component , sidebar component etc ..
+   - it is a function/class that returns jsx code
+   - it is a reusable component
+   - it is a file that contains jsx code(html in js file)
+   - we can create a component in two ways 
+             1. function component
+             2. class component
+             3. Pure component
+             4. Higher order component
+             5. Function Component with hooks 
+             6. Presentational Component
+             7. Container Component
+             8. Controlled Component
+             9. Uncontrolled Component
 
-project structure:
-------------------
-    react-app
-      |_node modules--it consist of react and react-dom packages
-      |_ src  -- used to create react application component
-          |_ App.jsx
-          |_ App.css
-          |_ Main.css
-          |_ Main.jsx
-      |_ public-- used to store static files like images, audio, video etc.,
-      |_index.html -- main html file(entry point of react application)
-      |_package.json--used to store information about project
-      |_vite.config.js -- used to configure vite
+1.function component:
 
+syntax : 
 
+function component_name(){
+    return(
+        <>
+        //jsx code
+        </>
+    )
+}
 
------------------------------------------------------------------------------------
+2.class component:
 
+syntax :
 
-providing styles in react:
-=========================
-    1.inline styles - can be used in jsx file
-                    - provide in the form of object
-         syntax:
-         <div style={{color:"red"}}>
-         </div>
-    2.external styles - can be used in jsx file
-                      - need to create css file and link in the jsx file 
-                        using import statement
-         syntax:
-         import "./Main.css";
-         <div className="class_name">
-         </div>
-----------------------------------------------------------------------------------------
-creation of react components:
-----------------------------
-    1.create a jsx file or js file
-          1.create a component with function or class_name etc.,
-          2.return jsx code in the component
-          3.encapsulate the jsx code in the component using
-              <></> --->fragment
-              <React.Fragment></React.Fragment>  ---->fragment
-              <div></div>  --->elements of html
-              ``   --->template literal
-    2.export the component
-    3.import the component in the required files.
-
-Components:
------------
-        - components are used to create reusable code in react
-        - components are a part of web application like header, footer, sidebar etc.,
-        - can create components by using 
-                     1.function component
-                     2.class component
-                     3.Presentational component
-                     4.Container component
-                     5.Controlled component
-                     7.Uncontrolled component
-                     8.Pure component
-                     9.Higher order component
-  
-  Function component:
-  ==================
-      - component created by using js function
-      - which returns jsx code
-      - can be used to create reusable code
-syntax:
-    function App(){
-        return (
-          //jsx code
+class component_name extends React.Component{
+    render(){
+        return(
+            <>
+            //jsx code
+            </>
         )
     }
-
-class component:
-=================
-      - component created by using class
-      - component should have render method
-      - component should have extends React.Component
-
-syntax:
-    class App extends React.Component{
-        render(){
-            return (
-              //jsx code
-            )
-        }
-    }
-    
+}
 ---------------------------------------------------------------------
                          function                        class
- -------------------------------------------------------------------
+            ------------------------------------------------------
 syntax:                 js function                 Es6 class syntax
-extends                 not required                required with React.Component
 render()                not required                required
 state                   useState  hook              this.state
 props                   props                       this.props
@@ -160,99 +130,185 @@ this key                not required                required
 readability             clean                       more boilerplate
 preferred               modern standard             older standard(deprecated)
 ------------------------------------------------------------------
+State :
+    -state is an object that contains data that the component needs.
+    -it is used to store/update/manage data that the component needs 
+      to render.
+    -we can  modify the state in the component with the help of
+      setState() method. or this.setState() method.
+
+syntax: let [state /data, setState]=useState(initialState)
+ex: 
+   1.let [count, setCount] = useState(0)
+   2.let [name , setName] = useState('')
+   3.let [user , setUser] = useState({})
+   4.let[fruits, setFruits] = useState([])
+   5.let[isTrue, setIsTrue] = useState(true)
+
+setState() method:
+    -it is used to update the state of the component.
+    -it is a function used to update
+
+useState() hook:
+      -it is a hook that returns an array of two elements.
+      -the first element is the state variable.
+      -the second element is the function that updates the state variable.
+      -it is used to manage the state of the component.
+
+hooks:
+   -it is a function(special) that returns jsx code.
+   ex: useState(), useEffect(), useRef(), useContext()
+---------------------------------------------------------------------
+props:(properties)
+   -props is an object that contains data that the component needs.
+   -it is used to pass data from parent component to child component.
+   -we can access the props data in the component with the help of props.
+   -props are read-only.
+   -we can't modify the props data in the component.
+   -props are immutable.
+   -passing data: number, String , Object , Array, Function etc ..
+--------------------------------------------------------------------------------
+                           state                          props
+            ----------------------------------------------------------------------
+definition             used to update             used to pass/transfer(parent->child)
+mutability             mutable(can be modified)   immutable (can't be modified)
+managed                by itself                   by parent component
+access                 by itself                   by child component
+                       this.state/useState()       props/{name,age}
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 
+props drilling :
+    -it is a technique that is used to pass data from parent component
+     to child component.
+ex:  Grand Parent--->Parent--->Child---->Grand Child
+    -it makes difficult to code
+    -it causes deep component hierarchy
+    -it causes code maintainability
+    -to avoid props drilling we can use context api or redux
+--------------------------------------------------------------------
+context api
+       -it is a technique that is used to pass data 
+        from parent component to child component.
+       -it makes easy to code
+       -it causes shallow component hierarchy
+       -we are creating a context object(global object) with the help
+       of createContext() method
+       -Provider-used to provide/pass/send the data
+       -Consumer-used to consume/receive the data
+       -with the help of useContext() hook we can consume the data
 
+createContext():
+         - will accept one argument(initialValue/defaultValue)
+         - will return a context object
 
-container component:
-===================
-         - component used to manage state/data in react
-syntax:
-    function Container(){
-        return (
-          <Presentational data={data}/>
-        )
-    }
+Provider:
+         -will accept two arguments(value,children)
+         -will return a jsx code
+
+useContext():
+         -will accept one argument(context)
+         -will return a value/data
+-----------------------------------------------------------------------
+Container Component:
+      -it is a component that contains other components.
+      -it holds the state and props of its child components.
+      -it is used to manage the state and props of its child components.
+
 Presentational Component:
-========================
-    - component used to present data to the user
-syntax:
-    function Presentational({data}){
-        return (
-          <p>{data}</p>
-        )
-}
+      -it is a component that contains only UI.
+      -it holds the UI of its child components.
+      -it is used to manage the UI of its child components.
 
+---------------------------------------------------------------------
+style in react:
+         1. inline style
+         2. External Style
+         3. external framework/library(bootstrap)
 
+1.inline style:
+  -it is used to provide style with the help of
+   style attribute and object
+ex:
+<button style ={ { key: value} }>click</button>
+2.external style:
+   -it is used to provide style with the help of
+    external css file 
+   -then impost css file in respective jsx file
 
+ex: 
+import './style.css'
+<button>click</button>
 
-Pure component:
-===============
-    - component created by using class
-    - component should have render method
-    - component should have extends React.PureComponent
-    - It helps to optimize the performance of the application
+3.external framework/library(bootstrap):
+   -it is used to provide style with the help of
+    cdn or node packages
+   -then import bootstrap css file in respective jsx file - for css
+   -then import bootstrap js file in respective jsx file - for js
 
-syntax:
-    class App extends React.PureComponent{
-        render(){
-            return (
-              //jsx code
-            )
-        }
-    }
+ex:
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
 
+node packages:
+cmd: npm install bootstrap@5.3.5
+----------------------------------------------------------------------------------------------
 
+ controlled component: 
+         - it is a component controlled by the react state(useState hook)
+         - it is used to manage the state/props of the component
+         - mainly used for form validations , tracking form data
+         - accessing the data with the help of value(target) and onChange event
 
-     
-------------------------------------------------------------------------------------------
-Props:
------
-     -props are used to pass data from parent component to child component
-     -props will store data in the form of object
-     -props are passed to the child component using the attribute named as props
-syntax:
-    function Parent({data}){
-     return (
-       <Child data={data}/>
-     )
-    }
-    function Child(props){
-        return (
-          <p>{props.data}</p>
-        )
-    }
-    
------------------------------------------------------------------------------------------
-                  props                            state
------------------------------------------------------------------------------------------
-  used to pass data from parent component       used to manage state/data in react
- to child component  
--------------------------------------------------------------------------------------------
+ Uncontrolled component:
+        - it is a component controlled by the DOM (useRef hook)
+        - it is used to manage the DOM elements of the component
+        - mainly used for quick forms, simple forms
+        - accessing the data with the help of value(current) and onSubmit / onClick event
+      
+---------------------------------------------------------------------------------
+useRef hook:
+        -it is a hook that returns an object.
+        -the object contains a current property.
+        -the current property contains the DOM element.
+        -it is used to manage the DOM elements of the component.
+        -it is used to access the DOM elements of the component.
 
-Props Drilling:
----------------
-    -the process of passing data from parent component to child component
-    using props regardless of the depth of the component tree
-    - it causes prop drilling 
-    - it is not recommended to use props drilling in react
-    - to avoid props drilling we can use context api
-              GrandFather (data)
-              |
-              Father
-              |
-              Child
-              |
-              GrandChild
-              |
-              GrandGrandChild(data)
-data is exist in grandfather and it is passed to father and father to child and so on
-but data is required in GrandGrandChild
+---------------------------------------------------------------------------------
 
+Single page application:(spa)
+     -it is a web application that has only one page.
+     -SPA is developed by using React,Angular and Vue.
+     -this approach allows us for more fluid and responsive 
+     user experience.
+     -it wont reload/refresh the entire page.
 
+key -characteristics:
+      1.dynamic content/ui
+      2.client side rendering
+      3.DOM manipulation    
+      4.State manipulation
+      5.API-calls
+      6.Server communication
+      7.Fast loading time
+----------------------------------------------------------------
+Dealing with global data (context in react):
+-----------------------
+  1.creation of context object
+      - we are creating a jsx file with the help of createContext() method
+      ex : export const GlobalAuthContext = createContext(null);
+  2.provider component
+      - with the help of provider we are modifying the context object
+      ex : <GlobalAuthContext.Provider value={value}>
+           </GlobalAuthContext.Provider>
+               or
+            <GlobalAuthContext.Provider value={{value ,setValue}}>
+               {children}
+            </GlobalAuthContext.Provider>
 
+  3.Consumer Component
+      -with the help os useContext() hook we are consuming the data
+      ex : const data = useContext(GlobalAuthContext);
 
-
-
-
-
+----------------------------------------------------------------
