@@ -310,3 +310,272 @@ Dealing with global data (context in react):
       ex : const data = useContext(GlobalAuthContext);
 
 ----------------------------------------------------------------
+Hooks:
+=====
+     - react hooks are special functions that allow you to
+       use state and other react features
+     - hooks are used to manage state and lifecycle
+     - hooks are inbuilt in react
+     - hooks are introduced in react version 16.8
+     
+
+Note:
+----
+   - hooks are inbuilt function components in react
+   - can use hooks inside function component on top of other code like conditional
+   ,looping and rendering etc.,
+
+Types:
+-------
+    1.inbuilt hooks- inbuilt /existing hooks
+    2.custom hooks - created by developer/user
+
+
+1.useState hook:
+----------------
+      - used to manage state/data in react
+      - it returns the current state and a function to update the state
+syntax:
+    const [state, setState] = useState(initialState); 
+
+state: data that can change over time
+setState: function to update the state
+initialState: initial value of the state
+
+State :
++++++++
+     - state is a variable that holds data that can change over time
+     - state is used to manage data in react
+
+2.useRef hook:
+----------------
+      - used to create a mutable ref object
+      - it returns a mutable ref object, which can hold a value
+      - it is used to access the DOM element like input values.
+syntax:
+       const refName = useRef(initialValue);
+initialValue is optional
+
+   createRef():
+   ===========
+         - it creates a ref object and returns it
+         - used to add a ref to a component in react
+         - it is used to access the DOM element like input values.
+
+
+3.useContext hook:
+------------------
+      - used to access the context value
+      - it returns the current value of the context
+      - it is used to access the context value in react
+syntax:
+      const contextValue = useContext(ContextName);
+
+Context Api:
+------------
+   - to avoid props drilling we can use context api
+   - context api is used to pass data from parent component to child component
+   - context api is used to manage state/data in react
+Steps:
+     1.create a context object in jsx file
+     syntax:
+         const ContextName = createContext(initialValue);
+     2.create a provider component in jsx file
+     syntax:
+          <ContextName.Provider value={value}> 
+          <ChildComponent />
+          </ContextName.Provider>
+     3.use the context value in the child component
+     syntax:
+         const contextValue = useContext(ContextName);
+
+
+4.useNavigate hook:
+----------------
+    - used to navigate to another page in react
+    - it returns a function that can be used to navigate to another page
+    - it is present in react router dom
+    - navigate hooks must be enclosed in a route element
+syntax:
+    const navigate = useNavigate();
+    navigate("/path");
+
+---- in main component where we have routes (App.jsx in our case)----
+<BrowserRouter>
+  <Routes>
+    <Route path="/" element={<Home />} />
+  <Routes>
+</BrowserRouter>
+
+BrowserRouter 
+--------------
+         - it is used to wrap the routes in react
+         - it is mandatory to wrap the routes in react which have navigate hooks
+Routes
+------
+        - it is used to define the routes in react
+        - it helps to wrap the multiple route in react
+Route
+-----
+        - it is used to define the route in react
+        - it helps to map path with respective component
+
+
+Link:
+-----
+         - it is used to navigate to another page in react
+         - it is present in react router dom
+         - it works like anchor tag but it won't reload the page
+   syntax:
+      <Link to="/path">Click Here</Link>
+
+Outlet:
+-------
+        - it is used to display the child route with in parent route
+        - it is present in react router dom
+        - it need to use along with child paths in jsx file
+
+syntax:
+     <Link to="/dashboard/user">Click Here For User</Link>
+     <Link to="/dashboard/product">Click Here For Product</Link>
+      <Outlet />
+
+ --App.jsx---
+<BrowserRouter>
+  <Routes>
+    <Route path="/dashboard" element={<Dashboard />}>
+      <Route path="/dashboard/user" element={<User />} />
+      <Route path="/dashboard/product" element={<Product />} />
+    </Route>
+  </Routes>
+</BrowserRouter>
+
+
+5.useEffect hook:
+------------------
+     - it is used to perform actions after the component is rendered
+     - it is used to perform side effects in react , like fetching data from api etc.,
+     - it is present in react 
+syntax:
+        useEffect(() => {
+        
+       }, []);
+
+    - it accepts two arguments
+    - first argument is a function
+    - second argument is an array of dependencies
+    - useEffect will run the function only when the dependencies change
+
+react life cycle with useEffect hook:
+======================================
+  
+ 1.componentDidMount() 
+                useEffect(() => {
+                    // api call or other side effects
+                }, []);
+ 2.componentDidUpdate()
+                useEffect(() => {
+                    // api call or other side effects
+                }, [dependencies/state/data]);
+ 3.componentWillUnmount()
+                useEffect(() => {
+                    return () => {
+                        // api call or other side effects
+                    };
+                }, []);
+
+
+Mounting: when the component is rendered for the first time,it is called and
+          add to the DOM
+Updating: when the component is updated
+Unmounting: when the component is removed from the DOM
+
+
+6.useParams hook:
+----------------
+      - it is used to access/collect the parameters from the url
+  syntax:
+     url: http://localhost:3000/dashboard/user/1/raj/raj@gmail.com
+     
+     const params = useParams();
+     console.log(params);
+     output: {id: "1", name: "raj", email: "raj@gmail.com"}
+      
+      or
+    const name =useParams('name');
+    console.log(name);
+    output: raj
+
+
+   <Link to="/dashboard/user/1/raj/raj@gmail.com">Click Here</Link>
+   <Route path="/dashboard/user/:id/:name/:email" element={<User />} />
+      
+7.useSearchParams hook:
+----------------
+      - it is used to access/collect the search parameters from the url
+  syntax:
+     url: http://localhost:3000/dashboard/product?name=laptop&price=5000
+     const [searchParams] = useSearchParams();
+     console.log(searchParams);
+     o/p-
+     URLSearchParams { 'name' => 'laptop', 'price' => '5000' }
+    
+    <Link to="/dashboard/product?name=laptop&price=5000">Click Here</Link>
+    <Route path="/dashboard/product" element={<Product />} />
+
+8.useLocation hook:
+-------------------
+              - it is a hook that returns the current location object
+              - which contains information about the current location/path
+      syntax: 
+              const location = useLocation();
+              console.log(location);
+              output: 
+              Location {
+                pathname: "/dashboard/user",
+                search: "", 
+                hash: "", 
+                state: undefined, 
+                key: "1"
+                }
+
+
+
+useReducer hook:
+---------------
+    - it is a hook that returns a state and a dispatch function
+    - it is used to manage state in react
+    - it helps to deal with complex state logics
+    - it is present in react
+syntax:
+    const [state, dispatch] = useReducer(reducer, initialState);
+reducer: a function that takes two arguments and returns the new state
+initialState: the initial value of the state
+state: the current value of the state
+dispatch: a function that takes an action and updates the state
+
+reducer function:
+=================
+    - it is a function that takes two arguments and returns the new state
+    - it is used to manage state in react
+    - it helps to deal with complex state logics
+ 
+ syntax:
+        function reducer(state, action) {
+            //logic to manipulate the state
+            return newState
+        }
+
+action is an object that contains type and payload
+          type is a string that represents the action type and payload is the data
+         that is passed to the reducer function
+state is the current value of the state
+
+
+
+Custom hooks:
+-------------
+      - it is a function  that created by using js function
+      - it is used to create reusable code in react
+      - it is used to create custom hooks in react
+      - it must be start with use keyword
