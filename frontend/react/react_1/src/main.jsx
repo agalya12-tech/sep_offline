@@ -14,6 +14,7 @@ import Container from './components/Container.jsx'
 import GrandFather from './props/context/FamilyTree.jsx'
 import LoginPage from './props/context/AuthApplication.jsx'
 import Controlled from './components/Controlled.jsx'
+import UnControlled from './components/UnControlled.jsx'
 // import GrandFather from './props/PropsDrilling.jsx'
 
 createRoot(document.getElementById('root')).render(
@@ -27,7 +28,8 @@ createRoot(document.getElementById('root')).render(
     {/* <GrandFather/> */}
     {/* <GrandFather/> */}
     {/* <LoginPage/> */}
-    <Controlled/>
+    {/* <Controlled/> */}
+    <UnControlled/>
   </StrictMode>,
 )
 
