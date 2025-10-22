@@ -7,7 +7,15 @@ const Controlled = () => {
     setData(event.target.value);
     if(data.length>=8){ 
        if('1234567890'.split('').some((num)=>data.includes(num))) {
-        setMsg("strong password");
+        if('ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').some((cap)=>data.includes(cap))){
+          if('!@#$%^&*()_+'.split('').some((sym)=>data.includes(sym))){
+            setMsg("strong password");
+          }else{
+            setMsg("password should contain at least one special character");
+          }
+        }else{
+          setMsg("password should contain at least one capital letter");
+        }  
        }else{
         setMsg("password should contain  at least one number");
        }
