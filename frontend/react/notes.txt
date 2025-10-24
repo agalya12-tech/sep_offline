@@ -88,11 +88,10 @@ component : (ui component)
              2. class component
              3. Pure component
              4. Higher order component
-             5. Function Component with hooks 
-             6. Presentational Component
-             7. Container Component
-             8. Controlled Component
-             9. Uncontrolled Component
+             5. Presentational Component
+             6. Container Component
+             7. Controlled Component
+             8. Uncontrolled Component
 
 1.function component:
 
