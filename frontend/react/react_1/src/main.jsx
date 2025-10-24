@@ -19,14 +19,14 @@ import PureComponentExample from './components/PureComponentExample.jsx'
 import { HigherOrderExample } from './components/HigherOrderExample.jsx'
 import User from './components/User.jsx'
 import EventExample1 from './events/EventExample1.jsx'
+import EventExample2 from './events/EventExample2.jsx'
 // import GrandFather from './props/PropsDrilling.jsx'
 
-const HigherOrderComponent=HigherOrderExample(User);
+const HigherOrderComponent = HigherOrderExample(User);
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <EventExample1/>
-
-    
+    {/* <EventExample1/> */}
+    <EventExample2 />
     {/* <HigherOrderComponent/> */}
     {/* <App />  */}
     {/* <FunctionalComponent />
