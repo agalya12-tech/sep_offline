@@ -16,10 +16,18 @@ import LoginPage from './props/context/AuthApplication.jsx'
 import Controlled from './components/Controlled.jsx'
 import UnControlled from './components/UnControlled.jsx'
 import PureComponentExample from './components/PureComponentExample.jsx'
+import { HigherOrderExample } from './components/HigherOrderExample.jsx'
+import User from './components/User.jsx'
+import EventExample1 from './events/EventExample1.jsx'
 // import GrandFather from './props/PropsDrilling.jsx'
 
+const HigherOrderComponent=HigherOrderExample(User);
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <EventExample1/>
+
+    
+    {/* <HigherOrderComponent/> */}
     {/* <App />  */}
     {/* <FunctionalComponent />
     <ClassComponent/> */}
@@ -31,7 +39,7 @@ createRoot(document.getElementById('root')).render(
     {/* <LoginPage/> */}
     {/* <Controlled/> */}
     {/* <UnControlled/> */}
-    <PureComponentExample/>
+    {/* <PureComponentExample/> */}
   </StrictMode>,
 )
 
