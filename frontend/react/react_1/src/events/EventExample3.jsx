@@ -2,7 +2,8 @@ import React from 'react'
 
 export const EventExample3 = () => {
 
-   let[items,setItems]=React.useState([]);
+//    let[items,setItems]=React.useState([]);
+    let[items,setItems]=React.useState(null);
 
     let container = {
         display: 'flex',
@@ -23,18 +24,15 @@ export const EventExample3 = () => {
     function handleDragOver(e){
         e.preventDefault();
     }
-    
     function handleDrop(e){
         e.preventDefault();
         let data=e.dataTransfer.getData('text/plain');
-        setItems([...items,data]);
+        // setItems([...items,data]);
+        setItems(data);
     }
-
     function handleDragStart(e){
         e.dataTransfer.setData('text/plain',e.target.innerText);
     }
-
-
     return (
         <>
             <h1>Drag and Drop Example</h1>
@@ -48,11 +46,12 @@ export const EventExample3 = () => {
             onDrop={handleDrop}
             >Drop Here
             {
-                items.map(
-                    (item,index)=>{
-                        return <div key={index} >{item}</div>
-                    }
-                )
+                items && <div>{items}</div>
+                // items.map(
+                //     (item,index)=>{
+                //         return <div key={index} >{item}</div>
+                //     }
+                // )
             }
             
             </div>
