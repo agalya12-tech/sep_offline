@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
-import '../App.css'
-import '../index.css'
+
 import { useNavigate } from 'react-router-dom'
 export const Login = () => {
     let email = useRef(null);
@@ -14,7 +13,7 @@ export const Login = () => {
             navigate('/dashboard');
         } else {
             alert("Login Failed");
-            navigate('/error')
+            navigate('/')
         }
     }
     return (
@@ -22,6 +21,7 @@ export const Login = () => {
             <input type="text" placeholder='enter email' ref={email} /> <br /><br />
             <input type="password" placeholder='enter password' ref={password} /> <br /><br />
             <button onClick={handleSubmit} className='btn btn-outline-primary'>Login</button>
+
         </>
     )
 }
