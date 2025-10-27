@@ -6,15 +6,15 @@ export const Login = () => {
     let email = useRef(null);
     let password = useRef(null);
     let navigate = useNavigate();
-
-
     function handleSubmit() {
         let userEmail = email.current.value;
         let userPassword = password.current.value;
         if (userEmail == "admin@gmail.com" && userPassword == "1234") {
             alert("Login Successful");
+            navigate('/dashboard');
         } else {
             alert("Login Failed");
+            navigate('/error')
         }
     }
     return (
