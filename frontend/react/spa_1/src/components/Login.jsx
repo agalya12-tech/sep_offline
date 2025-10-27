@@ -7,9 +7,9 @@ export const Login = () => {
     function handleSubmit() {
         let userEmail = email.current.value;
         let userPassword = password.current.value;
-        if(userEmail == "admin@gmail.com" && userPassword == "1234"){
+        if (userEmail == "admin@gmail.com" && userPassword == "1234") {
             alert("Login Successful");
-        }else{
+        } else {
             alert("Login Failed");
         }
     }
@@ -17,7 +17,7 @@ export const Login = () => {
         <>
             <input type="text" placeholder='enter email' ref={email} /> <br /><br />
             <input type="password" placeholder='enter password' ref={password} /> <br /><br />
-            <button onClick={handleSubmit}>Login</button>
+            <button onClick={handleSubmit} className='btn btn-outline-primary'>Login</button>
         </>
     )
 }
