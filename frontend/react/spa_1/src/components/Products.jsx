@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect } from 'react'
-
+import './Product.css'
 const Products = () => {
 let[products,setProducts]=React.useState([]);
   useEffect(
@@ -18,10 +18,13 @@ let[products,setProducts]=React.useState([]);
       {
         products.map((product)=><div key={product.id} className='item'>
            <img src={product.image} alt="" />
-          <div>NAME: <b>{product.title}</b> </div>
-          <div>PRICE: <b>{product.price}</b></div>
-          <div>DESCRIPTION: <b>{product.description}</b></div>
-          <div>RATING: <b>{product.rating.rate}</b></div>
+          <div>NAME: <b>{product.title.slice(0,20)}</b> </div>
+          <div>DESCRIPTION: <b>{product.description.slice(0,50)}</b></div>
+          <span>PRICE: <b>{product.price}</b></span>
+          <span>RATING: <b>{product.rating.rate}</b></span>
+          <br />
+          <button className='btn btn-outline-warning'>EDIT</button>
+          <button className='btn btn-outline-danger'>DELETE</button>
         </div>)
       }
 
