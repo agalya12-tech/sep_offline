@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect } from 'react'
 import './Product.css'
+import { Link } from 'react-router-dom';
 const Products = () => {
 let[products,setProducts]=React.useState([]);
   useEffect(
@@ -41,7 +42,12 @@ let[products,setProducts]=React.useState([]);
           <span>PRICE: <b>{product.price}</b></span>
           <span>RATING: <b>{product.rating.rate}</b></span>
           <br />
-          <button className='btn btn-outline-warning'>EDIT</button>
+
+          {/*  path parameters -- dashboard/products/edit/1 */}
+          {/* <Link className='btn btn-outline-warning' to={'/dashboard/products/edit/'+product.id}>EDIT</Link> */}
+        
+         {/*  query parameters - dashboard/products/edit?id=1 */}
+          <Link className='btn btn-outline-warning' to={'/dashboard/products/edit?id='+product.id}>EDIT</Link>
           <button className='btn btn-outline-danger'  onClick={()=>handleDelete(product.id)} >DELETE</button>
         </div>)
       }
