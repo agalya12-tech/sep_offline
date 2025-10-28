@@ -13,6 +13,24 @@ let[products,setProducts]=React.useState([]);
   )
 
 
+
+
+  function handleDelete(id){
+    // fetch(`https://fakestoreapi.com/products/${id}`,{
+    //   method:'DELETE'
+    // })
+    axios.delete(`https://fakestoreapi.com/products/${id}`)
+    .then(res=>{
+      if(res.status==200){
+        alert("Deleted Successfully"+res.data.title);
+        window.location.reload();
+      }
+    });
+  }
+ 
+
+
+
   return (
      <div className='container'>
       {
@@ -24,13 +42,9 @@ let[products,setProducts]=React.useState([]);
           <span>RATING: <b>{product.rating.rate}</b></span>
           <br />
           <button className='btn btn-outline-warning'>EDIT</button>
-          <button className='btn btn-outline-danger'>DELETE</button>
+          <button className='btn btn-outline-danger'  onClick={()=>handleDelete(product.id)} >DELETE</button>
         </div>)
       }
-
-
      </div>
-  )
-}
-
+  )}
 export default Products
