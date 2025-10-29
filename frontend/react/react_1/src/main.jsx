@@ -21,6 +21,7 @@ import User from './components/User.jsx'
 import EventExample1 from './events/EventExample1.jsx'
 import EventExample2 from './events/EventExample2.jsx'
 import { EventExample3 } from './events/EventExample3.jsx'
+import CustomHook from './hooks/CustomHook.jsx'
 // import GrandFather from './props/PropsDrilling.jsx'
 
 const HigherOrderComponent = HigherOrderExample(User);
@@ -28,7 +29,8 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <EventExample1/> */}
     {/* <EventExample2 /> */}
-    <EventExample3/>
+    {/* <EventExample3/> */}
+    <CustomHook/>
     {/* <HigherOrderComponent/> */}
     {/* <App />  */}
     {/* <FunctionalComponent />
