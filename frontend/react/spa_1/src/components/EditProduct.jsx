@@ -15,6 +15,14 @@ export const EditProduct = () => {
   //  console.log(location);
   
   let [product,setProduct]=useState({});
+  let[editProduct,setEditProduct]=useState({});
+
+   function handleChange(e){
+     setEditProduct({...editProduct,[e.target.name]:e.target.value});
+   }
+
+
+
   useEffect(() => {
     // fetch(`https://fakestoreapi.com/products/${pid}`)
     //   .then(response => response.json())
@@ -38,19 +46,19 @@ export const EditProduct = () => {
 
     <>
       <label htmlFor="id">ID :  </label>
-      <input type="text" id='id' value={product.id} /> <br /><br />
+      <input type="text" id='id' defaultValue={product.id} readOnly onChange={handleChange} /> <br /><br />
     
       <label htmlFor="title">Title :  </label>
-      <input type="text" id='title' value={product.title} /> <br /><br />
+      <input type="text" id='title' defaultValue={product.title} onChange={handleChange} /> <br /><br />
     
       <label htmlFor="desc">Description :  </label>
-      <input type="text" id='desc' value={product.description} /> <br /><br />
+      <input type="text" id='desc' defaultValue={product.description} onChange={handleChange} /> <br /><br />
     
       <label htmlFor="category">Category :  </label>
-      <input type="text" id='category' value={product.category} /> <br /><br />
+      <input type="text" id='category' defaultValue={product.category}  onChange={handleChange} /> <br /><br />
     
       <label htmlFor="price">Price :  </label>
-      <input type="text" id='price' value={product.price} /> <br /><br />
+      <input type="text" id='price' defaultValue={product.price} onChange={handleChange} /> <br /><br />
     
        <button className='btn btn-warning '>Update</button>
      
