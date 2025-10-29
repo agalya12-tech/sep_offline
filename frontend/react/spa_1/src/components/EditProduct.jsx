@@ -9,7 +9,25 @@ export const EditProduct = () => {
   //  let location=useLocation();
   //  console.log(location);
 
-  let [product, setProduct] = useState({});
+
+
+let [product, setProduct] = useState({});
+//  to load the fetched data implicitly into dom -- mounting
+ useEffect(() => {
+    // fetch(`https://fakestoreapi.com/products/${pid}`)
+    //   .then(response => response.json())
+    //   .then(data => console.log(data));
+    axios.get(`https://fakestoreapi.com/products/${pid}`)
+      .then(response => {
+        // console.log(response.data)
+        setProduct(response.data);
+      });
+  }, [])
+
+
+
+
+
   let navigate = useNavigate();
   let title = useRef(null);
   let description = useRef(null);
@@ -25,29 +43,25 @@ export const EditProduct = () => {
       price: price.current.value
     }
     console.log(product);
-    fetch(`https://fakestoreapi.com/products/${pid}`, {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(product)
-    })
-      .then(response => response.json())
+
+
+
+    // fetch(`https://fakestoreapi.com/products/${pid}`, {
+    //   method: 'PUT',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify(product)
+    // })
+    //   .then(response => response.json())
+    
+    axios.put(`https://fakestoreapi.com/products/${pid}`, product)
       .then(data => {
         alert("Product Updated Successfully");
         navigate("/dashboard/products");
       });
-
-
   }
-  useEffect(() => {
-    // fetch(`https://fakestoreapi.com/products/${pid}`)
-    //   .then(response => response.json())
-    //   .then(data => console.log(data));
-    axios.get(`https://fakestoreapi.com/products/${pid}`)
-      .then(response => {
-        // console.log(response.data)
-        setProduct(response.data);
-      });
-  }, [])
+
+
+ 
   return (
     // <div>EditProduct {id}</div> -- path parameter
     // <div>EditProduct {pid}</div> //query parameter
