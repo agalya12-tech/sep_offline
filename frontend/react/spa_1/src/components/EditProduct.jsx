@@ -1,20 +1,16 @@
 import axios from 'axios';
 import React, { createRef, useEffect, useRef, useState } from 'react'
-import { useLocation, useParams, useSearchParams } from 'react-router-dom'
+import { useLocation, useNavigate, useParams, useSearchParams } from 'react-router-dom'
 
 export const EditProduct = () => {
-
-
   //   let {id}=  useParams(); -- path parameter
-
   let [id] = useSearchParams(); // query parameter
   let pid = id.get('id');
-
-
   //  let location=useLocation();
   //  console.log(location);
 
   let [product, setProduct] = useState({});
+  let navigate = useNavigate();
   let title = useRef(null);
   let description = useRef(null);
   let category = useRef(null);
@@ -29,13 +25,19 @@ export const EditProduct = () => {
       price: price.current.value
     }
     console.log(product);
+    fetch(`https://fakestoreapi.com/products/${pid}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(product)
+    })
+      .then(response => response.json())
+      .then(data => {
+        alert("Product Updated Successfully");
+        navigate("/dashboard/products");
+      });
+
 
   }
-
-
-
-
-
   useEffect(() => {
     // fetch(`https://fakestoreapi.com/products/${pid}`)
     //   .then(response => response.json())
@@ -45,15 +47,7 @@ export const EditProduct = () => {
         // console.log(response.data)
         setProduct(response.data);
       });
-  }, []);
-
-
-
-
-
-
-
-
+  }, [])
   return (
     // <div>EditProduct {id}</div> -- path parameter
     // <div>EditProduct {pid}</div> //query parameter
