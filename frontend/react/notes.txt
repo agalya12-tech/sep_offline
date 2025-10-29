@@ -428,6 +428,23 @@ Link:
    syntax:
       <Link to="/path">Click Here</Link>
 
+
+
+| Properties      | <Link>    | <NavLink>   |
+|-----------------|-----------|-------------|
+| to              |  Yes      |  Yes        |
+| replace         |  Yes      |  Yes        |
+| reloadDocument  |  Yes      |  Yes        |
+| state           |  Yes      |  Yes        |
+| end             | No        |  Controls when the link is considered active (exact match) |
+| className/style | OnlyStatic|  Accepts a **function** that gets `{ isActive, isPending }` |
+
+When To Use:
+
+
+ Simple navigation (no active styling needed) -- <Link> 
+ Navigation with active styling (e.g., menu bar, tabs, sidebar) --<NavLink>
+
 Outlet:
 -------
         - it is used to display the child route with in parent route
