@@ -2,13 +2,14 @@ import React from 'react'
 import useFetchData from './useFetchData'
 
 const CustomHook = () => {
-    let users= useFetchData('https://fakestoreapi.com/users');
-    console.log(users);
-    let products= useFetchData('https://fakestoreapi.com/products');
-    console.log(products);
     
+    let users = useFetchData('https://fakestoreapi.com/users');
+    // console.log('users', users);
+    let products = useFetchData('https://fakestoreapi.com/products');
+    // console.log('products', products);
 
-    
+
+
     // function fetchUser() {
     //     console.log("-----users-------");
     //     fetch('https://fakestoreapi.com/users')
@@ -26,7 +27,13 @@ const CustomHook = () => {
 
 
     return (
-        <div>CustomHook</div>
+        <>
+            <div>CustomHook</div>
+            <button className='btn ' onClick={() => {
+                console.log(products)
+            }
+            }>Click to Fetch Product</button>
+        </>
     )
 }
 

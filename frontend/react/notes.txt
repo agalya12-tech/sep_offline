@@ -595,3 +595,133 @@ Custom hooks:
       - it is used to create reusable code in react
       - it is used to create custom hooks in react
       - it must be start with use keyword
+
+=================================================================================================
+
+Axios :
+------
+    - it is a library used to make http requests in react
+    - which consist of promise based http client for the browser and node.js
+    - it provides get, post, put, delete and patch methods to make http requests
+
+  syntax: 
+          axios.get('url')--for get request
+          axios.post('url', data)--for post request
+          axios.delete('url')--for delete request
+          axios.put('url', data)--for put request--------update
+          axios.patch('url', data)--for patch request ---operation
+         
+advantage of axios:
+-------------------
+    - it is easy to use
+    - it is simple to use and understand
+    - it is easy to debug
+
+
+url:
+-----
+    http://localhost:8080/users/raj--path parameter/variables
+    http://localhost:8080/users?name=raj--query parameter/variables
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+
+
+     
+                                npm install @reduxjs/toolkit react-redux - to install redux library 
+                                npm install redux-thunk - to install redux thunk middleware
+                                npm install redux-saga - to install redux saga middleware
+
+
+Redux:
+=======
+        - redux is a library for managing state in react
+        - it is used to manage  complex state in react
+        - it helps to store the state in a single source of truth  and
+           make it easy to manage
+
+
+components of redux:
+----------------------
+    1.UI - user interface which is used to display the data
+         - events are triggered when the user interacts with the UI
+         - then the actions are dispatched to the reducer
+
+    2.action: it is an object that contains type and payload
+    
+    3.dispatch: it is a function that takes an action and dispatches
+              it to the reducer
+        syntax: 
+                import { useDispatch } from "react-redux";
+                const dispatch = useDispatch();
+                dispatch(action);
+
+    3.reducer: it is a function that takes the current state and 
+               an action and returns the new state after the action is dispatched
+               and manipulates the state according to the action type
+    4.store: it is a single source of truth for the state of the
+             application
+            : it stores the state of the application after manipulated by the reducer
+
+            syntax:
+                    import { createStore } from "redux";
+                    const myStore = createStore(reducer);
+                         or
+                    import { configureStore } from "@reduxjs/toolkit";
+                    const myStore = configureStore({
+                        reducer: {
+                            state: reducer,
+                        },
+                    });
+
+    5.provider: it is a component that provides the store to the
+                rest of the application
+                syntax:
+                        import { Provider } from "react-redux";
+                        <Provider store={myStore}>
+                            <App />
+                        </Provider>
+
+        
+Note : redux is a uni directional state management library
+       flow: action -> dispatch -> reducer -> store
+              ^                                  |
+              |                                  |
+            events                              Provider
+              |                                  |
+              UI---------------------------------+
+
+features of redux:
+-----------------
+    1.single source of truth
+    2.unidirectional data flow
+    3.state management
+    4.action
+    5.reducer
+    6.store
+    7.middleware
+
+MiddleWare: 
+----------
+   - it is a function that is called after the action is dispatched
+   - it is used to modify the action before it is dispatched
+   - it is used to modify the state before it is updated
+   - middle ware can be thunk or saga
+thunk:
+------
+   - it is a  pure function that returns a function 
+   - it is used to create async actions in redux
+saga:
+-----
+   - it is a generator function that returns an iterator
+   - it is used to create async actions in redux
+   - it is complex and used to manage the state in redux
+
+-----------------------------------------------------------------------
+features                 thunk                       saga
+-----------------------------------------------------------------------
+syntax                  pure function              generator function
+
+state management        simple state management    complex state management
+
+returns                 returns a function         returns a iterator
+-----------------------------------------------------------------------
