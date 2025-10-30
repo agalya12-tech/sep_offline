@@ -626,6 +626,10 @@ url:
 -------------------------------------------------------------------------------------------------------------------
 
 
+
+
+
+
      
                                 npm install @reduxjs/toolkit react-redux - to install redux library 
                                 npm install redux-thunk - to install redux thunk middleware
