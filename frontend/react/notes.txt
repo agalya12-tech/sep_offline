@@ -729,3 +729,133 @@ state management        simple state management    complex state management
 
 returns                 returns a function         returns a iterator
 -----------------------------------------------------------------------
+
+
+MERN:(mongodb, express, react, nodejs)
+=====
+     - It is a full stack web development framework
+     - It is a combination of mongodb, express, react, nodejs
+     - it helps to create a full stack web application
+     - mongodb is a document based database(no sql/non relational database)
+     - express is a web framework for nodejs
+     - react is a javascript library for building user interfaces
+     - nodejs is a javascript runtime environment
+  
+creating of backend (express server):
+-------------------------------------
+    1.open terminal and have cmd:
+    2.mkdir student_backend
+    3.cd student_backend
+    4.npm init -y
+    5.npm install express cors mongoose dotenv nodemon
+    6.npm run dev / npm start
+
+express-server
+cors-middleware to allow cross origin resource sharing
+mongodb to store data
+dotenv to store environment variables
+nodemon to run the server
+
+project structure:
+-----------------
+ student_backend
+    |_package.json
+    |_package-lock.json
+    |_node_modules
+    |_.env
+    |_server.js
+    |_routes
+    |   |_userRoutes.js
+    |_models
+        |_userModel.js
+
+
+Steps for mongodb:
+-----------------
+ 1.sign in to atlas
+ 2.create a project
+          : click on new project button
+          : provide project name-->next-->add members(optional)---> create
+ 3.create a cluster for project
+          :left side -->clusters-->create cluster
+          :deploy -- choose free --->provide cluster name --->create
+ 4.create a database user for project
+        -it is important to create a database and connect to backend
+        -database access(left side)-->  add new db user
+            : Password :
+                  userName:admin
+                  Password:admin123
+                  Database User Privileges: Atlas Admin
+            :click on create user
+ 5.Access IP Address:
+         :Network access(left side)-->Access IP Address
+         - add new ip address
+         -click on add ip address
+         -allow access from anywhere (0.0.0.0/0)
+         -click on confirm
+ 6.create db and collections
+       : clusters-->
+       browse collections--->
+       create database(inside collections)--->
+       provide : database name
+       provide : collection name
+       click on create
+ 7.create a connection links
+     -->clusters-->connect--->choose driver--->
+        copy the connection string-->click on done
+
+
+mongodb+srv://admin:admin123@bookcluster.wve30ts.mongodb.net/?retryWrites=true&w=majority&appName=bookCluster
+    
+
+atlas  --> project -->cluster-->database--->collection
+                                        --->collection
+                                        --->collection
+                            --->database--->collection
+                                        --->collection
+                                        --->collection
+
+
+crud methods from mongodb/mongoose:
+------------------------------------
+ save operation --save()
+ update operation --findByIdAndUpdate(id,body,{new:true})
+ delete operation --findByIdAndDelete(id)
+ find operation --find()
+ find by id operation --findById(id)
+
+
+
+ server.js
+ ---------
+const express=require('express'); // to deal with express server
+const mongoose=require('mongoose');// to deal with db
+const cors=require('cors');// to deal with frontend cors
+const env=require('dotenv'); // to deal with environment variables
+const userRoutes=require('provide route location');//to deal with end points
+
+
+//creating application
+const app=express();
+app.use(cors()); //application middleware to connect frontend
+app.use(express.json()); //application middleware
+app.use('/enPoint', userRoutes); //application middleware to use user routes
+
+
+//connecting to db
+mongoose.connect(env.config().parsed.MONGODB_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  dbName: "dbName"
+})
+.then(() => {
+  console.log("Connected to MongoDB");
+  app.listen(env.config().parsed.PORT, () => {
+    console.log(`Server running on port ${env.config().parsed.PORT}`);
+  });
+})
+.catch((error) => {
+  console.error("MongoDB connection error:", error);
+});
+
+
