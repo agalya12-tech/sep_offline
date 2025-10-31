@@ -744,8 +744,8 @@ MERN:(mongodb, express, react, nodejs)
 creating of backend (express server):
 -------------------------------------
     1.open terminal and have cmd:
-    2.mkdir student_backend
-    3.cd student_backend
+    2.mkdir userBackend
+    3.cd userBackend
     4.npm init -y
     5.npm install express cors mongoose dotenv nodemon
     6.npm run dev / npm start
@@ -758,7 +758,7 @@ nodemon to run the server
 
 project structure:
 -----------------
- student_backend
+ userBackend
     |_package.json
     |_package-lock.json
     |_node_modules
@@ -766,8 +766,9 @@ project structure:
     |_server.js
     |_routes
     |   |_userRoutes.js
-    |_models
+    |_model
         |_userModel.js
+
 
 
 Steps for mongodb:
@@ -805,8 +806,11 @@ Steps for mongodb:
         copy the connection string-->click on done
 
 
+
 mongodb+srv://admin:admin123@bookcluster.wve30ts.mongodb.net/?retryWrites=true&w=majority&appName=bookCluster
     
+
+
 
 atlas  --> project -->cluster-->database--->collection
                                         --->collection
