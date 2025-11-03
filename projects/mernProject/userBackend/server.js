@@ -2,21 +2,21 @@ const express=require('express'); // to deal with express server
 const mongoose=require('mongoose');// to deal with db
 const cors=require('cors');// to deal with frontend cors
 const env=require('dotenv'); // to deal with environment variables
-// const userRoutes=require('provide route location');//to deal with end points
+const userRoutes=require('./routes/userRoute');//to deal with end points
 
 
 //creating application
 const app=express();
 app.use(cors()); //application middleware to connect frontend
 app.use(express.json()); //application middleware
-// app.use('/enPoint', userRoutes); //application middleware to use user routes
+app.use('/', userRoutes); //application middleware to use user routes
 
 
 //connecting to db
 mongoose.connect(env.config().parsed.MONGODB_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  dbName: "dbName"
+  dbName: "userDB"
 })
 .then(() => {
   console.log("Connected to MongoDB");
@@ -27,3 +27,6 @@ mongoose.connect(env.config().parsed.MONGODB_URL, {
 .catch((error) => {
   console.error("MongoDB connection error:", error);
 });
+
+
+
