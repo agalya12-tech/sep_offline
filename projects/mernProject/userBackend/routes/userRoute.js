@@ -17,9 +17,6 @@ router.post('/save',(req,res)=>{
  })
 })
 
-
-
-
 //  http://localhost:5000/fetchAll -- get all users
 router.get('/fetchAll',(req,res)=>{
     model.find()
