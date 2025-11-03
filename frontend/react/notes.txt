@@ -750,6 +750,7 @@ creating of backend (express server):
     5.npm install express cors mongoose dotenv nodemon
     6.npm run dev / npm start
 
+
 express-server
 cors-middleware to allow cross origin resource sharing
 mongodb to store data
