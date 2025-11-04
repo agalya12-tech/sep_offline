@@ -1,7 +1,10 @@
 import axios from 'axios';
 import React, { useRef } from 'react'
+import { save } from '../services/api';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
+    let navigate = useNavigate();
     const [image, setImage] = React.useState(null);
     const name = useRef();
     const email = useRef();
@@ -17,14 +20,27 @@ const Register = () => {
 
         axios.post('https://api.cloudinary.com/v1_1/dsbwkapof/image/upload', formData)
             .then(
-                (data)=>{
-                 let user={
-                     name:name.current.value,
-                     email:email.current.value,
-                     password:password.current.value,
-                     image:data.data.url
-                 }
-                 console.log(user);
+                (data) => {
+                    let user = {
+                        name: name.current.value,
+                        email: email.current.value,
+                        password: password.current.value,
+                        image: data.data.url
+                    }
+                    let savedData = save(user);
+                    return savedData
+                }
+            ).then(
+                (data) => {
+                    if (data.status == 200) {
+                        alert('user registered successfully')
+                        navigate("/login")
+                    }
+                }
+            ).catch(
+                (error) => {
+                    alert(error.response.data.MSG)
+                    navigate("/")
                 }
             )
     }
