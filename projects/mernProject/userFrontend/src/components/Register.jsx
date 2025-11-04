@@ -3,24 +3,37 @@ import React from 'react'
 
 const Register = () => {
     const [image, setImage] = React.useState(null);
+    const name = React.useRef();
+    const email = React.useRef();
+    const password = React.useRef();
 
-     function handleSubmit(e){
+    function handleSubmit(e) {
         e.preventDefault();
-       
-        let formData= new FormData();
+
+        let formData = new FormData();
         formData.append('file', image);
         formData.append('upload_preset', 'mern_project');
         formData.append('cloudinary', 'dsbwkapof');
-        axios.post('https://api.cloudinary.com/v1_1/dsbwkapof/image/upload', formData)
-       
-     }
 
+        axios.post('https://api.cloudinary.com/v1_1/dsbwkapof/image/upload', formData)
+            .then((data) => console.log(data.data.url)
+            )
+    }
     return (
         <>
-        <input type="file" accept="image/*" 
-        onChange={(e)=>setImage(e.target.files[0])}
-         /> <br /><br />
-        <button onClick={handleSubmit}>Upload</button>
+            <label htmlFor="name">Name : </label>
+            <input type="text" id='name' placeholder='enter name' ref={name} /><br /><br />
+           
+            <label htmlFor="email">Email : </label>
+            <input type="email" id='email' placeholder='enter email' ref={email} /><br /><br />
+            
+            <label htmlFor="password">Password : </label>
+            <input type="password"  id='password' placeholder='enter password' ref={password} /><br /><br />
+
+            <input type="file" accept="image/*"
+                onChange={(e) => setImage(e.target.files[0])}
+            /> <br /><br />
+            <button onClick={handleSubmit}>Upload</button>
         </>
     )
 }
