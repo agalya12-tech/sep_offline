@@ -7,7 +7,7 @@ const userRoutes=require('./routes/userRoute');//to deal with end points
 
 //creating application
 const app=express();
-app.use(cors()); //application middleware to connect frontend
+// app.use(cors()); //application middleware to connect frontend
 app.use(express.json()); //application middleware
 app.use('/', userRoutes); //application middleware to use user routes
 

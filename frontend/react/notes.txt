@@ -864,3 +864,23 @@ mongoose.connect(env.config().parsed.MONGODB_URL, {
 });
 
 
+
+========================================================================================================================
+Lazy Loading in React is a performance optimization technique where components (or other resources like images) are 
+ loaded only when they are needed, instead of loading everything upfront.
+
+This helps:
+ Improve initial load time
+ Reduce bundle size
+ Make apps faster and more efficient
+
+  Why Lazy Loading?
+-------------------
+Normally, when you build a React app (especially with many routes and large components), everything is bundled into one large JavaScript file.
+When a user visits the site, they download the entire app — even parts they might never see.
+
+Lazy loading allows React to split your app into smaller chunks, loading each one only when it’s required.
+
+-> React.lazy(() => import('./About')) → dynamically imports the component.
+
+-> <Suspense> → shows a fallback (like a spinner or message) until the component is loaded.

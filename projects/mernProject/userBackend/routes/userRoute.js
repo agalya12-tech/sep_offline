@@ -74,4 +74,23 @@ router.put("/update/:id", (req, res) => {
     });
 });
 
+//  http://localhost:5000/login
+router.post("/login", (req, res) => {
+  model
+    .findOne({
+      email: req.body.email,
+      password: req.body.password,
+    })
+    .then((data) => {
+      if (data) {
+        res.status(200).json({ data: data, msg: "login successful" });
+      } else {
+        res.status(400).json({ msg: "Invalid credentials" });
+      }
+    })
+    .catch((error) => {
+      res.status(500).json({ MSG: error.message });
+    });
+});
+
 module.exports = router;
