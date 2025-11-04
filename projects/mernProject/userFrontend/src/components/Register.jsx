@@ -27,22 +27,18 @@ const Register = () => {
                         password: password.current.value,
                         image: data.data.url
                     }
-                    let savedData = save(user);
-                    return savedData
-                }
-            ).then(
-                (data) => {
-                    if (data.status == 200) {
-                        alert('user registered successfully')
-                        navigate("/login")
-                    }
-                }
-            ).catch(
-                (error) => {
-                    alert(error.response.data.MSG)
-                    navigate("/")
-                }
-            )
+                    return save(user);
+                }).then(
+                    (data) => {
+                        if (data.status == 200) {
+                            alert('user registered successfully')
+                            navigate("/login")
+                        }
+                    }).catch(
+                        (error) => {
+                            alert(error.response.data.MSG)
+                            navigate("/")
+                        })
     }
     return (
         <>
