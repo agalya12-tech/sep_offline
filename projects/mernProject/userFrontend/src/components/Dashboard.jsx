@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { deleteUser, getAllUsers } from '../services/api';
+import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
     const [users, setUsers] = useState([]);
@@ -23,7 +24,11 @@ const Dashboard = () => {
     }
     return (
         <>
-            <table class="table table-striped table-hover">
+             {
+                 users.length == 0 && <h1>Loading...</h1>
+             }
+
+            <table className="table table-striped table-hover">
                 <tr>
                     <th>Name</th>
                     <th>Email</th>
@@ -35,7 +40,7 @@ const Dashboard = () => {
                     <th>DELETE</th>
                 </tr>
                 {
-                    users.map((user) => {
+                   users.length > 0 &&  users.map((user) => {
                         return (
                             <tr key={user._id} class="table-primary">
                                 <td>{user.name}</td>
@@ -44,7 +49,7 @@ const Dashboard = () => {
                                 <td>{user.gender}</td>
                                 <td>{user.address}</td>
                                 <td><img style={{ "width": "200px", "height": "200px" }} src={user.image} alt="" /></td>
-                                <td><button className='btn btn-primary'>Edit</button></td>
+                                <td><Link to={`/edit/${user._id}`} className='btn btn-primary'>Edit</Link></td>
                                 <td><button className='btn btn-danger' onClick={() => handleDelete(user._id)}>Delete</button></td>
                             </tr>
                         )

@@ -6,6 +6,7 @@ import Register from './components/Register';
 import Login from './components/Login';
 import './App.css'
 import Dashboard from './components/Dashboard';
+import Edit from './components/Edit';
 const App = () => {
   return (
     <>
@@ -14,6 +15,7 @@ const App = () => {
          <Route path="/" element={<Register />}></Route>
          <Route path="/login" element={<Login />}></Route>
          <Route path="/dashboard" element={<Dashboard />}></Route>
+         <Route path="/edit/:id" element={<Edit />}></Route>
         </Routes>
       </BrowserRouter>
     </>
