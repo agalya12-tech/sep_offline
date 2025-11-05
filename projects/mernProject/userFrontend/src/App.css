@@ -40,3 +40,32 @@
 .read-the-docs {
   color: #888;
 }
+
+table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    width: 50%;
+    height: 39px;
+ 
+}
+th{
+    background-color: lightblue;
+    font-size: 40px;
+}
+td{
+    font-size: 30px;
+}
+
+.btn{
+   color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 0 10px;
+    background-color: red;
+}
