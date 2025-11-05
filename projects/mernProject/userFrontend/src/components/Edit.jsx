@@ -48,7 +48,7 @@ const Edit = () => {
     const [image, setImage] = useState(null);
     function handleEditImage(e) {
         e.preventDefault();
-        
+
         uploadImage(image)
             .then(
                 (data) => {

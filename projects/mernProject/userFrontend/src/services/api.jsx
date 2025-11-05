@@ -12,7 +12,7 @@ export const deleteUser=(id)=>axios.delete(`${API}/delete/${id}`);
 export const updateUser=(id,user)=>axios.put(`${API}/update/${id}`,user);
 
 export const uploadImage=(img)=>{
-     let formData = new FormData();
+            let formData = new FormData();
             formData.append('file', img);
             formData.append('upload_preset', 'mern_project');
             formData.append('cloudinary', 'dsbwkapof');
