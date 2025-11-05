@@ -23,7 +23,7 @@ const Login = () => {
           }
         }).catch(
           (error) => {
-            alert(error.response.data.MSG)
+            alert("Invalid Credentials")
             navigate("/login")
           })
   }

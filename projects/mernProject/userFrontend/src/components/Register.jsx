@@ -1,6 +1,5 @@
-import axios from 'axios';
 import React, { useRef } from 'react'
-import { save } from '../services/api';
+import { save, uploadImage } from '../services/api';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Register = () => {
@@ -12,13 +11,7 @@ const Register = () => {
 
     function handleSubmit(e) {
         e.preventDefault();
-
-        let formData = new FormData();
-        formData.append('file', image);
-        formData.append('upload_preset', 'mern_project');
-        formData.append('cloudinary', 'dsbwkapof');
-
-        axios.post('https://api.cloudinary.com/v1_1/dsbwkapof/image/upload', formData)
+           uploadImage(image)
             .then(
                 (data) => {
                     let user = {
