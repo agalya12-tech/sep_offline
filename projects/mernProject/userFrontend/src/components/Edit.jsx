@@ -1,11 +1,12 @@
 import React, { use, useEffect, useRef, useState } from 'react'
-import { useBlocker, useParams } from 'react-router-dom'
-import { getUser } from '../services/api';
+import { useBlocker, useNavigate, useParams } from 'react-router-dom'
+import { getUser, updateUser } from '../services/api';
 
 const Edit = () => {
     const { id } = useParams();
     const [user, setUser] = useState({});
-    
+    const[image,setImage]=useState(null);
+    const navigate=useNavigate();
     useEffect(() => {
         getUser(id)
         .then(res => {
@@ -22,8 +23,30 @@ const Edit = () => {
     const address=useRef();
     const age=useRef();
     const gender=useRef();
+    function handleEdit(e){
+     e.preventDefault();
+     let user={
+        name:name.current.value,
+        email:email.current.value,
+        password:password.current.value,
+        address:address.current.value,
+        age:age.current.value,
+        gender:gender.current.value
+     }
+      updateUser(id,user)
+      .then(res => {
+        if(res.status==200){
+            alert("User Updated Successfully");
+            navigate("/dashboard");
+        }
+      })
+      .catch(err => console.log(err));
+
+    }
+
     return (
         <>
+    
         <label htmlFor="name">Name : </label>
         <input type="text" id='name' defaultValue={user.name}  ref={name}/> <br /><br />
         <label htmlFor="email">Email : </label>
@@ -37,7 +60,7 @@ const Edit = () => {
         <label htmlFor="gender">Gender : </label>
         <input type="text" id='gender' defaultValue={user.gender} ref={gender} /> <br /><br />
     
-        <button>Update</button>
+        <button onClick={handleEdit}>Update</button>
         
         </>
     )
