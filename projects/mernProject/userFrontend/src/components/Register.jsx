@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useRef } from 'react'
 import { save } from '../services/api';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Register = () => {
     let navigate = useNavigate();
@@ -54,7 +54,8 @@ const Register = () => {
             <input type="file" accept="image/*"
                 onChange={(e) => setImage(e.target.files[0])}
             /> <br /><br />
-            <button onClick={handleSubmit}>Upload</button>
+            <p>Already have an account? <Link to="/login">Login</Link></p>
+            <button onClick={handleSubmit}>REGISTER</button>
         </>
     )
 }
