@@ -2,7 +2,7 @@ package basic_project;
 /*
  * Primitive Data types:
  * byte=Byte , short=Short , int=Integer , long=Long
- * double=Double , float=Float , char=Character
+ * double=Double , float=Float , char=Character boolean =Boolean
  * */
 public class DataTypeProgram1 {
 
