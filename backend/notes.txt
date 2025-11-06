@@ -124,6 +124,7 @@ Variables:(identifier/reference variable)
      - it is a container to store values / data / literal
      - it is a reference data type
 
+
 Variable declaration : 
 ----------------------
     datatype identifier;
