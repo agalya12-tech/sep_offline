@@ -1,0 +1,323 @@
+JAVA
+-----
+    - java is a programming language and a platform independent
+    - it is a high level programming language
+
+history:
+-------
+    - java was developed in the year of 1991 by james gosling with his green team 
+    - java is introduced in the year of 1995 by sun microsystems
+    - In 1995 java first version was released
+     versions released:
+     -----------------
+         java 1.0- 1996
+         java 1.1- 1997
+         java 1.2- 1998
+         java 1.8- 2014
+         java 23- 2024
+         java 24- 2025-march-18
+         java 25- 2025-september-16
+https://en.wikipedia.org/wiki/Java_version_history
+
+jdk-java development kit
+   - it consists of jre and jdk and development tools 
+    like javac and java etc.,
+jre-java runtime environment
+    -jre consist of jdk and library to develop and run 
+     java application
+jvm-java virtual machine
+   -jvm helps java to run on different platforms
+
+
+features:
+---------
+1.platform independent: java can be executed on any platform
+     (any os like windows,linux,mac)
+        - java files must save with .java extension
+        - java files are high level programming language
+                compiles
+     ____.java--------------->____.class (bytecode)
+       - .java files compiles into .class files by java compiler
+          cmd: javac filename.java
+       - to execute java file cmd: java filename
+
+Note : java is a platform independent but jdk dependent
+     : to compile the code main method is not required bcoz,
+       compiler will check syntax .
+     : to execute the code main method is required bcoz ,
+       interpreter/jvm will search for main method as entry point
+
+2.strongly typed: java is a strongly typed language
+3.object oriented: java is a object oriented language
+                 : polymorphism,inheritance,encapsulation,abstraction
+4.dynamic: java is a dynamic language
+5.robust and portable:
+                    - java is a robust and portable language
+                    - it consist garbage collection and memory management
+                    - it does't have pointers like c++
+6.secure: java is a secure language
+        : it provides security features like access modifiers
+7.java is a case sensitive language 
+        
+
+
+syntax of java program:
+----------------------
+
+//package - folder
+package basic_project;
+/*
+ * public - access modifier
+ * class- keyword
+ * FirstProgram-Identifier
+ * */
+public class FirstProgram {
+	/*
+	 * main()-entry point to run the program
+	 * public - access modifier
+	 * static- non access modifier
+	 * void -return type
+	 * main- identifier
+	 * String - Data type
+	 * args- identifier
+	 * */
+	public static void main(String[] args) {
+		System.out.println("hlo world");
+	}
+
+}
+
+
+
+
+tokens: building blocks of java program
+=======
+    1.keywords : reserved words/predefined words
+               eg:public ,static,void etc.,
+Rules: 
+    1.cannot start with digit and space and special characters
+    2.cannot contain space and special characters other than(_ and $)
+    2.keywords cannot be used as identifiers
+    3.identifiers are case sensitive
+    4.identifiers are unique
+
+Conventions:
+    1.class and interface names should start with capital letter(CamelCase)
+     eg:FirstProgram
+    2.method and variables should start with small letter(PascalCase)
+     eg:firstProgram
+
+
+
+    2.Identifiers: names given to variables,methods,classes,
+                   interface etc.,
+    3.literals: values /data /constant 
+    4.Operators
+    5.separators : delimiters
+                  eg: ;, ., :, /, etc.,
+
+
+------------------------------------------------------------------------------------------
+
+Variables:(identifier/reference variable)
+==========
+     - it is a container to store values / data / literal
+     - it is a reference data type
+
+Variable declaration : 
+----------------------
+    datatype identifier;
+
+Note: local variable must be initialized before use
+
+Variable initialization:(variable assignment)
+-------------------------
+    datatype identifier=value;
+variable re-initialization:
+----------------------------
+    datatype identifier=value;
+             identifier=value2;
+
+variable re-declaration:
+-------------------------
+    datatype identifier=value;
+    datatype identifier=value2;
+
+Note : variable re-declaration is not allowed  in java
+
+
+Variables types:
+==================
+          1.Based on Scope
+                 1.Local variable
+                 2.Global variable(static variable+ instance/non static variable)
+          2.Based on data type
+                 1.Primitive variables
+                         - a variable can store single value/primitive data  
+                 2.Non primitive variables
+                         - a variable can store multiple values/address of variables/non primitive data 
+          3.Based on access modifiers(applicable to global variables only for visibility)
+                 1.Public variable
+                 2.Private variable
+                 3.Protected variable
+                 4.Default variable
+
+
+
+Data Types:
+==========
+     - it defines which type of values can be stored in a variable
+
+Primitive data types: it store single value
+=====================
+    1.Numbers 
+            1.Integers 
+                       1.byte   -128 to 127      
+                       2.short  -32768 to 32767  
+                       3.int    -2147483648 to 2147483647
+                       4.long   -9223372036854775808 to 9223372036854775807
+            2.Decimal 
+                       5.float  -3.4028235E38 to 3.4028235E38
+                       6.double -1.7976931348623157E308 to 1.7976931348623157E308
+
+    2.Characters       7.char    
+    3.Boolean          8.boolean  true or false
+
+Note : boolean doesn't have any min and max value
+       
+
+Non primitive data types: it stores multiple values/address of variables
+=========================
+    1.String
+    2.Array
+    3.Object
+    4.Class/interface/enum
+    
+
+
+Scanner class:
+--------------
+    - it is used to take input from user
+    - it is a class from java.util package
+
+    syntax:
+        import java.util.Scanner; 
+        Scanner sc=new Scanner(System.in);
+        
+        byte b=sc.nextByte();
+        short s=sc.nextShort();
+        int i=sc.nextInt();
+        long l=sc.nextLong();
+        float f=sc.nextFloat();
+        double d=sc.nextDouble();
+        char c=sc.next().charAt(0); //for single character
+        boolean b=sc.nextBoolean();
+        String s=sc.nextLine(); // for sentence
+        
+
+Note : InputMismatchException is thrown by scanner class when user enter wrong data type
+
+import statements:
+==================
+    - it is used to import a package
+    - it is a statement
+    - it is used to import a class/interface present in different package
+    - for java.lang package we don't need to use import statement, by default 
+     java.lang package is imported by compiler
+   
+
+printing statements:
+====================
+    - it is used to print a value on console
+    - it is a statement
+    - it is used to print a value on console
+
+syntax:
+    System.out.println(value); - with new line
+    System.out.print(value); - without new line
+    System.out.printf(format,value); - with format
+    System.err.println(value); - with new line for error message
+
+
+Note :
+------
+   - System is a class from java.lang package
+   -  . is used to access members of class
+
+    System.err: standard error stream
+    System.in: standard input stream
+    System.out: standard output stream
+
+
+TypeCasting/Type Conversion:
+-----------------------------
+   - the process of converting one data type to another data type
+   Types:
+       1.primitive type casting
+       2.non primitive type casting
+
+1.Primitive type casting:
+-------------------------
+   - it is used to convert one primitive data type to another primitive data type
+   Types:
+      1.implicit type casting/auto type casting/widening
+              - converting smaller data type to larger data type
+              - no loss of data
+              - compiler implicit add cast operator
+      2.explicit type casting/forced type casting/narrowing
+              - converting larger data type to smaller data type
+              - loss of data
+              - programmer explicitly add cast operator
+
+order:
+    byte ----> short ----> 
+                           int ----> long ----> float ----> double
+                char ---->
+
+ size            byte     bits
+-------------------------------------
+   byte           1         8
+   short          2         16
+   int            4         32
+   long           8         64
+   float          4         32
+   double         8         64
+   char           2         16
+   boolean        1         8
+
+Note : can't convert boolean to any other data type and vice versa
+
+
+Non primitive type casting:
+----------------------------
+   - the process of converting one non primitive data type to 
+     another non primitive data type
+       types:
+            1.implicit type casting/UpCasting/auto type casting
+                 The process of converting(storing) child class object  
+                 to parent class object
+                 syntax: 
+                    Parent refName=new ChildClass();
+            2.explicit type casting/DownCasting/forced type casting
+                  The process of converting(storing) parent class object 
+                  to child class object
+                  syntax: 
+                    ChildClass refName=(ChildClass) new ParentClass();
+                - UpCasting is mandatory for DownCasting, without UpCasting
+                  if we perform DownCasting it will throw ClassCastException
+
+Note : instanceof operator is used to check the type of object
+       it avoids ClassCastException
+       syntax:
+            if(parentRefName instanceof ChildClass){
+              ChildClass refName=(ChildClass)parentRefName;
+            }
+       
+
+
+
+
+
+
+==============================================================================
+==============================================================================
