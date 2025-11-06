@@ -1,7 +1,8 @@
 JAVA
 -----
-    - java is a programming language and a platform independent
+    - java is a programming language and a platform independent(Os) , jvm dependent
     - it is a high level programming language
+    - java is WORA(write once run anywhere) programming language
 
 history:
 -------
@@ -19,8 +20,11 @@ history:
          java 25- 2025-september-16
 https://en.wikipedia.org/wiki/Java_version_history
 
+
+
+
 jdk-java development kit
-   - it consists of jre and jdk and development tools 
+   - it consists of jre  and development tools 
     like javac and java etc.,
 jre-java runtime environment
     -jre consist of jdk and library to develop and run 
@@ -39,7 +43,13 @@ features:
      ____.java--------------->____.class (bytecode)
        - .java files compiles into .class files by java compiler
           cmd: javac filename.java
-       - to execute java file cmd: java filename
+       - to execute java file (jvm /interpreter)
+        cmd: java filename
+
+             javac filename.java               java className
+___.java  <----------------------> ____.class<-----------------> output
+
+
 
 Note : java is a platform independent but jdk dependent
      : to compile the code main method is not required bcoz,
@@ -94,7 +104,14 @@ tokens: building blocks of java program
 =======
     1.keywords : reserved words/predefined words
                eg:public ,static,void etc.,
-Rules: 
+
+
+
+
+    2.Identifiers: names given to variables,methods,classes,
+                   interface etc.,
+        
+        Rules: 
     1.cannot start with digit and space and special characters
     2.cannot contain space and special characters other than(_ and $)
     2.keywords cannot be used as identifiers
@@ -108,9 +125,6 @@ Conventions:
      eg:firstProgram
 
 
-
-    2.Identifiers: names given to variables,methods,classes,
-                   interface etc.,
     3.literals: values /data /constant 
     4.Operators
     5.separators : delimiters
@@ -181,7 +195,7 @@ Primitive data types: it store single value
                        5.float  -3.4028235E38 to 3.4028235E38
                        6.double -1.7976931348623157E308 to 1.7976931348623157E308
 
-    2.Characters       7.char    
+    2.Characters       7.char    single character(white space)  
     3.Boolean          8.boolean  true or false
 
 Note : boolean doesn't have any min and max value
