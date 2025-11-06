@@ -1,0 +1,11 @@
+package basic_project;
+/*
+ * Primitive Data types:
+ * */
+public class DataTypeProgram1 {
+
+	public static void main(String[] args) {
+		  byte minByte=Byte.MIN_VALUE;
+//		  byte maxByte=
+	}
+}
