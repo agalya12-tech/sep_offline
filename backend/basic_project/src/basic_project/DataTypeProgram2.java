@@ -15,11 +15,11 @@ public class DataTypeProgram2 {
 		 short s=b1;
 		 System.out.println(s);
 		 
-		 char c=97;
+		 char c=97; //converting ASCII into char
 		 System.out.println(c);
 		 
 		 
-		 int a='a';
+		 int a='a';//converting char into ASCII
 		 System.out.println(a);
 	}
 }

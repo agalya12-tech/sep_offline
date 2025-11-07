@@ -336,3 +336,188 @@ Note : instanceof operator is used to check the type of object
 
 ==============================================================================
 ==============================================================================
+
+Operators:
++++++++++
+       1.Arithmetic operators : + , - , * , / , %
+       2.Relational/comparison operators: == , != , > , < , >= , <=
+       3.Logical operators : && , || , !
+       4.Bitwise operators : & , | , ~ , ^ , << , >>
+       5.Assignment operators : = , += , -= , *= , /= , %=
+       6.Unary operators:
+                   1.increment operator
+                                 1.pre-increment operator: ++a
+                                 2.post-increment operator : a++
+                   2.decrement operator
+                                 1.pre-decrement operator: --a
+                                 2.post-decrement operator : a--
+       7.Ternary/conditional operators
+               operand1?operand2:operand3
+               condition?true:false
+
+precedence/priority of operators:
+=================================
+    ()
+    ! , ~
+    * , / , %
+    + , -
+    << , >>
+    & , |
+    == , != , > , < , >= , <=
+    &&
+    ||
+    = , += , -= , *= , /= , %=
+    
+
+Statements:
+============
+       1.printing statements
+       2.conditional statements
+       3.looping statements
+       
+2.Conditional statements:
+-------------------------
+       1.if statement
+       2.else if statement
+       3.else if ladder statement
+       4.nested if statement
+       5.switch statement
+
+Note :
+-------
+ switch :
+   - it can accept a value/data/expression
+   - it will accept byte , short , int , char , String , enum (constant)
+   - it won't accept duplicate cases
+   - default is optional
+   - break is optional, but used to terminate a case
+
+3.looping statements:
+---------------------
+       1.while loop
+       2.do while loop
+       3.for loop
+       4.for each loop(advanced for loop/enhanced for loop)
+       5.nested loop
+-----------------------------------------------------------------
+                        while                           do while
+----------------------------------------------------------------
+no of min iterations     0                         1
+                    checks the condition         firstly it executes the block 
+                    then executes the block      then checks the condition
+-----------------------------------------------------------------
+
+Arrays:
+=======
+    - it is used to store multiple values in a single variable of same data type
+    - it is a non primitive data type/reference data type
+    - it is fixed in size(immutable for size)
+    - it is indexed and indexed start from 0
+    - mutable for elements
+
+note : values of an array can be modified but size of an array 
+      can't be modified
+creation of array:
+-----------------
+    datatype [] name=new datatype[size];
+    datatype [] name=new datatype[]{value1,value2,value3};
+    datatype name[]={value1,value2,value3};
+    datatype [] name=new datatype[size]{value1,value2,value3};
+accessing elements of array:
+----------------------------
+    name[index]; // for reading
+    name[index]=value; // for writing/modifying
+length of array:
+----------------
+    name.length; // for reading
+
+Arrays methods:
+===============
+   - Arrays is a class from java.util package
+   - it consist static methods which are used to perform 
+     operations on arrays 
+
+toString():
+------------    
+    - it is used to convert array to string
+    - it helps to print array elements rather than address
+    syntax:
+        Arrays.toString(arrName);
+
+sort():
+-------
+    - it is used to sort array elements
+    - it helps to sort array elements in ascending order
+    syntax:
+        Arrays.sort(arrName);
+    - to sort in descending order
+        Arrays.sort(arrName,Collections.reverseOrder());
+
+binarySearch():
+----------------
+    - it is used to search for an element in array
+    - it helps to search for an element in array in ascending order
+    syntax:
+        int index=Arrays.binarySearch(sortedArray,element);
+    - it element found it returns the index of that element
+    - if element not found it returns  -(index+1)
+    - to search in descending order
+        int index=Arrays.binarySearch(sortedArray,element,
+        Collections.reverseOrder());
+equals():
+---------
+    - it is used to compare two arrays
+    syntax:
+        boolean result=Arrays.equals(arr1,arr2);
+    - it returns true if both arrays are equal
+    - it returns false if both arrays are not equal
+mismatch():
+------------
+    - it is used to find the index of first mismatched elements
+    syntax:
+       int index=Arrays.mismatch(arr1,arr2);
+    - it returns the index of first mismatched elements
+    - it returns -1 if both arrays are equal
+
+copyOf():
+---------
+    - it is used to copy one array to another array
+    syntax:
+        datatype [] newName=Arrays.copyOf(arrName,size);
+Note : size can be greater or equal or less to arrName.length
+     : it will copy from 0th index to endIndex-1th index
+copyOfRange():
+--------------
+    - it is used to copy one array to another array
+    syntax:
+        datatype [] newName=Arrays.copyOfRange
+          (arrName,startIndex,endIndex);
+Note : it will copy from startIndex to endIndex-1th index
+
+multidimensional arrays:
+-------------------------
+    - it is used to store multiple arrays in a single variable
+    syntax:
+
+      datatype [] [] name=new datatype[rowSize][columnSize];
+
+      datatype[][]name={
+          {value1,value2,value3},
+          {value1,value2,value3},
+          {value1,value2,value3}
+      };
+
+note : if rows and columns are equal then it is called square matrix
+       if rows and columns are not equal then it is called 
+        rectangle matrix/jagged matrix/jagged array
+
+deepToString():
+----------------
+    - it is used to convert multidimensional array to string
+    syntax:
+        Arrays.deepToString(arrName);
+
+
+
+=============================================================================
+=============================================================================
