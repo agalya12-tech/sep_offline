@@ -178,6 +178,9 @@ Variables types:
                  4.Default variable
 
 
+Note : final variables cannot be changed
+      Constants: Constants means fixed values
+
 
 Data Types:
 ==========
