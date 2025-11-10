@@ -452,8 +452,22 @@ Note : return type of main method must be void
      : if return type is void , then return statement is optional
      : if return type is other than void , then return statement is mandatory
 
-
-
+Parameters/arguments:
+---------------------
+       - it is a variable which is used to pass a value to a method
+       - it is a local variable to a method
+       Based on parameters:
+       -------------------
+                     1.Argumented method/parameterized method
+                     2.Non-argumented method/non-parameterized method
+        actual parameters:
+        ------------------
+                     1. it is a value/data passed to a method
+                     m1(a);
+        formal parameters:
+        ------------------
+                     2. it is a variable which is used to collect and store a value passed to a method
+                      m1(int a)
 
 
 
