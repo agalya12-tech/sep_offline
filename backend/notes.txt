@@ -389,7 +389,7 @@ Statements:
 Note :
 -------
  switch :
-   - it can accept a value/data/expression
+   - it can accept a value/data/expression/variable
    - it will accept byte , short , int , char , String , enum (constant)
    - it won't accept duplicate cases
    - default is optional
@@ -409,6 +409,52 @@ no of min iterations     0                         1
                     checks the condition         firstly it executes the block 
                     then executes the block      then checks the condition
 -----------------------------------------------------------------
+
+
+====================================================================================================================================
+Methods:
+--------
+     - It is a block of code which is used to perform a specific task
+     - It is a re-usable block of code
+
+     syntax:
+      
+      accessModifier modifier return_type method_name(parameters){
+          ----
+          ---
+          return type;
+      }
+method signature:
+-----------------
+         methodName (parameters)
+             
+method definition/declaration:
+----------------------------
+         accessModifier modifier return_type method_name(parameters)
+
+method body:
+------------
+         {
+             ----
+             ----
+             return type;
+         }
+       
+Return type:
+-----------
+     - it is a data type which is used to return a value from a method
+       to a caller
+
+Note : return type of main method must be void
+
+
+
+
+
+
+
+
+
 
 Arrays:
 =======
@@ -462,7 +508,7 @@ binarySearch():
     - it helps to search for an element in array in ascending order
     syntax:
         int index=Arrays.binarySearch(sortedArray,element);
-    - it element found it returns the index of that element
+    - if element found it returns the index of that element
     - if element not found it returns  -(index+1)
     - to search in descending order
         int index=Arrays.binarySearch(sortedArray,element,
