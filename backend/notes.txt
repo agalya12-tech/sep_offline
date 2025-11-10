@@ -414,15 +414,18 @@ no of min iterations     0                         1
 ====================================================================================================================================
 Methods:
 --------
-     - It is a block of code which is used to perform a specific task
-     - It is a re-usable block of code
+     - It is a block of code which is used to perform a specific task,
+       which consist collection of statements
+     - It is a re-usable block of code(call method n times)
+     - without invoking a method it won't execute the method
+     - can't create a method inside a method
 
      syntax:
       
       accessModifier modifier return_type method_name(parameters){
           ----
           ---
-          return type;
+          return ;
       }
 method signature:
 -----------------
@@ -446,6 +449,8 @@ Return type:
        to a caller
 
 Note : return type of main method must be void
+     : if return type is void , then return statement is optional
+     : if return type is other than void , then return statement is mandatory
 
 
 
