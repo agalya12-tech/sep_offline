@@ -10,7 +10,7 @@ public class Calculator {
 		int a=sc.nextInt();
 		System.out.print("enter second value : ");
 		int b=sc.nextInt();
-		System.out.print("enter Operation(+,-,*,/,%) : ");
+		System.out.print("enter Operator(+,-,*,/,%) : ");
 		char symbol=sc.next().charAt(0);
 		
 		switch (symbol) {
@@ -20,7 +20,7 @@ public class Calculator {
 		case '/':division(a,b);break;
 		case '%':modules(a,b);break;
 
-		default:System.err.println("please enter correct operation");
+		default:System.err.println("please enter correct operator");
 			break;
 		}
 		
