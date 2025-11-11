@@ -511,8 +511,15 @@ instance members will load into instance memory when object is created
 Accessibility:
 -------------
    1.In same class
+         in static method:
+               - static members can access directly/className
+               - non static members can access by using object reference
+         in non static method:
+              - static and non static members directly
 
    2.In Different class:
+       - static members can access by using class name
+       - non static members can access by using object
          
 
 

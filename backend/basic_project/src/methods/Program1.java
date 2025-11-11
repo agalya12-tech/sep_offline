@@ -29,7 +29,6 @@ public class Program1 {
 		 System.out.println(program1.instanceVariable);
 		 program1.instanceMethod();
 	}
-	
 	public void m2() {
 		System.out.println(instanceVariable);
 		System.out.println(staticVariable);
