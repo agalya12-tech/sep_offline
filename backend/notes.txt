@@ -468,9 +468,52 @@ Parameters/arguments:
         ------------------
                      2. it is a variable which is used to collect and store a value passed to a method
                       m1(int a)
+Method Overloading:
+-------------------
+    - The process of having multiple methods with same name but different parameters or
+      formal arguments in same class is called method overloading
+Rules:
+------
+    1. method name must be same
+    2. number of parameters must be different
+    3. data type of parameters must be different
+    4. order/position/sequence of parameters must be different
+
+
+Class:
+------
+    - it is a blueprint/template to create objects
+    - it is a non primitive data and reference data type
+    - it is a container to store values/data/literals
+    - it is a collection of variables/properties/data members and methods/functions
+
+
+Object:
+-------
+    - it is a real world entity
+    - it is a instance of a class
+    - it is a reference data type
+    - Constructor is used to create an object
 
 
 
+
+Class members:
+==============
+    1.static members
+    2.instance/non static members
+
+Note:
+-----
+static members will load into static memory when class is loaded into JVM
+instance members will load into instance memory when object is created
+
+Accessibility:
+-------------
+   1.In same class
+
+   2.In Different class:
+         
 
 
 
