@@ -497,16 +497,122 @@ Object:
 
 
 
+constructor:
+------------
+     - it is a special method which is used to create objects
+     - it is a block of code which is executed when object is created
+     - it is used to initialize data members of objects
+Note:
+------- 
+    - constructor name should be same as class name
+    - constructor does not return any value
+
+Types:
+------
+     1. default constructor:
+         - by default compiler creates default constructor
+         - once user creates a constructor it will override(remove) 
+           default constructor
+     2. user defined constructor
+          1. parameterized constructor/argumented constructor
+          2. non parameterized constructor/no argumented constructor
+        
+Constructor overloading:
+-------------------------
+      - the process of creating multiple constructors with different 
+        parameters in same class is called constructor overloading
+rules:
+      1.no of args should be different
+      2.data types of args should be different
+      3.order of args should be different  
+
+
+-------------------------------------------------------------------------
+                      method                            constructor
+-------------------------------------------------------------------------
+return type           yes                                  no
+modifiers            yes                                   no
+name                  can be anyName                 same as className
+use                  performs a task                 creates an object
+                                              initializes data members
+-------------------------------------------------------------------------
+
+Modifiers:(specifiers)
+==========
+    - it is a keyword which is used to modify ,access of methods and 
+      variables
+    - it is used to modify access of methods and variables
+    Types:
+        1.Access modifiers:(visibility)
+                      1.public
+                      2.private
+                      3.protected
+                      4.default
+        2.Non access modifiers(modifiers):
+                      1.static
+                      2.final
+                      3.abstract
+                      4.synchronized etc.,
+
+
+----------------------------------------------------------------------------
+                       private     default    protected    public
+---------------------------------------------------------------------------
+with in class          yes         yes         yes          yes
+
+with in package        no         yes         yes           yes
+
+with in another
+package but subclass   no         no          yes           yes
+
+
+with in another        no        no           no            yes
+package
+----------------------------------------------------------------------------
 
 Class members:
 ==============
     1.static members
     2.instance/non static members
 
-Note:
------
-static members will load into static memory when class is loaded into JVM(one time)
-instance members will load into instance memory/heap memory when object is created(multiple times)
+static:
+-------
+      - it is a keywords used to modify methods and variables
+      - static members will belongs to class and not to objects
+
+loading of members:
+-------------------
+      - static members will be loaded into static area when
+        class is loaded
+      - it executes static initializers before main()
+    
+      - non static members will be loaded into heap area when
+       object is created
+      -it executes non static initializers before constructor
+       calls
+
+static initializers:
+-------------------
+      - it is a block of code which is executed when class is loaded
+      - it is used to initialize static members of class
+      syntax:
+          static{
+          
+          }
+
+non static initializers:
+------------------------
+      - it is a block of code which is executed when object is created
+      - it is used to initialize non static members of class
+    syntax:
+          {
+          
+          }
+
+
+
+
+
 
 Accessibility:
 -------------
@@ -522,7 +628,7 @@ Accessibility:
        - non static members can access by using object
          
 
-
+==========================================================================================
 
 
 Arrays:
