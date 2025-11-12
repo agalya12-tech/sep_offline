@@ -560,7 +560,7 @@ Modifiers:(specifiers)
 ---------------------------------------------------------------------------
 with in class          yes         yes         yes          yes
 
-with in package        no         yes         yes           yes
+with in package        no          yes         yes           yes
 
 with in another
 package but subclass   no         no          yes           yes
@@ -569,6 +569,11 @@ package but subclass   no         no          yes           yes
 with in another        no        no           no            yes
 package
 ----------------------------------------------------------------------------
+
+Note:
+----
+   - class can't be private and protected 
+
 
 Class members:
 ==============
