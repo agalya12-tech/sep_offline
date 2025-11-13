@@ -18,5 +18,10 @@ public class Array3 {
 			arr[i]=a++;
 		}
 		System.out.println(Arrays.toString(arr));
+		
+		
+		
+		
+		
 	}
 }
