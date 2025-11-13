@@ -5,7 +5,7 @@ import java.util.Collections;
 
 public class AscendingDescending {
 	public static void main(String[] args) {
-     Integer[]arr= {10,21,11,5,9,23,45,9,2,1};
+     Integer[]arr= {10,21,11,5,9,23,45,9,2,1,89};
 //              5,9,10,11,21
 //                          45,23,9,2,1
 //              5,9,10,11,23,45,23,9,2,1
