@@ -48,7 +48,7 @@ public class Array4 {
 		System.out.println("copied " + Arrays.toString(copy3));
 
 		int[] arr5 = { 10, 123, 20, 23, 45, 123, 123 };
-		int value = 123;
+		int value = 10;
 //		boolean res=false;
 //		for(int a:arr5) {
 //			if(value==a) {
