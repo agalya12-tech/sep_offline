@@ -638,7 +638,7 @@ Accessibility:
 
 Arrays:
 =======
-    - it is used to store multiple values in a single variable of same data type
+    - it is used to store multiple values in a single variable of same/homogenous data type
     - it is a non primitive data type/reference data type
     - it is fixed in size(immutable for size)
     - it is indexed and indexed start from 0
