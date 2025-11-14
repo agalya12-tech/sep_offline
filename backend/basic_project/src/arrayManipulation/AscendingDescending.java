@@ -14,9 +14,7 @@ public class AscendingDescending {
      Arrays.sort(firstHalf);
      
      Integer[] secondHalf=Arrays.copyOfRange(arr, half, arr.length);
-     Arrays.sort(secondHalf,Collections.reverseOrder());
-     
-     
+     Arrays.sort(secondHalf,Collections.reverseOrder()); 
      int[]modifiedArray=new int[arr.length];
      for(int i=0;i<half;i++) {
     	 modifiedArray[i]=firstHalf[i];
