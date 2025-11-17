@@ -3,22 +3,29 @@ package stringManipulation;
 public class String5 {
 
 	public static void main(String[] args) {
-		String s = "This is A large sentence which explains about string";
-		for (String word : s.split(" ")) {
-			char ch = word.charAt(0);
+		String s = "listen";
+		String s1 = "silent";
+		if (isAnagram(s1, s)) {
+			System.out.println("is an anagram");
+		}
+	}
 
-//         if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'
-//			ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U') {
-//        	  for vowel
-//         }
-			String vowel = "aeiouAEIOU";
-			int compare = vowel.indexOf(ch);
-			if (compare == -1) {
-				System.out.println(word + " - " + ch + "  is a consonant");
-			} else {
-				System.out.println(word + " - " + ch + "  is a vowel");
+	public static boolean isAnagram(String s1, String s2) {
+
+		if (s1.length() != s2.length()) {
+			return false;
+		} else {
+			for (char c : s1.toCharArray()) {
+//				if (s2.indexOf(c) != -1) {
+				if (s2.contains(c + "")) {
+					return true;
+				} else {
+					return false;
+				}
 
 			}
 		}
+
+		return false;
 	}
 }
