@@ -750,3 +750,277 @@ deepToString():
 
 =============================================================================
 =============================================================================
+
+=============================================================================
+Strings:
+-------
+     - it is a collection of characters which is enclosed in 
+       double quotes
+     - it is a non primitive data type/reference data type
+     - it is immutable(can't be modified but it will create a
+        new memory space for each changes)
+     - String is a class from java.lang package
+     - it is indexed and indexed start from 0
+Note :
+    String s="Toy";
+    String rev="";
+    for(char c: s.toCharArray()){
+        rev=c+rev;
+    }
+    System.out.println(rev);
+if we try to modify string then it will create a new memory space
+     Toy ---> 0X1
+        ----> 0X2
+      T-----> 0X3
+      oT-----> 0X4
+      yoT-----> 0X5
+
+ 
+
+creation of string:
+-------------------
+    String name="value"; // with string literal
+    String name=new String("value"); // with string object
+
+Note : String literal is stored in constant pool area/string area/string pool area
+       String object is stored in heap area
+
+
+String methods:
+===============
+    
+charAt():
+--------
+      - it is used to access elements of string
+      syntax: 
+          String name="Java";
+          char c=name.charAt(index);
+equals():
+-------
+     - it is used to compare two strings values exactly
+     syntax:
+         String s1="Java";
+         String s2="Java";
+         boolean result=s1.equals(s2);
+     - it returns true if both strings are equal
+     - it returns false if both strings are not equal
+equalsIgnoreCase():
+------------------
+         - it is used to compare two strings values case insensitive
+         syntax:
+             String s1="Java";
+             String s2="java";
+             boolean result=s1.equalsIgnoreCase(s2);
+         - it returns true if both strings are equal
+         - it returns false if both strings are not equal
+toCharArray():
+-------------
+      - it is used to convert string to character array
+      syntax:
+          String s="Java";
+          char []c=s.toCharArray();
+      - it returns character array
+length():
+--------
+      - it is used to find length of string
+      syntax:
+          String s="Java";
+          int length=s.length();
+      - it returns length of string
+indexOf():
+----------
+      - it is used to find index of first occurrence of character
+      syntax:
+          String s="Java";
+          int index=s.indexOf(c);
+      - it returns index of first occurrence of character
+      - if character not found it returns -1
+lastIndexOf():
+--------------
+      - it is used to find index of last occurrence of character
+      syntax:
+          String s="Java";
+          int index=s.lastIndexOf(c);
+      - it returns index of last occurrence of character
+      - if character not found it returns -1
+contains():
+-----------
+      - it is used to check if string contains specified character
+      syntax:
+          String s="Java";
+          boolean result=s.contains(c);
+      - it returns true if string contains specified character
+      - it returns false if string doesn't contain specified character
+
+toLowerCase():
+--------------
+      - it is used to convert string to lowercase
+toUpperCase():
+--------------
+      - it is used to convert string to uppercase
+
+split():
+-------
+      - it is used to split string into multiple strings
+      syntax:
+          String s="this is java";
+          String []name=s.split(" ");
+      - it returns string array
+
+replace(old string,new string):
+----------
+      - it is used to replace one string with another string
+      syntax:
+          String s="this is java";
+          String s1=s.replace("java","python");
+      - it returns new string
+replace(old char, new char):
+---------
+      - it is used to replace one character with another character
+      syntax:
+          String s="java";
+          String s1=s.replace('a','e');
+      - it returns new string
+replaceAll(old string,new string):
+----------
+      - it is used to replace all occurrences of one string with another string
+      syntax:
+          String s="this is java java";
+          String s1=s.replaceAll("java","python");
+      - it returns new string
+
+hashCode():
+-----------
+     - it is used to get hash code of string
+     syntax:
+         String s="java";
+         int hashCode=s.hashCode();
+     - it returns hash code(integer) of string
+
+isEmpty():
+-----------
+     - it is used to check if string is empty
+     syntax:
+         String s="java";
+         boolean result=s.isEmpty();
+     - it returns true if string is empty
+     - it returns false if string is not empty
+isBlank():
+-----------
+     - it is used to check if string is blank
+     syntax:
+         String s="java";
+         boolean result=s.isBlank();
+     - it returns true if string is blank
+     - it returns false if string is not blank
+
+limitations of string:
+-----------------------
+   - string is immutable , so for every changes in string 
+     a new string is created
+   - to avoid this we use string buffer and string builder 
+
+
+StringBuffer:
+============
+    - it is used to create mutable string
+    - it is a class from java.lang package from 1.0 version
+    - it is thread safe
+    - it is  synchronized
+    - performance is low
+StringBuilder:
+=============
+    - it is used to create mutable string
+    - it is a class from java.lang package from 1.5 version
+    - it is not a thread safe(deals with multiple threads)
+    - it is not a synchronized
+    - performance is high
+
+
+methods of string buffer and string builder:
+---------------------------------------------
+
+append():
+-------
+      - it is used to append string
+      syntax:
+          StringBuffer sb=new StringBuffer("Java");
+          sb.append("Python");
+      - it returns string buffer
+insert():
+-------
+      - it is used to insert string in specified index position
+      syntax:
+          StringBuffer sb=new StringBuffer("Java");
+          sb.insert(2,"Python");
+      - it returns string buffer
+
+delete():
+-------
+      - it is used to delete string in specified index position
+      syntax:
+          StringBuffer sb=new StringBuffer("Java");
+          sb.delete(2,5(exclusive));
+      - it returns string buffer
+
+deleteCharAt():
+--------------
+      - it is used to delete character in specified index position
+      syntax:
+          StringBuffer sb=new StringBuffer("Java");
+          sb.deleteCharAt(2);
+      - it returns string buffer
+
+reverse():
+----------
+      - it is used to reverse string
+          StringBuffer sb=new StringBuffer("Java");
+          sb.reverse();
+      - it returns string buffer
+
+setCharAt():
+-------------
+      - it is used to set character in specified index position
+      syntax:
+          StringBuffer sb=new StringBuffer("Java");
+          sb.setCharAt(2,'P');
+      - it returns string buffer
+setLength():
+-------------
+      - it is used to set length of string
+      syntax:
+          StringBuffer sb=new StringBuffer("Java");
+          sb.setLength(2);
+      - it returns string buffer
+
+String tokenizer:
+=================
+    - it is used to tokenize string
+    - it is a class from java.util package
+    - it is used to split string into multiple strings
+    syntax:
+        String s="this is java";
+        StringTokenizer st=new StringTokenizer(s," ");
+        while(st.hasMoreTokens()){
+            System.out.println(st.nextToken());
+        }
+
+hasMoreTokens():
+----------------
+      - it is used to check if there are more tokens in string
+      - returns true if there are more tokens
+      - returns false if there are no more tokens
+
+nextToken():
+-------------
+      - it is used to get next token
+      - returns next token(String)
+      - returns null if there are no more tokens
+
+nextElement():
+---------
+    - it is used to get next element
+    - returns next element(Object)
+    - returns null if there are no more elements
+
+
