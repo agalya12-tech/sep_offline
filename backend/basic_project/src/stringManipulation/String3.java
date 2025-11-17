@@ -16,7 +16,7 @@ public class String3 {
 		System.out.println(Arrays.toString(arr));//[H, e, l, l, o]
 		System.out.println(s1.toUpperCase());//HELLO
 		System.out.println(s1.toLowerCase());//hello
-		s1.
+		
 		
 	}
 }
