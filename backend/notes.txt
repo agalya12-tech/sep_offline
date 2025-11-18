@@ -1024,3 +1024,175 @@ nextElement():
     - returns null if there are no more elements
 
 
+
+OOPS:(object oriented programming system)
++++++
+      1.encapsulation
+      2.inheritance
+      3.polymorphism
+      4.abstraction
+
+1.Encapsulation:
+================
+     - the process of wrapping/binding data members and methods
+       together as a single unit(class) is called encapsulation
+  use:
+  ----
+      - data hiding/data security/data privacy
+      - we can hide data by making data members as private
+       and providing public methods to access data members
+  public methods: 
+           1.getter methods: for read/access
+           2.setter methods: for write/modify
+
+--------------------------------------------------------------------
+getter                                    setter
+---------------------------------------------------------------------
+used to read/access                    used to write/modify/initialize
+
+return type must be same               return type should be void
+as data type of variable
+
+arguments are optional                 arguments are mandatory
+--------------------------------------------------------------------
+
+RelationShip:
+=============
+    - it is a relationship/bond/connection between classes
+    types:
+       1.inheritance/is - a relationship
+       2.has - a relationship
+
+
+Inheritance:(is - a relationship)
+-----------
+    -the process of inheriting(acquiring) properties and methods
+     from parent to child class is called inheritance
+    - to achieve inheritance we use extends and implements keyword
+
+extends: class to class and interface to interface
+implements: interface to class 
+           +-------------------------------------+
+           | parent class/super class/base class |
+           | child class/sub class/derived class |
+           +-------------------------------------+
+
+Types:
+------
+    1.single level inheritance
+            - inheriting properties and methods from one parent class
+              to one child class
+    2.multi level inheritance
+            - inheriting properties and methods from one parent class
+              to child class and to grand child class(as levels)
+    3.hierarchical inheritance
+            - inheriting properties and methods from one parent class
+              to multiple child classes
+    4.multiple inheritance
+            - inheriting properties and methods from multiple parent
+              classes to one child class
+    5.hybrid inheritance
+            - it is a combination of all other types of inheritance
+Note:multiple and hybrid inheritance is not supported in java
+      by using classes, it causes ambiguity or diamond problem
+
+ambiguity problem (diamond problem):
+------------------------------------
+      - it occurs when multiple parent classes have same method name
+        and same arguments and return type
+      - it occurs when child class constructor calls multiple parent class
+        constructor
+
+Note: In java every class is a child of object class(java.lang.Object)
+    : by default compiler will add extends object class in every class
+
+
+
+Has-a-relationship:(Association)
+------------------
+      -One class has a relationship with another class
+      -One class is a part of another class
+ex: Car has a Engine
+
+class Car{                     class Engine{
+ 
+ Engine e;
+
+}                              }
+
+ - Car has an engine (car is a container of engine)
+        Types:
+        -----
+            1.composition
+            2.aggregation
+
+1.Composition:
+-------------
+        -one class is strongly connected with another class
+        ex: Car has an Engine
+syntax:
+class Car{                     class Engine{
+ Engine e=new Engine();
+}                              }
+
+2.aggregation:
+-------------
+       - one class is weakly connected with another class
+        ex: bus has a passengers
+syntax:
+class Bus{                     Passenger{
+
+    Passengers p;    
+}                              }
+
+==========================================================================================
+polymorphism:(many forms)
++++++++++++++
+      - the process of having many forms of an object is
+        called polymorphism
+      - the process of performing same task in different ways
+        is called polymorphism
+     Types:
+     -----
+         1.Compile time polymorphism(compile time binding)
+             - the process of binding method signature with method body 
+               during compile time is called compile time polymorphism
+            ex: overloading (constructor overloading and method overloading)
+         2.Run time polymorphism(run time binding)
+              - the process of binding method signature with method body
+                during run time is called run time polymorphism
+            ex: overriding (method overriding)
+     
+
+
+    method overriding:
+    -----------------
+       - the process of changing the implementation of parental method
+         inside the child class is called method overriding
+       - it is a type of runtime polymorphism
+    Note : 1.relationship should be parent and child
+           2.method return type and method signature must be same as parent
+           3.access modifiers should be same  or greater
+            than parent visibility
+
+   method overloading:
+   ------------------
+       - the process of having multiple methods with same name but
+         different parameters is called method overloading
+       - it is a type of compile time polymorphism
+   Note: number, type and order of parameters should be different
+
+------------------------------------------------------------------------------
+method overloading                      method overriding
+------------------------------------------------------------------------------  
+compile time polymorphism              run time polymorphism
+
+inheritance is not required            inheritance is mandatory
+
+method return type can be               method return type should 
+different                                        be same as parent
+
+access modifier can be                 access modifier should be 
+different                               same or greater than parent
+
+------------------------------------------------------------------------
