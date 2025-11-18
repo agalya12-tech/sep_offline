@@ -1158,6 +1158,8 @@ polymorphism:(many forms)
              - the process of binding method signature with method body 
                during compile time is called compile time polymorphism
             ex: overloading (constructor overloading and method overloading)
+
+            
          2.Run time polymorphism(run time binding)
               - the process of binding method signature with method body
                 during run time is called run time polymorphism

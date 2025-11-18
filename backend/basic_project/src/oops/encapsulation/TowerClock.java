@@ -7,7 +7,9 @@ public class TowerClock {
 		System.out.println(c);
 		c.setHrs(30);
 		System.out.println(c);
-		c.setHrs(23);
+		c.setHrs(3);
+		c.setMin(34);
+		c.setSec(42);
 		System.out.println(c);
 	}
 }

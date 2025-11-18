@@ -18,4 +18,10 @@ public class MethodProgram5 {
 
 	}
 	
+	
+	
+	public static void main(String[] args) {
+		 m1(10);
+	}
+	
 }

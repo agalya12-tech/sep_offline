@@ -12,7 +12,7 @@ public class Clock {
 
 	@Override
 	public String toString() {
-		return "The Current time is "+hrs+" hrs : "+min+" min : "+sec+" sec";
+		return "The  time is "+hrs+" hrs : "+min+" min : "+sec+" sec";
 		
 	}
 
@@ -25,23 +25,25 @@ public class Clock {
 			this.hrs = hrs;
 		}
 	}
+	public void setMin(int min) {
+		if(min>=1&&min<=60)
+		this.min = min;
+	}
+	public void setSec(int sec) {
+		if(sec>=1&&sec<=60)
+		this.sec = sec;
+	}
 
 	public int getMin() {
 		return min;
 	}
 
-	public void setMin(int min) {
-		if(min>=1&&min<=60)
-		this.min = min;
-	}
+	
 
 	public int getSec() {
 		return sec;
 	}
 
-	public void setSec(int sec) {
-		if(sec>=1&&sec<=60)
-		this.sec = sec;
-	}
+	
 
 }
