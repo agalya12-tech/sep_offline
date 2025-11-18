@@ -14,7 +14,8 @@ public class BankAccount {
 	}
 	public void moneyTransfer(long fromPhone, long accountNumber ,String IFSC, int pin, double amount) {
 		if(this.pin==pin) {
-			System.out.println("money "+amount+" is transfered from "+fromPhone+" to "+accountNumber+ "accountNumber");
+			System.out.println("money "+amount+" is transfered from "+fromPhone+" to "+accountNumber
+					+ "accountNumber");
 		}
 	}
 	
