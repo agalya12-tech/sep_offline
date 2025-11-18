@@ -9,8 +9,12 @@ public static void main(String[] args) {
 	StringTokenizer tokenizer=new StringTokenizer(sentence);
     System.out.println(tokenizer);
     while (tokenizer.hasMoreElements()) {
-		Object object = (Object) tokenizer.nextElement();
-		System.out.println(object);
+//		 downcasting (non primitive typeCasting)
+//    	Object object = (Object) tokenizer.nextElement();
+//		System.out.println(object);
+
+    	String token=tokenizer.nextToken();
+		System.out.println(token);
     	System.out.println("-------");
 	}
     
