@@ -4,12 +4,12 @@ public class Inheritance3 {
 	
 	public static void main(String[] args) {
 		Father father=new Father();
-		father.m2();
-		father.m1();
+		father.m2();// static 
+		father.m1();// non static
 		 System.out.println("=============================");
-		father=new Son();
-		father.m2();
-		father.m1();
+		father=new Son();// ---- child object 
+		father.m2();//static  -- parent implemenatation
+		father.m1();//non static -- child implementation
 	}
 
 }
@@ -29,7 +29,6 @@ class Father {
 		System.out.println("m3  final method");
 	}
 }
-
 class Son extends Father {
 	@Override
 	public void m1() { // visibilty can be more or equal to parent methods 
