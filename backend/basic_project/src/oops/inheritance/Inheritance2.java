@@ -4,12 +4,9 @@ public class Inheritance2 {
 	public static void main(String[] args) {
 		Animal animal=new Animal();
 		animal.eats();//Animal is eating
-		
 		Dog dog=new Dog();
 		dog.eats();//Dog eats meat...
-	}
-
-}
+	}}
 class Animal{
 	 public void eats() {
 		 System.out.println("animal is eating ....");
