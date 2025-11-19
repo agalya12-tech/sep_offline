@@ -3,7 +3,7 @@ package oops.inheritance;
 public class MultiLevelInheritance {
 	 public static void main(String[] args) {
 		System.out.println("----first release-----");
-		WeChat chat=new WeChat();
+		WeChat chat = new WeChat();
 		chat.call();
 		 System.out.println("----second release-----");
 //		 Non primitive Typecasting -- implict 

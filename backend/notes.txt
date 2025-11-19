@@ -1198,3 +1198,14 @@ access modifier can be                 access modifier should be
 different                               same or greater than parent
 
 ------------------------------------------------------------------------
+
+Note : Method overriding is not possible with static methods , 
+       final methods and private  methods
+    : If we try to override static method it behaves like method Shadowing
+
+
+Method Shadowing:
+-----------------
+     - Static Methods belongs to class and not to objects
+     - If we try to override , instead of giving child implementation 
+       it gives parent implementation, it is called method shadowing/method hiding
