@@ -1209,3 +1209,91 @@ Method Shadowing:
      - Static Methods belongs to class and not to objects
      - If we try to override , instead of giving child implementation 
        it gives parent implementation, it is called method shadowing/method hiding
+
+
+------------------------------------------------------------------------------------------------
+
+Object class:
+++++++++++++
+         - Object class is the supermost class for every class in java
+         - present in java.lang package
+         - compiler will add extends object class in every class
+         - it consist of 11 methods
+
+getClass()
+-----------
+       - it returns the class of object
+toString()
+-----------
+       - it returns string representation of object
+       - Used to print object values rather than object address
+hashCode()
+-----------
+       - it returns hash code of object
+equals()
+-----------
+       - it returns true if both objects are equal
+
+notify()
+notifyAll()
+wait()
+wait(long timeout)
+wait(long timeout,int nanoseconds)
+       -- all are thread methods
+
+clone(): used to create deep copy of object
+finalize(): used to free memory of object for garbage collection
+
+===============================================================================
+constructor chaining:
+---------------------
+   - the process of calling a constructor from another constructor
+     is called constructor chaining
+   - can achieve using this and super call statements
+   - it helps to reuse code
+
+this: used to refer current object
+super: used to refer parent class object
+
+Note : this or super call statement must be the first statement in
+       constructor, so both can't used together
+===============================================================================
+
+Abstraction:
+++++++++++++
+    - the process of hiding implementation details and showing
+      only functionality of object is called abstraction
+    - can achieve using abstract and interface keywords
+    - it helps to achieve multiple inheritance
+
+abstract:
+--------
+    - it is a keyword used for class and method.
+    (to create abstract class we use abstract method - incomplete)
+    - for abstract method there won't be body, and can declared inside
+     abstract class and interface only.
+    - abstract class can consist of static and non static
+      members and methods , along with it can have abstract methods
+
+note: abstract class can't be instantiated(object can't be created)
+      (const is used for re-initialization of object members)
+    : abstract can't be final , static and private 
+
+
+
+interface:
+---------
+     - it is a keyword used to create interfaces
+     - interface is used to achieve 100% abstraction and multiple inheritance
+     - it consist of only static data members(constants)
+     - it consist of only abstract methods(non static methods)
+     - it dose't have constructor  
+     - it can't be instantiated(object can't be created)
+
+Note : static method and default method is introduced in java 8
+       which is completed methods and can't be overridden
+
+
+
+=======================================================================================================
+========================================================================================================

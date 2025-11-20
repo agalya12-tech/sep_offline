@@ -10,7 +10,6 @@ class Developer {
 		return "Developer [language=" + language + ", exp=" + exp + ", email=" + email + ", phone=" + phone + "]";
 	}
 	public Developer(String language) {
-		super();
 		this.language = language;
 	}
 	public Developer(String language, int exp) {
