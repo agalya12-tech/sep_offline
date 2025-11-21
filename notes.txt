@@ -203,7 +203,7 @@ Banking Application
 ------------------
 
        1.One encapsulated Class(BankAccount) with following attributes
-               accountNumber, accountHolderName, accountType, balance,IFSCCode,phone,email
+               Pin,accountNumber, accountHolderName, accountType, balance,IFSCCode,phone,email
 
        2.Create Bank interface which consist functionalities
                createAccount()
