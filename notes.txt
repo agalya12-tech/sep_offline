@@ -194,3 +194,34 @@ CRUD app (create/update/delete users or posts)
 
 Login/register simulation using dummy API
     
+
+
+==============================================================================================================
+OOPs Project:
+
+Banking Application
+------------------
+
+       1.One encapsulated Class(BankAccount) with following attributes
+               accountNumber, accountHolderName, accountType, balance,IFSCCode,phone,email
+
+       2.Create Bank interface which consist functionalities
+               createAccount()
+               depositAmount()
+               withdrawAmount()
+               transferAmount() // phone to phone transfer
+               transferAmount() // phone to upi
+               transferAmount() // phone to bank account/IFSC code
+               checkBalance()
+               displayAccountDetails()
+               updateAccountDetails()
+               deleteAccount()   
+   CRUD operations on Book  
+         3.Create BankUserInterface class (main class)
+ bankManagement.model      ---BankAccount c
+ bankManagement.repo       ---Bank i
+ bankManagement.dao        ---BankImpl -c
+ bankManagement.controller ----BankUserInterface -c     
+         
+         
+          

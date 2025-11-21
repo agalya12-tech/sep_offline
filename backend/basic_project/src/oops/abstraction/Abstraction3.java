@@ -58,11 +58,6 @@ public class Abstraction3 {
 }
 }
 
-
-
-
-
-
 abstract class Employee {
 	String name;
 	int age;
