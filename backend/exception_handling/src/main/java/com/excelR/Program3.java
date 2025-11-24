@@ -11,10 +11,17 @@ public class Program3 {
 
         try {
             int a = input.nextInt();
-            System.out.println(a);
+            System.out.println(a/0);
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println(e.getMessage());
-        } catch (Throwable e) {// handling input mismatch by parent(UpCasting)
+        }
+        catch (NumberFormatException e) {
+            System.out.println(e.getMessage());
+        }
+        catch (ArithmeticException e) {
+            System.out.println(e.getMessage());
+        }
+        catch (Throwable e) {// handling input mismatch by parent(UpCasting)
             System.out.println("enter a number of 0-9 combination");
         }
 
