@@ -1398,7 +1398,7 @@ Note : when we are having multiple catch blocks ,
 
 try{
 
-}catch(ArithmeticException || ClassCastException e){
+}catch(ArithmeticException | ClassCastException e){
 
 }
 
@@ -1413,7 +1413,7 @@ throws:
    Exception propagation:
    ---------------------
        the process of propagating / passing exception from one method
-       to another method is called exception propagation
+       to another method (caller)is called exception propagation
 
 
 
@@ -1445,3 +1445,9 @@ inside block                     along with method signature or
  
   =============================================================================================================
  
+ final: final variables can't be reassigned,
+        final methods can't be overridden
+        final class can't be inherited
+ finally: it is a block used to close the resources in exception handling
+ finalize(): it is a method in Object class
+             used to free memory of object for garbage collection

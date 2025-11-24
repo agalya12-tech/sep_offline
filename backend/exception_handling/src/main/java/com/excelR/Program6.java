@@ -3,7 +3,7 @@ package com.excelR;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
-public class Program6 {
+public class Program6 extends Object {
     public static void main(String[] args) {
         try {
             m1();
@@ -19,7 +19,7 @@ public class Program6 {
     }
 // throwing checked exception
     public static void m1() throws FileNotFoundException {
-        FileInputStream fis = new FileInputStream("");
+        FileInputStream fis = new FileInputStream("demo.txt");
     }
 // throwing unchecked exception
     public static void m2() throws RuntimeException {
