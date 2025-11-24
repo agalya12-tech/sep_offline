@@ -1297,3 +1297,151 @@ Note : static method and default method is introduced in java 8
 
 =======================================================================================================
 ========================================================================================================
+
+
+Exception:(problematic situations/statements)
+----------
+    -The process of handling problematic situations is
+     called exception handling
+    -can handle using try , catch , finally and throws  keywords
+
+    Exceptions are two types:
+    ---------------------------
+         1.checked exceptions
+         2.unchecked exceptions
+checked exceptions:
+-------------------
+    - checked exceptions are checked at compile time(compiler aware)
+     ex: IOException,FileNotFoundException , SQL exception etc.,
+    - it is a subclass of Exception class
+
+unchecked exceptions:
+---------------------
+    - unchecked exceptions are checked at run time(compiler unaware)
+     ex: NullPointerException , ArrayIndexOutOfBoundsException etc.,
+    - it is a subclass of RuntimeException class
+
+try:
+----
+    - it is a keyword used for exception handling
+    - it is a block of code which is executed when exception is thrown
+    - it is used to handle exceptions
+    - problematic statements are written inside try block
+catch:
+-----
+    - it is a keyword used for exception handling
+    - it is a block of code which is executed when exception is caught
+finally:
+-------
+    - it is a keyword used for exception handling
+    - it is a block of code which is executed when exception is thrown
+      or not thrown
+    - it is used to free resources before exiting from try block
+
+Exception hierarchy:
+-------------------
+                     Object
+                        ^
+                        |
+                    Throwable
+                        ^
+                        |
+            ___________________________
+            ^                          ^
+            |                          |
+         Exception                    Error
+            ^                          
+            |                          
+_____________________________________________________________
+^                          ^             ^             ^
+|                          |             |             |
+RuntimeException        IOException    SQL exception   FileNotFoundException
+        ^
+        |_ArithmeticException
+        |_NumberFormatException
+        |_InputMismatchException
+        |_IndexOutOfBoundsException  
+        |_ClassCastException  etc.,          
+
+try{
+
+}catch(Exception e){
+
+}
+
+try{
+
+}finally{
+
+}
+
+try{
+
+}catch(Exception e){
+    
+}finally{
+
+}
+
+
+try{
+
+}catch(ArithmeticException e){
+    
+}catch(Exception e){
+      
+}
+Note : when we are having multiple catch blocks , 
+     then starting catch block will be executed first
+     so have child class exception before parent class exception
+
+
+try{
+
+}catch(ArithmeticException || ClassCastException e){
+
+}
+
+
+throws:
+-------
+    - it is a keyword used for exception handling
+    - it is used to throw exceptions
+    - it is used to declare exceptions in method signature and
+       constructor signature
+    - it helps to achieve exception propagation
+   Exception propagation:
+   ---------------------
+       the process of propagating / passing exception from one method
+       to another method is called exception propagation
+
+
+
+
+custom exception:
+-----------------
+    - it is a user defined exception
+    - creating a child class of Exception class
+    syntax: 
+            class CustomException extends Exception{}
+Note : for checked custom exception , inherit Exception class
+       for unchecked custom exception , inherit RuntimeException
+
+throw:
+------
+    - it is a keyword used for exception handling
+    - it is used to throw exceptions inside blocks
+
+-------------------------------------------------------------------
+throw                                                  throws
+--------------------------------------------------------------------
+used to throw exception           used to (partial) handle exception
+                                  boz, it will propagate exception
+
+inside block                     along with method signature or
+                                 constructor signature
+           
+
+ 
+  =============================================================================================================
+ 
