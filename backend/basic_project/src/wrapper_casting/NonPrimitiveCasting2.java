@@ -5,25 +5,25 @@ public class NonPrimitiveCasting2 {
 		Father f = new Father();
 		parentMethdod(f);
 		parentMethdod(new Son()); // UpCasting
-		parentMethdod(new Daughter());//UpCasting
+		parentMethdod(new Daughter());// UpCasting
 
 		System.out.println("==============================");
 		System.out.println();
 		System.out.println("==============================");
 
-		childMethod(new Son()); 
-		Father f1 = new Son();//UpCasting
+		childMethod(new Son());
+		Father f1 = new Son();// UpCasting
 		if (f1 instanceof Son) {
-			childMethod((Son) f1); //DownCasting
+			childMethod((Son) f1); // DownCasting
 		}
 
-		Father f2 = new Daughter();//UpCasting
+		Father f2 = new Daughter();// UpCasting
 		if (f2 instanceof Son) {
-			childMethod((Son) f2);//DownCasting
+			childMethod((Son) f2);// DownCasting
 		}
 	}
 
-	public static void parentMethdod(Father father) { 
+	public static void parentMethdod(Father father) {
 		System.out.println(father);
 	}
 
