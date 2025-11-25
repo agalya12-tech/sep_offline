@@ -5,16 +5,21 @@ import java.sql.DriverManager;
 
 public class NonPrimitiveCasting {
 	public static void main(String[] args) {
+//		 storing child in parent
 		Father father = new Son(); // implicit ---UpCasting
 		System.out.println(father);
 
+//		checking parent refernce consist son object
 		if (father instanceof Son) {
-			Son son = (Son) father;
+//			 converting parent to child
+			Son son = (Son) father; // explicit --downCasting
 			System.out.println(son);
 		}
 
+//		checking parent refernce consist daughter object
 		if (father instanceof Daughter) {
-			Daughter d = (Daughter) father;
+// in father ref daughther object is not exist so,ClassCastException will occur
+			Daughter d = (Daughter) father; 
 			System.out.println(d);
 		}
 		
