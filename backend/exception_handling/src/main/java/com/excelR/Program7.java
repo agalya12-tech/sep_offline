@@ -9,17 +9,22 @@ public class Program7 {
         String userName = sc.next();
         System.out.print("Enter  password: ");
         String password = sc.next();
-        authenticate(userName, password);
+        try {
+            authenticate(userName, password);
+        }
+        catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
     }
-    public static void authenticate(String username, String password) {
+    public static void authenticate(String username, String password) throws RuntimeException {
         if (username.equals("rahul")) {
             if (password.equals("Rahul@1234")) {
                 System.out.println("Welcome " + username);
             } else {
-                System.out.println("Wrong password");
+                throw new RuntimeException("Invalid password ");
             }
         } else {
-            System.out.println("Wrong username");
+            throw new RuntimeException("Invalid userName enter correct userName");
         }
     }
 }
