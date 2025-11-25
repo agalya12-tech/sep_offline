@@ -12,8 +12,8 @@ public class Program7 {
         try {
             authenticate(userName, password);
         }
-        catch (Exception e) {
-            System.err.println(e.getMessage());
+        catch (Exception e) { //catching child exception object and storing in parent ref (UpCasting)
+            System.err.println(e.getMessage()); // calling parent method which consist child implementation
         }
     }
     public static void authenticate(String username, String password) throws RuntimeException {
@@ -21,7 +21,9 @@ public class Program7 {
             if (password.equals("Rahul@1234")) {
                 System.out.println("Welcome " + username);
             } else {
-                throw new RuntimeException("Invalid password ");
+//                throw new RuntimeException("Invalid password ");
+//                creating and throwing child class
+                throw new CustomException("invalid password");
             }
         } else {
             throw new RuntimeException("Invalid userName enter correct userName");
