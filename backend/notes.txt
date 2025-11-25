@@ -1451,3 +1451,43 @@ inside block                     along with method signature or
  finally: it is a block used to close the resources in exception handling
  finalize(): it is a method in Object class
              used to free memory of object for garbage collection
+
+        
+----------------------------------------------------------------------------------------------------------
+Wrapper classes:
+----------------
+   - it is a class from java.lang package
+   - it is a collection of primitive data types
+ Types:
+     - it is used to convert primitive data types to non primitive data types
+     Byte a=10; 
+     Short s=10;
+     Integer i=10;
+     Long l=10l;
+     Double d=10d;
+     Float f=10f;
+     Character c='a';
+     Boolean b=true;
+
+The process of converting primitive data types to non primitive data types
+is called autoBoxing/boxing/wrapping
+ syntax :   int a=10;
+            Integer i=a;
+The process of converting non primitive data types to primitive data types
+is called unboxing
+ syntax :   Integer i=10;
+            int a=i;  => int a=i.intValue();
+            
+            Byte b=10;
+            byte b1=b.byteValue();
+
+
+Parsing:
+-------
+   - it is a process of converting string to primitive data types
+   syntax:
+       int a=Integer.parseInt("10");
+
+  
+
+  ===========================================================================================================
