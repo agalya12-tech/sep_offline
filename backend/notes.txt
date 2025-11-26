@@ -1491,3 +1491,284 @@ Parsing:
   
 
   ===========================================================================================================
+
+Thread:(task)
+-------
+   -it is a light weight process
+   -it is a smallest unit of execution
+   -it is a collection of instructions
+   -it is a collection of stack frames
+
+                    MultiTasking
+                        |
+                        |
+          ---------------------------------------
+          |                                      |
+    process based multitasking   thread based multitasking
+
+process based multitasking:
+--------------------------
+        - executing several tasks at the same time simultaneously 
+          where each task is independent of other task
+  
+  ex: In hotel ---multiple chefs --
+             chef---1task
+             chef---1task
+
+thread based multitasking:
+-------------------------
+             - executing several/multiple tasks at the same time simultaneously 
+               where each task is dependent on other task
+  ex: In hotel ---multiple chefs --
+         1chef---cutting vegetables
+              ----cooking
+              ----serving
+
+Note: multiple threads belongs to a single process, but a process is 
+      not just a collection of threads
+
+
+How to create a thread?
+----------------------
+            1.Thread class
+            2.Runnable interface
+
+1.Thread class:
+++++++++++++++++ 
+         by extending Thread class we can create a thread(user defined thread)
+         syntax:
+         class MyThread extends Thread{
+           
+         }
+
+2.Runnable interface:
++++++++++++++++++++
+         by implementing Runnable interface we can create a thread(user defined thread)
+         syntax:
+         class MyThread implements Runnable{
+           public void run(){
+             //code
+           }
+         }
+
+
+Thread Life Cycle:
+------------------
+            1.New state -> thread is created(user defined thread) - heap area
+               syntax: Thread t=new Thread();
+            2.Runnable state --> thread is ready to execute , but waiting  for
+                                 CPU to execute
+               syntax: t.start();
+            3.Running state--> thread is executing/Running
+               syntax:  t.run();
+              Note : run() method is called by start() method automatically
+
+            4.waited/blocked state --> thread is in waiting phase/paused/ blocked state
+                                       for another thread to be complete
+                  syntax: t.wait();
+            5.Timed Waiting state -->thread is waiting for specified time to complete
+                  syntax: t.sleep();
+            6.Terminated state--> thread is completed or terminated
+                  syntax: t.stop();
+
+
+Note : 1.by using notify() or notifyAll() method we can notify a waiting thread
+       we can move thread from waiting state to running state
+
+       2.start() will create a new thread and it is responsible for the execution of run()
+-----------------------------------------------------------------------------
+
+synchronized:
+++++++++++++++
+       - it is a keyword , and non access modifier
+       - it is used to make a block synchronized
+       -synchronized blocks will ensure that only one thread can access at a time
+
+  -------------------------------------------------------------------------------
+                  with synchronized                            without synchronized
+  --------------------------------------------------------------------------------
+ safe         safe - proper thread handling          unsafe - no proper thread handling
+
+ performance       slower                            faster
+
+ output           always accurate                    may not be accurate
+ -------------------------------------------------------------------------------------
+
+
+Thread Scheduler:
+-----------------
+   - if multiple threads are waiting to execute, which thread will execute
+     1st is decided by Thread Scheduler , which is a part of jvm
+    -which algorithm or behavior is used by jvm to decide ,  which can't  be expected 
+
+    - we can provide priority to threads by using setPriority() method
+
+Thread Priority:
+----------------
+     Thread.MIN_PRIORITY-1
+     Thread.NORM_PRIORITY-5
+     Thread.MAX_PRIORITY-10
+
+ Note:Thread.NORM_PRIORITY is default priority
+
+
+
+
+Q.what will happen when we have overloading methods for run()?
+A.start() method will only check for no args run() method, so it will call 
+  no args run() method
+
+Q.What will happen if we are not overriding run() method?
+A.start() method will invoke parental run() method , so it wont print anything
+
+
+
+Getter and Setter in Thread class:
+----------------------------------
+  getter : are used to get the info about a thread
+           like getName() , getState() etc
+
+  setter : are used to set the info about a thread
+           like setName() , setState() etc
+
+constructor of Thread class:
+---------------------------
+      - Thread class consist overloading constructor used to create
+       a thread in different ways
+// default constructor
+     Thread t1=new Thread(); 
+		 System.out.println(t1);
+		 
+		 Runnable r1=new Thread(); //upCasting
+		 System.out.println(r1);
+// parameterized constructor used to create a thread with name	 
+		 Thread t2=new Thread("ThreadA"); 
+		 System.out.println(t2);
+// arg const	used to create a thread with target object (thread/runnable) 
+		 Thread t3=new Thread(r1);
+		 System.out.println(t3);
+// arg const used to create a thread with target object (thread/runnable) and name		 
+		 Thread t4=new Thread(r1,"Thread B");
+		 System.out.println(t4);
+// arg const used to create a thread with a  concise task(lambda expression) 
+		 Thread t5=new Thread(()->{
+			System.out.println("creating with lambda expression"); 
+		 });
+		 System.out.println(t5);
+
+
+methods to control execution of a thread:
+---------------------------------------
+1.start() : used to start a new thread  (NEW---->RUNNABLE)
+          : it calls run() method automatically (RUNNABLE---->RUNNING)
+
+2.run() : used to execute a thread (RUNNABLE---->RUNNING)
+        :it won't create a new thread
+
+3.sleep(long milliseconds) : used to pause a thread for specified time
+                            (RUNNING---->TIMED WAITING/BLOCKED)
+
+4.sleep(long milliseconds,int nanoseconds) : used to pause a thread for specified time
+                                             (RUNNING---->TIMED WAITING/BLOCKED)
+
+5.join() : used to wait for a thread to complete/finish
+
+6.join(long milliseconds) : used to wait for a thread to complete for specified time
+
+7.yield() : used to give a chance to other threads to execute
+
+8.interrupt() : used to interrupt a thread
+
+9.isInterrupted() : used to check whether a thread is interrupted or not
+                  : it returns true if thread is interrupted otherwise false
+
+10.stop() : used to terminate a thread forcefully (unsafe operation)
+            (RUNNING---->TERMINATED)
+
+11.wait(): used to wait for a thread to complete (RUNNING---->TIMED WAITING/BLOCKED)
+
+12.notify(): used to notify a waiting thread (TIMED WAITING/BLOCKED---->RUNNING)
+
+13.notifyAll(): used to notify all waiting threads (TIMED WAITING/BLOCKED---->RUNNING)
+
+-----------------------------------------------------------------------------------------------------------------------
+Dead Lock:
+++++++++++
+    -when two threads are waiting for each other to complete their execution
+                          or
+    -when two or more  threads are waiting for each other to release a lock
+    it is called deadlock
+    -it can be handled by using synchronized blocks
+
+ Ex: two persons are walking in a narrow road and they want to cross the road
+     by blocking each other-----both will wait forever
+
+
+DeadLock happens when:
+              1.two or more  threads hold resources(locks)
+              2.Each thread waits for other thread to complete or release task
+
+can overcome :
+           1.use a consistent locking order(recommended)
+           2.use tryLock() from ReentrantLock
+           3.avoid nested locks
+
+----------------------------------------------------------------------------------
+Daemon Thread:
+++++++++++++++
+    - the daemon thread is a thread that is automatically started 
+      by the JVM
+    - a daemon thread is a background service thread that runs continuously
+      and performs a task in the background
+    - we can make a thread as a daemon thread by using setDaemon(true) method
+    - mainly used for garbage collection , file monitoring ,background logging etc
+
+    -setDaemon() - used to make a thread as a daemon thread
+                 - default value is false , so it is not a daemon thread 
+    -a daemon thread is mainly used to perform background tasks that should not prevent 
+      the  jvm exiting , when the application is in running.
+
+    -isDaemon() - used to check whether a thread is a daemon thread or not
+ex:
+   main thread --Main worker /manager
+   daemon thread --assistant workers
+
+-----------------------------------------------------------------------------------------
+Thread Group:
++++++++++++++
+          -it is a way to group threads together/ collection of threads
+          -so that we can control them together as a single unit
+        ex: checking priority, joining threads, interrupting threads etc
+          -it can achieve by using ThreadGroup class present in java.lang package
+  
+  methods in ThreadGroup
+  ---------------------
+      list()-- used to get the list of threads in the group
+      activeCount()-- used to get the number of active threads in the group
+      activeGroupCount()-- used to get the number of active groups in the group
+      interrupt()-- used to interrupt all the threads in the group
+      destroy()-- used to destroy all the threads in the group
+      getName()-- used to get the name of the group
+      setName()-- used to set the name of the group
+---------------------------------------------------------------------------------
+Lock and ReentrantLock:
++++++++++++++++++++++
+   - both belongs to java.util.concurrent package and used
+    to handle synchronization manually
+
+Lock:
+-----
+    - it is an interface that tells about locking mechanism
+    - it consist lock() , unlock(), tryLock(), lockInterruptibly() methods
+ReentrantLock:
+-------------
+    - it is a (child/concrete)class that implements Lock interface
+
+lock(): used to acquire the lock
+unlock(): used to release the lock
+tryLock(): used to try to acquire the lock and return 
+          true if lock is acquired otherwise false
+lockInterruptibly(): used to acquire the lock and if thread
+                  is interrupted then it throws InterruptedException
+
+-----------------------------------------------------------------------
