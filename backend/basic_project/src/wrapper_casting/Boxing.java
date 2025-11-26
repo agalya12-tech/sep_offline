@@ -12,6 +12,7 @@ public class Boxing {
 	 boolean booleanValue=false;
 //	 Wrapper Class ref= primitveValue
 	      Byte      b =  byteValue;
+	      Byte b1=Byte.valueOf(byteValue);
 	 Short s=shortValue;
 	 Integer i=intValue;
 	 Long l=longValue;
