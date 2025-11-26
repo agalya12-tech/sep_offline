@@ -20,7 +20,7 @@ public class RemoveCharacter {
     public static String removeConsonants(String s) {
         StringBuilder b = new StringBuilder();
         for (char c : s.toCharArray()) {
-            if ("aeiouAEIOU ".indexOf(c) == -1) {
+            if ("BCDFGHJKLMNPQRSTUVWXYZbcdfghjklmnpqrstvwxyz".indexOf(c) != -1) {
                 continue;
             }
             b.append(c);
