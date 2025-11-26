@@ -6,7 +6,6 @@ public class RemoveCharacter {
         System.out.println("After removing consonants: " + removeConsonants(str));
         System.out.println("After removing digits: " + removeDigits(str));
     }
-
     public static String removeVowels(String s) {
         StringBuilder b = new StringBuilder();
         for (char c : s.toCharArray()) {
