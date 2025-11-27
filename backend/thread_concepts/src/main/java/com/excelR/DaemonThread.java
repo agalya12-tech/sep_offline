@@ -1,6 +1,6 @@
 package com.excelR;
 
-public class DemonThread {
+public class DaemonThread {
     public static void main(String[] args) throws InterruptedException {
         Thread daemon=new Thread(()->{
             while(true){

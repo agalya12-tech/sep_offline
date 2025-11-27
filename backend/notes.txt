@@ -1730,7 +1730,7 @@ Daemon Thread:
 
     -isDaemon() - used to check whether a thread is a daemon thread or not
 ex:
-   main thread --Main worker /manager
+   main thread(non daemon thread) --Main worker /manager
    daemon thread --assistant workers
 
 -----------------------------------------------------------------------------------------
