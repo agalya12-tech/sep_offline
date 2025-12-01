@@ -29,7 +29,7 @@ class Bike1 {
 }
 
 class Bike2 {
-    public synchronized void runBike2(Bike1 bike1) {
+    public  void runBike2(Bike1 bike1) {
         synchronized (Bike2.class) {
             System.out.println("runBike2");
         }
