@@ -14,11 +14,9 @@ public class DeadLockExample {
     /*
     * car1.runcar1():
     *                Car1 moving
-    *                ego of car2
     *
     * car2.runcar2():
     *                Car2 moving
-    *                ego of car1
     *
     *
     * */
