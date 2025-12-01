@@ -1750,25 +1750,15 @@ Thread Group:
       destroy()-- used to destroy all the threads in the group
       getName()-- used to get the name of the group
       setName()-- used to set the name of the group
----------------------------------------------------------------------------------
-Lock and ReentrantLock:
-+++++++++++++++++++++
-   - both belongs to java.util.concurrent package and used
-    to handle synchronization manually
+---------------------------------------------------------------------------------------------------------
 
-Lock:
------
-    - it is an interface that tells about locking mechanism
-    - it consist lock() , unlock(), tryLock(), lockInterruptibly() methods
-ReentrantLock:
--------------
-    - it is a (child/concrete)class that implements Lock interface
-
-lock(): used to acquire the lock
-unlock(): used to release the lock
-tryLock(): used to try to acquire the lock and return 
-          true if lock is acquired otherwise false
-lockInterruptibly(): used to acquire the lock and if thread
-                  is interrupted then it throws InterruptedException
-
------------------------------------------------------------------------
++-----------------------------------------------------------------------------------------------------+
+| Feature     | Synchronized Method                     | Synchronized Block                          |
+| ----------- | --------------------------------------- | ------------------------------------------- |
+| Scope       | Entire method                           | Only part of the method                     |
+| Performance | Slower                                  | Faster                                      |
+| Flexibility | Low                                     | High                                        |
+| Lock Type   | Always current object (`this`) or class | Can choose any lock object                  |
+| Use Case    | When whole method must be thread-safe   | When only critical section needs protection |
+======================================================================================================================================
+======================================================================================================================================
