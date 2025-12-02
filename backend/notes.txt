@@ -1762,3 +1762,478 @@ Thread Group:
 | Use Case    | When whole method must be thread-safe   | When only critical section needs protection |
 ======================================================================================================================================
 ======================================================================================================================================
+
+  drawback of arrays:
+-----------------
+  - arrays are collection of data /value/objects
+  - arrays are fixed in size(risk in over/under size allocation)
+  - arrays are not thread safe
+  - arrays are not synchronized
+  - arrays will accept same data type values only
+  - manipulations of arrays are slow(there are no inbuilt methods )
+  - arrays are low level and not user friendly
+    (sorting , searching , insertion , deletion , element shifting etc)
+  
+
+
+Collection Framework:
++++++++++++++++++++++
+   - it is a framework that provides collection of objects
+   - it works only for non -primitive data type/ objects
+   - A group/multiple  of individual data/objects is called collection
+   - it is introduced in java 1.2 version 
+   - In collection framework , mainly we have two(root) types of interfaces
+        1. Collection interface
+        2. Map interface
+
+Framework: 
+---------
+  -a framework is a collection/set of classes and interfaces that provides
+  a ready made solution for a particular problem
+
+
+1.collection interface:  
+-----------------------
+      - It is a interface present in java.util package since java 1.2
+      - It is a child interface of Iterable interface
+      - it consist three child interfaces
+              1.List -ArrayList, LinkedList, Vector
+              2.Set - HashSet, LinkedHashSet, TreeSet
+              3.Queue - ArrayDeque, LinkedBlockingQueue, PriorityQueue
+
+methods of collection interface:
+--------------------------------
+size()  :used to get the size of collection
+        :returns int , size of collection
+        :if collection is empty returns [] /0 
+
+add(element)  :used to add an element to collection
+              :returns boolean , if element is added returns true,
+              if element is not added returns false
+
+addAll(collection):used to add multiple elements to collection
+                  :returns boolean , if elements are added returns true,
+                  if elements are not added returns false
+remove(element):used to remove an element from collection
+                :returns boolean , if element is removed returns true,
+                if element is not removed returns false
+removeAll(collection):used to remove multiple elements from collection
+                     :returns boolean , if elements are removed returns true,
+                     if elements are not removed returns false
+
+removeIf(predicate):used to remove elements from collection
+                   :returns boolean , if elements are removed returns true,
+                   if elements are not removed returns false
+
+retainAll(collection):used to retain elements from collection
+                     :returns boolean , if elements are retained returns true,
+                     if elements are not retained returns false
+
+contains(element):used to check if an element is present in collection
+                   :returns boolean , if element is present returns true,
+                   if element is not present returns false
+containsAll(collection):used to check if all the elements are present in collection
+                       :returns boolean , if all the elements are present returns true,
+                       if all the elements are not present returns false
+
+isEmpty():used to check if collection is empty
+          :returns boolean , if collection is empty returns true,
+          if collection is not empty returns false
+
+clear():used to clear all the elements from collection
+         :returns boolean , if collection is cleared returns true,
+         if collection is not cleared returns false
+
+toArray() :used to convert collection to array
+          :returns Object[] , array of objects
+          :if collection is empty returns []
+
+iterator(): used to get the iterator of collection
+            :returns Iterator , iterator of collection
+            :if collection is empty returns null
+
+spiltIterator():used to get the split iterator of collection
+                :returns SpiltIterator , split iterator of collection
+                :if collection is empty returns null
+
+forEach():used to iterate over collection
+          :returns void , it will iterate over collection
+          :if collection is empty returns null
+
+stream():used to get the stream of collection
+          :returns Stream , stream of collection
+          :if collection is empty returns null
+
+parallelStream():used to get the parallel stream of collection
+          :returns Stream , parallel stream of collection
+          :if collection is empty returns null
+
+equals():used to check if two collections are equal
+          :returns boolean , if two collections are equal returns true,
+          if two collections are not equal returns false
+
+hashCode():used to get the hash code of collection
+            :returns int , hash code of collection
+            :if collection is empty returns 0
+
+toString():used to get the string representation of collection
+            :returns String , string representation of collection
+            :if collection is empty returns ""
+
+---------------------------------------------------------------------
+removeAll()                             retainAll()
+------------------------------------------------------------
+removes all the elements from         removes all the elements 
+collection (matching elements)        except the elements (matching elements)
+
+
+
+
+
+List interface:
+---------------
+       -it is a child of collection interface , present in java.util package since java 1.2
+       -it is a collection of ordered elements(index based)
+       -it allows duplicates
+
+    
+
+add(index,e): used to add an element at a particular index position
+            :if index is out of range then it will throw IndexOutOfBoundsException
+
+addAll(index,collection):used to add multiple elements at a particular index position
+                        :if index is out of range then it will throw IndexOutOfBoundsException
+
+addFirst(e):used to add an element at the beginning of the list
+
+addLast(e):used to add an element at the end of the list
+
+get(index): used to get the element at a particular index position
+          :returns E , element at a particular index position
+          :if index is out of range then it will throw IndexOutOfBoundsException
+
+getFirst():used to get the first element of the list
+
+getLast():used to get the last element of the list
+
+indexOf(e):used to get the index of an element
+          :returns int , index of element
+          :if element is not present returns -1
+
+lastIndexOf(e):used to get the last index of an element
+          :returns int , last index of element
+          :if element is not present returns -1
+
+listIterator():used to get the list iterator of the list
+              :returns ListIterator , list iterator of the list
+              :if list is empty returns null
+
+listIterator(index):used to get the list iterator of the list at a particular index position
+                    :returns ListIterator , list iterator of the list at a particular index position
+                    :if index is out of range then it will throw IndexOutOfBoundsException
+
+remove(index):used to remove an element at a particular index position
+             :returns E , element at a particular index position
+             :if index is out of range then it will throw IndexOutOfBoundsException
+
+removeFirst():used to remove the first element of the list
+
+removeLast():used to remove the last element of the list
+
+replaceAll(collection):used to replace all the elements of the list
+
+retainAll(collection):used to retain all the elements of the list
+                     :returns boolean , if elements are retained returns true,
+                     if elements are not retained returns false
+
+reversed():used to reverse the list
+          :returns reversed List
+         
+set(index,e):used to set/update/replace the element at a particular index position 
+            :returns E , element at a particular index position
+            :if index is out of range then it will throw IndexOutOfBoundsException
+
+sort(comparator):used to sort the list
+
+subList(startIndex,endIndex):used to get the sub list of the list
+                            :returns List , sub list of the list
+                            :if startIndex is greater than endIndex then it will throw IndexOutOfBoundsException
+
+
+Set interface:
+--------------
+   -Set is a child interface of Collection interface present in java.util package since java 1.2
+   -Set is a collection of unique elements(won't allow duplicates)
+   -Set is a collection of unordered elements
+   -No extra methods beyond what is inherited from Collection.
+
+------------------------------------------------------------------------------------
+                    HashSet              LinkedHashSet             TreeSet
+-----------------------------------------------------------------------------------
+order                no                  insertion order         sorting order
+
+null values          yes                   yes                       no(NPE)
+
+duplicates           no                    no                        no
+
+indexed access       no                    no                        no
+
+performance          faster               slower                    slower
+
+thread-safe          no                    no                        no
+------------------------------------------------------------------------------------
+
+
+
+Feature                   	List                         	Set
+------------------------------------------------------------------------------------
+Order	          Maintains insertion order	    May or may not (depends on implementation)
+Duplicates  	  Allowed	                      Not allowed
+Indexed Access	  Yes                        	  No
+Implementations	 ArrayList, LinkedList	        HashSet, LinkedHashSet, TreeSet
+-----------------------------------------------------------------------------------
+
+
+Queue interface:
+---------------
+     - Queue is a child interface of Collection interface present in java.util package since java 1.2
+     - Queue is a collection of ordered elements(first in first out - FIFO)
+
+offer(e):used to add an element to the queue
+         :returns boolean , if element is added returns true,
+         if element is not added returns false
+
+poll():used to remove an element from the queue
+       :returns E , element from the queue
+       :if queue is empty returns null
+
+peek():used to get the first element of the queue
+      :returns E , first element of the queue
+      :if queue is empty returns null
+
+element():used to get the first element of the queue
+          :returns E , first element of the queue
+          :if queue is empty returns NoSuchElementException
+
+remove():used to remove an element from the queue
+         :returns E , element from the queue
+         :if queue is empty returns NoSuchElementException
+
+
+-------------------------------------------------------------------------------
+                    PriorityQueue            LinkedList                   ArrayDeque
+--------------------------------------------------------------------------------
+parent interface         Queue              List,Deque,Queue             Deque,Queue
+
+random access             no                   yes (index)                  no
+
+ordering           priority order           insertion order            insertion order
+                                              (fifo)              
+
+null values               no                   yes                         no
+
+useCase            priority matters         both list and queue        both stack and queue
+-----------------------------------------------------------------------------------------
+
+
+
+
+
+Feature                 	List              	Set                	Queue
+------------------------------------------------------------------------------------------
+Duplicates Allowed	       Yes                 No                  Yes
+Maintains Order	           Yes (index)	     Depends               Yes (FIFO)
+Indexed Access	           Yes	               No	                  No
+Special Methods	       get, set etc.	      None extra	  offer, poll, peek etc.
+Main Usage	           Random access	    Unique elements	    FIFO processing
+
+
+ArrayList: 
+---------
+   -ArrayList is a implementation class that implements the List interface.
+   -ArrayList is a dynamic array that can grow and shrink as needed.
+   -ArrayList is not thread-safe.
+   -ArrayList is slower than LinkedList.
+   -mainly used for read-write operations
+   -initial capacity is 10
+methods of ArrayList:
+---------------------
+ensureCapacity(int minCapacity):used to ensure that the capacity of the ArrayList is at least minCapacity
+                               :if minCapacity is less than current capacity then it will not change the capacity
+                               :if minCapacity is greater than current capacity then it will change the capacity
+                               :returns boolean , if capacity is changed returns true,
+                               if capacity is not changed returns false
+
+capacity():used to get the capacity of the ArrayList
+          :returns int , capacity of the ArrayList
+
+trimToSize():used to trim the size of the ArrayList to the current size
+            :returns void , it will trim the size of the ArrayList to the current size
+
+clone():used to clone the ArrayList
+       :returns Object , clone of the ArrayList
+
+LinkedList:
+-----------
+   -LinkedList is a implementation class that implements the List interface.
+   -LinkedList is a doubly linked list that can grow and shrink as needed.
+   -LinkedList is thread-safe.
+   -LinkedList is faster than ArrayList.
+   -mainly used for read-write operations
+   -initial capacity is 0(there is no concept of initial capacity in LinkedList, it consist nodes)
+
+methods of LinkedList:
+---------------------
+removeFirst()	:	Removes first element
+removeLast()	:	Removes last element
+offerFirst(E e)	:	Offers to the front
+offerLast(E e)	:	Offers to the end
+pollFirst()	:	Retrieves and removes first
+pollLast()	:	Retrieves and removes last
+peekFirst()	:	Peeks first element
+peekLast()	:	Peeks last element
+push(E e)	:	Pushes onto stack (head)
+pop()	:	Pops from stack (head)
+descendingIterator()	:	Returns reverse iterator
+
+---------------------------------------------------------------------------------------------
+Feature                     	ArrayList                              	LinkedList
+-------------------------------------------------------------------------------------------
+default capacity                10                              doesn't have
+Structure	                   Dynamic Array                     	Doubly Linked List
+thread safe                  not thread safe                    not thread safe
+Access Speed             	    Fast (O(1))	                      Slow (O(n))
+Insert/Delete at Start	      Slow (O(n))                       Fast (O(1))
+Insert/Delete in Middle	      Slow (O(n))	                      Moderate (O(n))
+Memory Efficiency	         Better (less overhead)	             Higher (node pointers)
+                                                             Extra memory for pointers (next & prev) in each node
+Use Case	                Best for read-heavy apps	           Best for write-heavy apps
+-------------------------------------------------------------------------------------
+
+
+
+Vector:
+-------
+   -Vector is a legacy class that also implements the List interface.
+   -It is similar to ArrayList, but with one major difference:
+   -Vector is synchronized (i.e., thread-safe).
+   -Vector is slower than ArrayList. 
+   -Vector is deprecated and is replaced by ArrayList.
+   -mainly used for Multi-threaded list (without external sync)
+
+
+ Iterator
+----------
+    -Used to traverse elements in forward direction only.
+    -Works on any Collection (e.g., List, Set, Queue).
+    -Allows safe removal of elements during iteration.
+Method	
+-------
+hasNext()	:Returns true if there are more elements
+          :Returns false if there are no more elements 
+next()	:Returns the next element
+        :Throws NoSuchElementException if there are no more elements
+remove()	:Removes the current element (optional)
+          :Throws UnsupportedOperationException if remove() is not supported
+
+ ListIterator
+ ------------
+    -Used only with List implementations.
+    -Can traverse in both forward and backward directions.
+    -Can add, update, and remove elements during traversal.
+
+Method
+-------
+hasPrevious():	Checks for element in reverse
+             :Returns true if there are more elements
+             :Returns false if there are no more elements
+previous()	:Gets the previous element
+            :Throws NoSuchElementException if there are no more elements
+nextIndex()	:Returns the index of the next element
+            :Throws UnsupportedOperationException if nextIndex() is not supported
+previousIndex()	:Returns the index of the previous element
+                :Throws UnsupportedOperationException if previousIndex() is not supported
+add(E e)	:Adds an element
+set(E e)  :Updates the last returned element
+
+
+SpiltIterator
+-------------
+    -Used only with List implementations.
+    -Can traverse in both forward and backward directions.
+    -Can add, update, and remove elements during traversal.
+    -Can split into multiple iterators.
+    -added in java 8
+
+methods:
+-------
+trySplit():	tries to split the iterator into multiple iterators
+            :returns Spliterator<T> if successful, else returns null  
+tryAdvance():	tries to advance the iterator
+              :returns true if successful, else returns false
+forEachRemaining():	performs an action for each remaining element
+
+
+Map:
+------
+   -Map is a  interface present in java.util package since java 1.2
+   -Map is a collection of key-value pairs
+   -Map is a collection of unique keys
+   -Map is a collection of ordered elements(key based)
+   -Map allows duplicates(values)
+   -Map allows null keys
+   -Map allows null values
+
+methods:
+-------
+put(K key, V value) → Adds/updates a key-value pair.
+get(Object key) → Returns the value for the given key.
+remove(Object key) → Removes the entry for the key.
+containsKey(Object key) → Checks if key exists.
+containsValue(Object value) → Checks if value exists.
+size() → Returns number of entries.
+isEmpty() → Checks if map is empty.
+clear() → Removes all entries.
+keySet() → Returns a Set of keys.
+values() → Returns a Collection of values.
+entrySet() → Returns a Set of key-value pairs.
+putIfAbsent(K key, V value) → Puts value only if key is not already mapped.
+replace(K key, V value) → Replaces value for key if present.
+replace(K key, V oldValue, V newValue) → Replaces only if currently mapped to oldValue.
+getOrDefault(Object key, V defaultValue) → Returns value if found, otherwise default.
+forEach(BiConsumer<? super K, ? super V> action)→ Iterates through all key-value pairs using a lambda.
+compute(K key, BiFunction<? super K, ? super V, ? extends V> remappingFunction)→ Recomputes value for a key. Removes entry if result is null.
+computeIfAbsent(K key, Function<? super K, ? extends V> mappingFunction)→ Computes and inserts value only if key is not already mapped (or mapped to null).
+computeIfPresent(K key, BiFunction<? super K, ? super V, ? extends V> remappingFunction)→ Updates value only if key is already mapped. Removes if result is null.
+merge(K key, V value, BiFunction<? super V, ? super V, ? extends V> remappingFunction)→ Inserts value if absent, otherwise merges old and new value. Removes if function returns null.
+------------------------------------------------------------------------------------
+
+                  HashMap          TreeMap          HashTable           LinkedHashMap
+-----------------------------------------------------------------------------------
+ordering          no order        key based         no order            insertion order
+
+null key          allow           not allow         not allow           allow  
+
+null values      allow             allow           not allow           allow
+
+thread safe       no                no                 yes                 no
+
+performance       fast             slow             slow                slightly slower
+
+internal ds       hashTable      red-black tree      hashTable        doubly linked list
+--------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------------------
+Feature                     	Comparable                                    	Comparator
+-----------------------------------------------------------------------------------------------------------
+Package	                        java.lang	                                     java.util
+Method	                        compareTo(T o)	                                compare(T o1, T o2)
+Where defined	          Inside the class of the object	               Separate class, lambda expression
+Sorting type	            Natural ordering (default)	                 Custom ordering (can have multiple)
+Flexibility             	Only one way of sorting                         	Many ways of sorting
+Example use          	     Collections.sort(list)                      	Collections.sort(list, comparator)
+
+------------------------------------------------------------------------------------------------------------
+
+
