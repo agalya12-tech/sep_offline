@@ -33,6 +33,6 @@ public class SetProgram1 {
 //        set.add(null); Null Pointer Exception
         System.out.println(set+"   Treeset");
 
-    
+
     }
 }
