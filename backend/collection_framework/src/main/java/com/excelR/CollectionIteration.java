@@ -27,7 +27,7 @@ public class CollectionIteration {
         }
         System.out.println(c4);
 
-        
+
 
 
 //    for each loop / enhanced for loop/ advanced for loop
@@ -47,6 +47,7 @@ public class CollectionIteration {
 //        };
 //        c4.removeIf(p);
 //        System.out.println(c4);
+
 
 
 
