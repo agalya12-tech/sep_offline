@@ -1,9 +1,6 @@
 package com.excelR.setPrograms;
 
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class SetProgram1 {
     public static void main(String[] args) {
@@ -19,15 +16,15 @@ public class SetProgram1 {
 
 
 
-        
-        set=new LinkedHashSet<>();
+
+        set=new LinkedHashSet<>(); // insertion order
 //        set.add("Apple");
 //        set.add("Banana");
 //        set.add("Pear");
 //        set.add("Pear");
 //        set.add(null);
 //        System.out.println(set+"  linked hashset");
-        set=new TreeSet<>();
+        set=new TreeSet<>();// sorting order
         set.add("Apple");
         set.add("Orange");
         set.add("Banana");
@@ -35,5 +32,7 @@ public class SetProgram1 {
         set.add("Pear");
 //        set.add(null); Null Pointer Exception
         System.out.println(set+"   Treeset");
+
+    
     }
 }
