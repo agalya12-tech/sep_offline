@@ -14,6 +14,8 @@ public class Generic_NonGeneric {
         System.out.println(collection);
         System.out.println(collection.isEmpty());
         System.out.println(collection.size());
+
+
         Collection<Integer> collection1 = new ArrayList<Integer>(); // UpCasting
         collection1.add(10);
 //        collection1.add('A');

@@ -1,5 +1,4 @@
 package com.excelR;
-
 import java.util.Arrays;
 public class Array1 {
     public static void main(String[] args) {
@@ -11,7 +10,6 @@ public class Array1 {
         System.out.println(Arrays.toString(arr));
     }
 }
-
 /*
 * Collection Framework -- is a collection of classes and interfaces
 *                      -- non -primitive data type(Wrapper class)
