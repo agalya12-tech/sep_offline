@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.function.Consumer;
+import java.util.function.Predicate;
 
 public class CollectionIteration {
     public static void main(String[] args) {
@@ -18,6 +19,16 @@ public class CollectionIteration {
              System.out.println(num);
         };
         c4.forEach(consumer);
+
+        
+//        boolean test(T t)
+        Predicate<Integer>p=(x)->{
+             return x%2!=0;
+        };
+        c4.removeIf(p);
+        System.out.println(c4);
+
+
 
 
     }
