@@ -31,6 +31,17 @@ public class Collection1 {
 //        System.out.println(c2);
 
 
+        Collection<Integer>c3=new ArrayList<>(Arrays.asList(10, 11, 12, 13));
+        System.out.println(c3);
+
+        Collection<Integer> c4=new ArrayList<>(Arrays.asList(10, 11, 12, 13,100, 200, 300, 400, 500));
+        System.out.println(c4);//[10, 11, 12, 13, 100, 200, 300, 400, 500]
+//        c4.removeAll(c3);//[ 100, 200, 300, 400, 500]
+        c4.retainAll(c3);//[10, 11, 12, 13]
+        System.out.println(c4);
+
+
+
     }
 
 
