@@ -15,13 +15,31 @@ public class ListProgram1 {
 //      list.addAll(list2);
 //      list.addAll(0,list1);
 
-        list.remove(0);
-        list.removeFirst();
-        list.removeLast();
-        list.remove("Yellow");
+
+//        update elements
+        System.out.println(list);
+//      list.add(2,"Black"); // it inserts Black in 2nd index position
+        list.set(2,"Black"); // it modifies Black in 2nd index position
+        System.out.println(list);
+
+
+//         accessing elements
+//         System.out.println(list.get(12));//IOBE
+           System.out.println(list.get(2));//Black
+           System.out.println(list.getFirst());//Green
+           System.out.println(list.getLast());//Pink
+
+//        check elements
+//        list.contains("Yellow");
+//        list.containsAll(list1);
+
+//       delete operations
+//        list.remove(0);
+//        list.removeFirst();
+//        list.removeLast();
+//        list.remove("Yellow");
 //      list.removeAll(list1);
 //      list.retainAll(list1);
 //      list.removeIf()
-        System.out.println(list);
     }
 }
