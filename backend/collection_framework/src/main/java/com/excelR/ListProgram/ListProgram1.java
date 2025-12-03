@@ -1,6 +1,7 @@
 package com.excelR.ListProgram;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ListProgram1 {
@@ -46,5 +47,7 @@ public class ListProgram1 {
 //      list.removeAll(list1);
 //      list.retainAll(list1);
 //      list.removeIf()
+
+
     }
 }
