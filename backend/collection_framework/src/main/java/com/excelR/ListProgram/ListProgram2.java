@@ -25,11 +25,12 @@ public class ListProgram2 {
         list2.add("ONE");
         list2.add("TWO");
         list2.add("THREE");
-        String[]arr2=new String[list2.size()];
-
-        for(int i=0;i<list2.size();i++){
-            arr2[i]=list2.get(i);
-        }
+//        String[]arr2=new String[list2.size()];
+//
+//        for(int i=0;i<list2.size();i++){
+//            arr2[i]=list2.get(i);
+//        }
+        String[]arr2=list2.toArray(new String[0]);
 
         System.out.println(Arrays.toString(arr2));
     }
