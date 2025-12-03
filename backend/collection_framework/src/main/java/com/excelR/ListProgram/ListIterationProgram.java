@@ -29,5 +29,10 @@ public class ListIterationProgram {
         }
 
 
+        System.out.println();
+        list.forEach(
+                (e)->{
+                 System.out.print(e+" ,");
+                });
     }
 }
