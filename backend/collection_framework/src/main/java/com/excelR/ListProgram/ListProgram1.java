@@ -18,16 +18,21 @@ public class ListProgram1 {
 
 //        update elements
         System.out.println(list);
-//      list.add(2,"Black"); // it inserts Black in 2nd index position
-        list.set(2,"Black"); // it modifies Black in 2nd index position
+        list.add(2,"Black"); // it inserts Black in 2nd index position
+        list.set(3,"Black"); // it modifies Black in 2nd index position
         System.out.println(list);
-
 
 //         accessing elements
 //         System.out.println(list.get(12));//IOBE
            System.out.println(list.get(2));//Black
            System.out.println(list.getFirst());//Green
            System.out.println(list.getLast());//Pink
+
+
+//        finding index based on value
+         System.out.println(list.indexOf("Black"));//2
+         System.out.println(list.lastIndexOf("Black"));//3
+         System.out.println(list.lastIndexOf("White"));//-1
 
 //        check elements
 //        list.contains("Yellow");
