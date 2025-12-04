@@ -10,14 +10,14 @@ public class MaxRepeatingCharacter {
 		for(char c:s.toCharArray()) {
 			map.put(c,map.getOrDefault(c,0)+1);
 		}
-		int max=0; 
+		int maxValue=0; 
 		for(Map.Entry<Character,Integer>entry:map.entrySet()) {
-			if(entry.getValue()>max) {
-			    max=entry.getValue();
+			if(entry.getValue()>maxValue) {
+			    maxValue=entry.getValue();
 			}
 		}
 		for(Map.Entry<Character,Integer>entry:map.entrySet()) {
-			if(entry.getValue()==max) {
+			if(entry.getValue()==maxValue) {
 			   System.out.println(entry.getKey()+" - "+entry.getValue());
 			}
 		}
