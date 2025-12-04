@@ -27,8 +27,12 @@ public class MapIteration {
             System.out.println(entry.getKey()+" - "+entry.getValue());
         }
 
-
-
+        
+        map.forEach(
+                (key,value)->{
+                     System.out.println(key+" - "+value);
+                }
+        );
 
 
     }
