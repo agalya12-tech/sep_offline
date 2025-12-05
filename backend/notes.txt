@@ -52,9 +52,9 @@ ___.java  <----------------------> ____.class<-----------------> output
 
 
 Note : java is a platform independent but jdk dependent
-     : to compile the code main method is not required bcoz,
+     : to compile the code main method is not required because,
        compiler will check syntax .
-     : to execute the code main method is required bcoz ,
+     : to execute the code main method is required because, ,
        interpreter/jvm will search for main method as entry point
 
 2.strongly typed: java is a strongly typed language
@@ -2168,7 +2168,7 @@ SpiltIterator
 methods:
 -------
 trySplit():	tries to split the iterator into multiple iterators
-            :returns Spliterator<T> if successful, else returns null  
+            :returns SplitIterator<T> if successful, else returns null  
 tryAdvance():	tries to advance the iterator
               :returns true if successful, else returns false
 forEachRemaining():	performs an action for each remaining element
@@ -2225,7 +2225,7 @@ internal ds       hashTable      red-black tree      hashTable        doubly lin
 
 
 +----------------------------------------------------+
-| HashMap               | Hashtable                  |
+| HashMap               | HashTable                  |
 | --------------------- | -------------------------- |
 | Not synchronized      | Synchronized (thread safe) |
 | Allows null key/value | Does NOT allow null        |
