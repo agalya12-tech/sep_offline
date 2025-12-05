@@ -13,11 +13,11 @@ public class EmployeeMain {
         System.out.println(empList);
         empList.sort(
             (e1,e2)->{
-              int num= Double.compare(e2.experience, e1.experience);
+              int num= Double.compare(e2.experience, e1.experience);//Descending order
               if(num==0){
-                num=Double.compare(e2.salary, e1.salary);
+                num=Double.compare(e2.salary, e1.salary);//Descending order
                 if(num==0){
-                    num=e1.name.compareTo(e2.name);
+                    num=e1.name.compareTo(e2.name);//Ascending order
                 }
               }
               return num;
