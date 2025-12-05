@@ -2243,6 +2243,7 @@ Where defined	          Inside the class of the object	               Separate c
 Sorting type	            Natural ordering (default)	                 Custom ordering (can have multiple)
 Flexibility             	Only one way of sorting                         	Many ways of sorting
 Example use          	     Collections.sort(list)                      	Collections.sort(list, comparator)
+                             list.sort(comparator)                              list.sort(comparator)
 
 ------------------------------------------------------------------------------------------------------------
 
