@@ -2247,3 +2247,274 @@ Example use          	     Collections.sort(list)                      	Collecti
 ------------------------------------------------------------------------------------------------------------
 
 
+
+java 8 features:
+----------------
+      after 1.5 version , java 8 version is the next major version
+1.lambda expression
+2.functional interface
+3.default method
+4.stream api
+5.optional class
+6.date and time api
+7.Double colon operator(::) etc..
+
+
+lambda expression:
+===================
+    - lambda expression is a small anonymous(without name) function
+    - it doesn't have method name, return type , modifiers
+    -lambda expression is also called as anonymous function or closures
+
+ex1:  public void m1(){
+      System.out.println("hello");
+      }
+
+      lambda expression: ()->{System.out.println("hello");}
+                         ()->System.out.println("hello");
+  
+Note : curly brackets are required when we are having more than
+       one statement in lambda expression
+
+
+ex2: public void m2(int a,int b){
+      System.out.println(a+b);   
+     }
+
+     lambda expression: (int a,int b)->System.out.println(a+b);
+                      : (int a, int b)->{System.out.println(a+b);}
+                      : (a,b)->System.out.println(a+b);
+
+
+
+
+ex: public return type m3(int a,int b){
+    return a+b;
+   }
+
+   lambda expression: (int a,int b)-> return a+b;
+                    : (a,b)->return a+b;
+    
+
+Functional interface:
+---------------------
+    -it is an interface which contains only one abstract method
+    -it also called as single abstract method interface(SAMI)
+    -then the single abstract method is called as functional interface method or
+     single abstract method (SAM) 
+    -in java 8 they introduced @FunctionalInterface annotation
+
+Note: Functional interface allows only one abstract method but
+      multiple default and static methods are allowed
+
+   ex:
+            Runnable  -void run()
+            Predicate - boolean test(E e)
+            Function(UnaryOperator) - T apply(T t)
+            Consumer - void accept(T t)
+            Comparator - int compare(T o1, T o2)
+            Comparable - int compareTo(T o)
+            BiConsumer- void accept(K t, V u)
+            BiFunction - R apply(T t, U u)
+
+
+ 
+--------------------------------------------------------------------------------------------------------------------------------
+                Predicate                                Function                                         Consumer
+------------------------------------------------------------------------------------------------------------------------------
+interface     functional interface                     functional interface                             functional interface
+
+method        boolean test(T t)                            R  apply(T t)                                  void accept(T t)
+
+return type   boolean                                      R(any type)                                       void
+
+purpose       to filter elements of a             to map elements of a collection to another           printing,saving,logging
+            collection based on a condition        collection/ transforms each element
+
+used in      filter(), anyMatch(), allMatch()        map(), sorted(), distinct(), limit(),             forEach(), andThen()
+                                                         skip(), collect() etc
+-----------------------------------------------------------------------------------------------------------------------------------
+    
+
+
+Functional interface vs lambda expression:
+------------------------------------------
+  - once we create a functional interface then we can create a lambda expression
+    for that abstract method
+  -we can use functional interface to refer a lambda expression
+
+Note :the local variables mentioned in lambda expression are implicitly final, so that 
+      variable  cannot be modified.
+
+
+
+default method:
+---------------
+     - it is a new feature introduced in java 8
+     - default methods are used in interfaces to provide
+       default implementation of methods
+     - if we have a default method then we can 
+       break the implementation in child class
+syntax:
+        default void m1(){
+          System.out.println("hello");
+        }
+
+Note: we can override default method in child class 
+
+
+Q.what will happen if we have same default methods in both parents
+  of child class(multiple inheritance)?
+
+ans: It causes ambiguity problem , it gets confuse to which method to call
+     can overcome by overriding default method in child class
+
+Q.What will happen if we override a static method?
+  Override is applicable for object members not for class Members.
+  Static is a class members , even though if we try to override it acts like
+  method shadowing .
+
+
+inner anonymous class:
+----------------------
+   - a class without name is called inner anonymous class
+   - it is also called as local class
+   - the class will declare inside a block or method (inner class)
+syntax:
+   MyInterface mi=new MyInterface(){
+
+   }
+
+Note: for interfaces/abstract classes if we are not ready to create
+  a child class then we can use inner anonymous class to create object  
+      
+
+Stream Api:
+-----------
+     - it is a new feature introduced in java 8
+     - it is used to perform operations on collections(arrays,lists,sets)
+     - it is used to process data/collections in parallel
+     - it is not a ds , it is used to process data/collections(filtering ,
+       sorting , mapping ,reducing ,collecting etc.)
+    - mainly it process the data in two ways
+         1.intermediate operation
+         2.terminal operation
+    - the collection can convert into stream in two ways
+         list.stream() //sequential
+         list.parallelStream() //parallel - multithreading
+
+1.Intermediate operation:
++++++++++++++++++++++++
+      filter() - filter elements of a collection based on a condition
+      map()   -  map elements of a collection to another collection/ transforms each element
+      sorted() - sort elements of a collection
+      distinct()- remove duplicate elements of a collection
+      limit(n)  - limit the number of elements of a collection
+      skip(N)   - skip the first n elements of a collection
+      peek()   - peek at the first element of a collection without removing it
+
+2.Terminal operation:
+++++++++++++++++++++
+      collect() - collect elements of a collection into another collection
+      forEach() - iterate over elements of a collection and perform an action on each element
+      findFirst() - find the first element of a collection that matches a condition
+      findAny() - find any element of a collection that matches a condition
+      count() - count the number of elements of a collection that match a condition
+      anyMatch() - check if any element of a collection matches a condition
+      allMatch() - check if all elements of a collection match a condition
+      noneMatch() - check if none of the elements of a collection match a condition
+      min() - find the minimum element of a collection
+      max() - find the maximum element of a collection
+      average() - find the average of the elements of a collection
+      reduce() - reduce the elements of a collection to a single value
+
+
+Stream Characteristics:
+-----------------------
+      1.lazy evaluation - intermediate operations are not executed until 
+                          terminal operation is called
+      2.pipeline     -multiple intermediate operations can be chained together
+      3.parallel processing - multiple streams can be processed in parallel
+      4.immutable - once a stream is created it cannot be modified original data
+      5.eager evaluation - intermediate operations are executed immediately
+
+                                          
+
+Note: Stream Api processing methods dealing with functional interface 
+      so we need use lambda expression to create object of functional interface
+      and pass it to stream api processing methods
+
+
+
+Date and Time Api:
++++++++++++++++++++
+        - it is a new feature introduced in java 8
+        - it is used to work with date and time
+        - it is used to perform operations on date and time
+        - it indicates in java.time package
+        - all classes are immutable and thread safe
+
+class:
+------
+1.LocalDate: Date without time
+           : it is used to represent date without time
+           : it is used to store date in yyyy-MM-dd format
+
+2.LocalTime: Time without date
+           : it is used to represent time without date
+           : it is used to store time in HH:mm:ss format
+
+3.LocalDateTime: Date and Time
+           : it is used to represent date and time
+           : it is used to store date and time in yyyy-MM-dd HH:mm:ss format
+
+4.ZoneDateTime: Date and Time with time zone
+           : it is used to represent date and time with time zone
+           : it is used to store date and time with time zone in yyyy-MM-dd HH:mm:ss Z format
+
+5.Period: Difference between two dates
+           : it is used to represent difference between two dates
+           : it is used to store difference between two dates in yyyy-MM-dd format
+
+6.Duration: Difference between two times
+           : it is used to represent difference between two times
+           : it is used to store difference between two times in HH:mm:ss format
+
+7.Instant: Date and Time with time zone
+           : it is used to represent date and time with time zone
+           : it is used to store date and time with time zone in yyyy-MM-dd HH:mm:ss Z format
+
+8.DateTimeFormatter: Format date and time
+           : it is used to format date and time
+           : and parse date and time
+
+
+Optional Class:
+++++++++++++++++
+    - it is a new feature introduced in java 8
+    - it is used to handle null values
+    - so we can avoid null pointer exception
+
+methods :
+---------
+1.isPresent() - check if value is present
+2.get() - get value
+3.orElse() - get default value if value is not present
+4.isEmpty() - check if value is empty
+5.orElseThrow() - throw exception if value is not present
+6.ifPresent() - perform action if value is present
+7.ifPresentOrElse() - perform action if value is present or else perform 
+                      another action
+8.filter() - filter value if condition is true
+9.map() - map value if condition is true
+10.orElseGet() - get default value if value is not present  
+
+
+(::)dot operator:
+----------------
+    - it is a new feature introduced in java 8
+    - it is used to deal with lambda expression
+    - it also called as method reference operator
+    - it is a shorthand syntax to call methods/ constructors in lambda expression
+    
+====================================================================================================================
