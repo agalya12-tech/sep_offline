@@ -22,7 +22,7 @@ public class OptionalClassProgram {
         return Optional.ofNullable(name);
     }
 
-    
+
     //    public static String getName(){
 //        String name=null;
 //        return name;
