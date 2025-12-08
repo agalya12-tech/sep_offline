@@ -2447,6 +2447,48 @@ Note: Stream Api processing methods dealing with functional interface
 
 
 
+Print all even numbers from a given list using Stream API.
+
+Convert a list of strings to uppercase using streams.
+
+Count how many strings in a list start with the letter 'A'.
+
+Sort a list of integers using Stream API.
+
+Find the square of each number in a list using streams.
+
+Remove duplicate elements from a list using streams.
+
+Find the maximum value from a list using Stream API.
+
+Find the minimum value from a list using Stream API.
+
+Calculate the sum of all numbers in a list using streams.
+
+Get the first 3 elements of a list using the limit() method.
+
+Given a list of strings, filter and print only those with length > 4.
+
+Given a list of integers, print the numbers greater than 50.
+
+Convert a list of integers to a list of their cubes using map().
+
+Check if any number in the list is negative using anyMatch().
+
+Check if all numbers in the list are positive using allMatch().
+
+Count how many numbers are greater than 10 in a list.
+
+Collect all even numbers into a new list using streams.
+
+Create a comma-separated string from a list of names using Collectors.joining().
+
+Skip the first 5 elements of a list using skip().
+
+Convert a list of strings to their lengths using map().
+
+
+
 Date and Time Api:
 +++++++++++++++++++
         - it is a new feature introduced in java 8
