@@ -2470,6 +2470,10 @@ Calculate the sum of all numbers in a list using streams.
 
 Get the first 3 elements of a list using the limit() method.
 
+Get the last 3 elements of a list using the skip() method.
+
+Get the first element of a list using the findFirst() method.
+
 Given a list of strings, filter and print only those with length > 4.
 
 Given a list of integers, print the numbers greater than 50.
