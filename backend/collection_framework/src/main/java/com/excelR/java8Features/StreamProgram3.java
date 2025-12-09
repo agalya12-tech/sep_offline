@@ -15,7 +15,10 @@ public class StreamProgram3 {
         System.out.println(map);
 
 
-       map=list.stream().collect(Collectors.toMap((e)->e,(e)->e.length()));
+       map=list.stream()
+               .collect(
+                       Collectors
+                               .toMap((e)->e,(e)->e.length()));
 
     }
 }
