@@ -2569,8 +2569,13 @@ methods :
     
 ====================================================================================================================
 
+  Board link:  https://miro.com/app/board/uXjVGd7yHvk=/?share_link_id=239204358436
+
+====================================================================================================================
+
+
 JDBC(Java Database Connectivity):
----------------------------------
+---------------------------------   
       - It is an api/translator/mediator used to connect and communicate 
         between java application and database
      -  to perform crud operations on database
