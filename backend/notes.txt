@@ -2568,3 +2568,145 @@ methods :
     - it is a shorthand syntax to call methods/ constructors in lambda expression
     
 ====================================================================================================================
+
+JDBC(Java Database Connectivity):
+---------------------------------
+      - It is an api/translator/mediator used to connect and communicate 
+        between java application and database
+     -  to perform crud operations on database
+     - it introduced in java 1.0 version as java.sql 
+ 
+
+JDBC Steps:
+-----------
+     1.load and register driver 
+     2.creation of connection
+     3.creation of statement
+     4.execution of statement
+     5.close
+
+1.Driver:
+---------
+      - it is a software component that allows java application
+       to communicate  with database by providing implementation
+       of java.sql interface
+    Types:
+       1.(Type-1)JDBC-ODBC Driver-  c language dependent
+       2.(Type-2)Native - API  Driver  - partially java driver
+       3.(Type-3)Netweork Protocol Driver - fully java driver , but dependence on server  
+       4.(Type-4)Thin Driver - fully java driver
+
+
+1.Load and Register:
+---------------------
+        Class.forName("com.mysql.cj.jdbc.Driver");
+		          or
+		Driver driver= new com.mysql.cj.jdbc.Driver() ;//UpCasting
+		DriverManager.registerDriver(driver);
+
+Note : 
+    Drivers is taken from maven repository 
+    so we need to add maven repository in pom.xml file
+    as dependency in pom.xml file
+
+    <dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.28</version>
+    </dependency>
+
+2.Creation of Connection:
+-------------------------
+     - connecting a path between java application and database
+     url/path:jdbc:mysql://localhost:3306/databaseName(SchemaName)
+     userName: root
+     password: root
+
+    DriverManager.getConnection(url);
+    DriverManager.getConnection(url,properties);
+    DriverManager.getConnection(url,userName,password);
+
+3.Creation of Statement:
+------------------------
+   - creatioin of statement objects to hold or carry SQL commands/queries
+
+    Statement -i     - it executes static commands/queries
+        ^   		 Statement s = con.createStatement();//java.sql.Statement
+	    |            System.out.println(s);//com.mysql.cj.jdbc.StatementImpl@
+        |
+PreparedStatement-i  - it will execute static and dynamic commands/queries
+        ^              ps = con.prepareStatement("insert into student values(3,'Varun',3453453,'v@gmail.com')");- static command
+        |              ps = con.prepareStatement("insert into student values(?,?,?,?)");- dynamic command
+        |
+        |
+CallableStatement-i - it will execute static and dynamic commands/queries
+                      cs = con.prepareCall("insert into student values(3,'Varun',3453453,'v@gmail.com')");- static command
+                      cs = con.prepareCall("insert into student values(?,?,?,?)");- dynamic command
+--------------------------------------------------------------------------------------------------
+Statement                    PreparedStatement                      CallableStatement
+--------------------------------------------------------------------------------------------------  
+parent interface            child interface                         sub child interface
+
+executes static commands    executes static and dynamic commands    executes static and dynamic commands
+
+con.createStatement()        con.prepareStatement(Query)           con.prepareCall(Query)
+
+performance is slow         performance is fast                    performance is fast
+
+---------------------------------------------------------------------------------------------------
+
+4.execution of Statement
+------------------------ 
+     - exceuting the sql commands
+
+     1.execute():
+                 - it executes both DML and DQL commands
+                 - it returns boolean value
+                 - it returns true if command is DQL command
+                   or else it returns false
+             syntax: 
+                s.execute(query);
+                ps.execute();
+                cs.execute();
+
+     2.executeUpdate():
+                 - it executes only DML commands
+                 - it returns int value
+                 - it returns number based on number of rows affected/manipulated
+             syntax: 
+                s.executeUpdate(query);
+                ps.executeUpdate();
+                cs.executeUpdate();
+     3.executeQuery():
+                 - it executes only DQL commands
+                 - it returns ResultSet object
+   
+ResultSet: 
+----------
+      - it is an interface present in java.sql package since java 1.2
+      - it is a collection of rows and columns
+      (which refer to a temporary tables created based on query)
+      - next(): - it is used to move cursor to next row
+                it returns boolean value
+                if next row is present then it returns true
+                else it returns false
+      - getter methods:-
+                 - it is used to access and print the values of columns
+                 - based on column name or column index
+             ex: getString(columnName)
+                     or
+                 getString(columnIndex)
+
+5.close
+------
+    - it is used to close the resources
+    - it is used to free the resources before exiting from try block
+    - it is required to close the resources to avoid connection leaks
+    syntax :
+            s.close();
+            ps.close();
+            cs.close();
+            rs.close();
+            con.close();
+
+Note : 1st and last step are optional 
