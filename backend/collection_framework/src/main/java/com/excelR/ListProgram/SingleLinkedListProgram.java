@@ -5,12 +5,13 @@ public class SingleLinkedListProgram {
         SinglyLinkedList<Integer> list = new SinglyLinkedList<Integer>();
         System.out.println(list.size());
         System.out.println(list.isEmpty());
-        list.add(11);
+        list.add(1);
         list.add(2);
         list.add(3);
         System.out.println(list.size());
         System.out.println(list.isEmpty());
-
+        list.display();
+        list.display();
 
 
 
@@ -58,9 +59,17 @@ class SinglyLinkedList<T> {
         size++;
     }
 
+    public void display() {
+        Node<T> temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + " -> ");
+            temp = temp.next;
+        }
+        System.out.println("null");
 
 
-
-
+    }
 
 }
+
+

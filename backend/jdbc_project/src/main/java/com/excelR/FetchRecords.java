@@ -7,8 +7,8 @@ import com.mysql.cj.jdbc.Driver;
 
 public class FetchRecords {
 	public static void main(String[] args) throws SQLException {
-		String query="select * from toys where id=1 and name='superman'";
-		DriverManager.registerDriver(new Driver()); 
+		String query="select * from toys  ";
+//		DriverManager.registerDriver(new Driver()); 
 		Connection con = DriverManager.getConnection
 				("jdbc:mysql://localhost:3306/database1","root","root");
 	    Statement s=con.createStatement();
@@ -21,8 +21,8 @@ public class FetchRecords {
         	System.out.println("Quanity : "+rs.getInt("quantity"));
         	System.out.println("====================");
         }
-	    s.close();
-	    con.close();
+//	    s.close();
+//	    con.close();
 	}
 
 }

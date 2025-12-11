@@ -12,9 +12,9 @@ import com.mysql.cj.jdbc.Driver;
 
 public class DeleteData {
 	public static void main(String[] args) throws SQLException {
+//		update toys set name='doll' , quantity=2 where id=1;
 		Scanner sc=new Scanner(System.in);
 		String query="delete from toys where id=?";
-		
 		DriverManager.registerDriver(new Driver()); 
 		Connection con = DriverManager.getConnection
 				("jdbc:mysql://localhost:3306/database1","root","root");
