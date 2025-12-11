@@ -11,10 +11,9 @@ public class FetchRecords {
 		DriverManager.registerDriver(new Driver()); 
 		Connection con = DriverManager.getConnection
 				("jdbc:mysql://localhost:3306/database1","root","root");
-//	    Statement s=con.createStatement();
-		PreparedStatement ps=con.prepareStatement(query);
+	    Statement s=con.createStatement();
 //	    System.out.println(s.execute(query));
-	    ResultSet rs = ps.executeQuery();
+	    ResultSet rs = s.executeQuery(query);
         if(rs.next()) {
         	System.out.println("ID : "+rs.getInt("id"));
         	System.out.println("Name : "+rs.getString("name"));
