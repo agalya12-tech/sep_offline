@@ -12,6 +12,7 @@ public class SingleLinkedListProgram {
         System.out.println(list.isEmpty());
         list.display();
         list.display();
+        System.out.println(list.get(1));
 
 
 
@@ -66,8 +67,18 @@ class SinglyLinkedList<T> {
             temp = temp.next;
         }
         System.out.println("null");
+    }
 
-
+    public  T get(int index) {
+        if(index>=0&&index<size){
+            Node<T> temp =  head;
+            for (int i=0;i<index;i++) {
+                temp = temp.next;
+            }
+           return temp.data;
+        }else{
+            throw new IndexOutOfBoundsException();
+        }
     }
 
 }
