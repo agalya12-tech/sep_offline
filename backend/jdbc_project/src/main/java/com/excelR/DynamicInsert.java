@@ -36,7 +36,6 @@ public class DynamicInsert {
    //close
 	ps.close();
 	con.close();
-	
 	System.out.println("Inserted "+name);}
 	 catch (Exception e) {
 		 System.err.println(e.getMessage());
