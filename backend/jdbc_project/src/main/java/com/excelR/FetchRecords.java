@@ -29,16 +29,20 @@ public class FetchRecords {
 
 
 /*
- * execute()
+ * execute()--boolean
  * DML -data manipulation language
  *      (insert , update ,delete)  --false
  * DQL  -data query language
  *       (select)--true
  *       
  *       
- * executeQuery()
+ * executeQuery()---ResultSet
  * DQL---ResultSet
  * DMl---Exception
+ * 
+ * executeUpdate()---int
+ * DMl---count on no .of rows manipulating
+ * DQL---Exception
  * */
 
 
