@@ -2715,3 +2715,206 @@ ResultSet:
             con.close();
 
 Note : 1st and last step are optional 
+================================================================================================================================================================================================================================================================================================================
+creation of dynamic webproject+maven:
+----------------------------------
+       ctrl+N--->serach maven project in wizard----->don't check on create simple project
+       ---->next---->serach org.apache.maven in filter --->select webapp ---->next
+       ---->provide groudpId and artifactId --->Finish --after downloading the project
+       --->enter y to build.
+
+downloading and installinng 
+-------------------------- 
+     run on server--->select apache --->select tomcat 9.0.x-->next--->download and install directory
+     --->next--->finsih
+-------------------------------------------------------------------------------------------------------------------------------------
+Servlet :
+++++++++
+      - It is an api , which connects webpages with java code
+      - It will accept each request in the form of thread , so it supports multithreading
+      - It is used to handle client request and send response back to client
+      - It is a java program , which runs on server
+
+creation of servlet class
+-------------------------
+      by inheriting from Servlets Components class
+             ____________________Servlet -(i)_________________
+            |                                                 |
+            |                                                 |
+java Class--|____________________GenericServlet -(ac)_________|-----Servlet Class
+            |                                                 |
+            |                                                 |
+            |___________________HttpServlet-(ac)______________|
+
+
+Servlet Life cycle:
+------------------
+         1.Class loading -1
+         2.Instantiation  -1
+         3.Initialization  -1
+         4.service()   -n
+         5.destroy()   -1
+
+1.class loading
+---------
+      - it loads the servlet class into static memory
+      - once request touches servlet class then it is loaded into static memory
+      - it is executed only once by server
+2.instantiation
+--------------
+       - it creates object of servlet class , so it load non static members into heap memory
+       - it is executed only once by server
+3.initialization
+-------------
+       - it calls init() method of servlet class, to initlize server resources
+       - it is executed only once by server
+4.service()
+-------------
+       - it calls service() or doXXX() method of servlet class
+       - it is executed multiple times
+       - it is processed by developer to handle client request
+5.destroy()
+-----------
+        - it calls destroy() method of servlet class
+        - it is executed only once by server
+        - it occurs when server is shutting down or server is stopped
+
+program:
+-------
+    
+@WebServlet("/save")
+public class SaveStudent extends HttpServlet {
+
+	static {System.out.println("class loading");}
+	public SaveStudent() {System.out.println("Instantiation");}
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("service logic");
+	}
+
+	@Override
+	public void init() throws ServletException {
+		System.out.println("intilization");}
+	@Override
+	public void destroy() {System.out.println("destroy");}
+}
+
+----------------------------------------------------------------------------------------------------------------------
+PrintWriter:
+------------
+        - PrintWriter is a class from java.io package
+        - used to print data on browser as response from servlet class
+        - it consist of methods to print data on browser
+        syntax:
+
+        				PrintWriter pw = resp.getWriter();
+				        pw.println("<h1 style='color:green;'>" 
+				           + name + "  your data is inserted"
+						   + "</h1>");
+-----------------------------------------------------------------------------
+RequestDispatcher:
+-----------------
+        - RequestDispatcher is an interface from java.servlet package
+        - It is a servlet component used to dispatch(naviagtes with request and response object)
+         from one source to another resources(servlet or jsp page or html page)
+syntax:
+        RequestDispatcher rd=req.getRequestDispatcher("index.html");    
+        rd.forward(req, resp); //for forwarding to another page
+        rd.include(req, resp); //for including to existing page
+-----------------------------------------------------------------------------
+JSP: java server pages/ java servlet pages
+-------------------------------------------
+           - Jsp tags/ special tags are used to write java code inside
+             html content to make it dynamic
+           - It is a file with .jsp extension
+           - It is a java program , which runs on server
+           - it conist 5 tags:
+                1.Scriptlet tag <% %>
+                2.Expression tag <%= %>
+                3.declarative tag <%! %>
+                4.Directive tag <%@  %>
+                5.comment tag <%--  --%>
+
+Note : inside html tag ,we can use jsp tags
+       inside jsp tags ,we can't use html tags
+       inside one jsp tag , we can't use another jsp tag
+
+Jsp Implicit Objects:
+---------------------
+       - it is a special object provided by server
+    1.application - ServletContext
+    2.session - HttpSession
+    3.request - HttpServletRequest
+    4.response - HttpServletResponse
+    5.config - ServletConfig
+    6.out - JspWriter
+    7.page - Object
+    8.exception - Throwable
+    9.pageContext - PageContext
+
+Note : Jsp page will act like a java class , so object class members 
+       and HttpServlet members are available
+--------------------------------------------------------------------
+JSP Life Cycle:
+--------------
+         1.Parsing -1
+         2.Compilation -1
+         3.Class loading -1
+         4.Instantiation  -1
+         5.Initialization  -1
+         6.service()   -n
+         7.destroy()   -1
+
+1.parsing
+---------
+     - converting jsp file into java file by server implicitly
+     - it is executed only once by server
+     ______.jsp ------> _______.java
+
+2.compilation
+------------
+     - compiling java file into class file by server implicitly
+     - it is executed only once by server
+     ______.java ------> _______.class
+
+--------------------------------------------------------------------------
+Session Tracking:
+-----------------
+   The process of tracking/monitoring a data/userData with in a Period
+   of time/session is called Session Tracking
+   Types:
+      1.Cookie : cookies will store data in browser/client side
+               : it will sttore a small amount of data, 
+                 in the form of key-value pair
+
+     syntax :
+         to add data into browser
+                Cookie cookie=new Cookie("key1", name); //creating cookie
+                cookie.setMaxAge(0); //cookie will expire after 0 seconds
+                resp.addCookie(cookie); //adding cookie to response object
+        to read data from browser
+                Cookie[] data = req.getCookies(); //reading cookie	
+                for (Cookie cookie : data) {
+                    System.out.println(cookie.getName()+" "+cookie.getValue());    
+                }
+
+            
+      2.HttpSession : HttpSession will store data in server side
+                    : it will store a large amount of data,
+                       in the form of key-value pair
+        syntax:
+           to add data into server
+                HttpSession session=req.getSession();//creating session
+                session.setMaxInactiveInterval(0);//session will expire after 0 seconds
+                session.setAttribute("key", value);//adding data to session
+            to read data from server
+                HttpSession session=req.getSession();
+                String value=(String)session.getAttribute("key");
+
+      3.URL rewrites: rewriting the url to track session
+                    : Query String -query paramenter(url?k1=v1&k2=v2)
+                    : path variables(url/v1/v2)
+                    
+      4.Hidden Form Fields: hiding an input from user by making a 
+                           field/input as hidden
+==========================================================================
