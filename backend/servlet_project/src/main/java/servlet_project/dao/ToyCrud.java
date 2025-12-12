@@ -1,14 +1,10 @@
 package servlet_project.dao;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
 import com.mysql.cj.jdbc.Driver;
-
 public class ToyCrud {
-
 	public int insertToy(int id, String name,double price,int quantity) throws SQLException {
 		DriverManager.registerDriver(new Driver());
 		Connection con = DriverManager.getConnection
