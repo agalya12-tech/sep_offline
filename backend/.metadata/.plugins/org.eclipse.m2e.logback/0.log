@@ -245,3 +245,212 @@
 2025-12-11 16:27:08,522 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
 2025-12-11 16:27:15,296 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2025-12-11 16:27:15,300 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-12-12 14:07:28,582 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2025-12-12 14:07:32,228 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 14:07:32,241 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-12-12 14:08:38,881 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 14:08:38,891 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-12-12 14:15:39,486 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409 [641])
+2025-12-12 14:15:39,492 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409
+2025-12-12 14:15:39,493 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\aopalliance-1.0.jar
+2025-12-12 14:15:39,494 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\guice-5.1.0.jar
+2025-12-12 14:15:39,494 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\httpclient-4.5.14.jar
+2025-12-12 14:15:39,495 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\httpcore-4.4.16.jar
+2025-12-12 14:15:39,496 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\jansi-2.4.1.jar
+2025-12-12 14:15:39,496 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\jcl-over-slf4j-1.7.36.jar
+2025-12-12 14:15:39,497 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-artifact-3.9.9.jar
+2025-12-12 14:15:39,497 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-builder-support-3.9.9.jar
+2025-12-12 14:15:39,498 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-compat-3.9.9.jar
+2025-12-12 14:15:39,499 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-core-3.9.9.jar
+2025-12-12 14:15:39,500 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-embedder-3.9.9.jar
+2025-12-12 14:15:39,500 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-model-3.9.9.jar
+2025-12-12 14:15:39,500 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-model-builder-3.9.9.jar
+2025-12-12 14:15:39,501 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-plugin-api-3.9.9.jar
+2025-12-12 14:15:39,501 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-repository-metadata-3.9.9.jar
+2025-12-12 14:15:39,502 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-api-1.9.22.jar
+2025-12-12 14:15:39,502 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-connector-basic-1.9.22.jar
+2025-12-12 14:15:39,502 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-impl-1.9.22.jar
+2025-12-12 14:15:39,502 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-named-locks-1.9.22.jar
+2025-12-12 14:15:39,502 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-provider-3.9.9.jar
+2025-12-12 14:15:39,502 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-spi-1.9.22.jar
+2025-12-12 14:15:39,503 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-file-1.9.22.jar
+2025-12-12 14:15:39,503 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-http-1.9.22.jar
+2025-12-12 14:15:39,503 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-wagon-1.9.22.jar
+2025-12-12 14:15:39,504 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-util-1.9.22.jar
+2025-12-12 14:15:39,505 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-settings-3.9.9.jar
+2025-12-12 14:15:39,505 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-settings-builder-3.9.9.jar
+2025-12-12 14:15:39,505 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-shared-utils-3.4.2.jar
+2025-12-12 14:15:39,505 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\org.eclipse.sisu.inject-0.9.0.M3.jar
+2025-12-12 14:15:39,506 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\org.eclipse.sisu.plexus-0.9.0.M3.jar
+2025-12-12 14:15:39,506 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-build-api-0.0.7.jar
+2025-12-12 14:15:39,506 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-build-api-1.2.0.jar
+2025-12-12 14:15:39,506 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-cipher-2.0.jar
+2025-12-12 14:15:39,507 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-classworlds-2.8.0.jar
+2025-12-12 14:15:39,507 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-component-annotations-2.1.0.jar
+2025-12-12 14:15:39,508 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-interpolation-1.27.jar
+2025-12-12 14:15:39,508 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-sec-dispatcher-2.0.jar
+2025-12-12 14:15:39,508 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-utils-3.5.1.jar
+2025-12-12 14:15:39,509 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-xml-3.0.1.jar
+2025-12-12 14:15:39,509 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-file-3.5.3.jar
+2025-12-12 14:15:39,510 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-http-3.5.3.jar
+2025-12-12 14:15:39,510 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-http-shared-3.5.3.jar
+2025-12-12 14:15:39,511 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-provider-api-3.5.3.jar
+2025-12-12 14:15:39,518 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava_33.3.1.jre [16])
+2025-12-12 14:15:39,521 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\com.google.guava_33.3.1.jre.jar
+2025-12-12 14:15:39,521 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=slf4j.api_2.0.16 [1008])
+2025-12-12 14:15:39,522 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\slf4j.api_2.0.16.jar
+2025-12-12 14:15:39,522 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=jakarta.inject.jakarta.inject-api_1.0.5 [34])
+2025-12-12 14:15:39,524 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\jakarta.inject.jakarta.inject-api_1.0.5.jar
+2025-12-12 14:15:39,524 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=jakarta.annotation-api_1.3.5 [29])
+2025-12-12 14:15:39,525 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\jakarta.annotation-api_1.3.5.jar
+2025-12-12 14:15:39,525 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.cli_1.9.0 [75])
+2025-12-12 14:15:39,526 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.apache.commons.cli_1.9.0.jar
+2025-12-12 14:15:39,526 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.commons-codec_1.16.0 [78])
+2025-12-12 14:15:39,526 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.apache.commons.commons-codec_1.16.0.jar
+2025-12-12 14:15:39,526 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava.failureaccess_1.0.2 [17])
+2025-12-12 14:15:39,528 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\excel\Downloads\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\com.google.guava.failureaccess_1.0.2.jar
+2025-12-12 14:15:39,542 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\excel\AppData\Local\Temp\m2e-archetypeGenerator16996327309228052059":
+2025-12-12 14:15:39,551 [Worker-34: Launching mavenrun-c70b6373-6889-48db-8936-39e03889a1f5] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-webapp -DarchetypeVersion=1.5 -DgroupId=com.excelR -DartifactId=servlet_project -Dversion=0.0.1-SNAPSHOT -Dpackage=com.excelR.servlet_project -DoutputDirectory=C:\Users\excel\OneDrive\Desktop\september_offline\backend -Dstyle.color=always -U archetype:generate
+2025-12-12 14:16:15,751 [Worker-11: Creating maven-archetype-webapp] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' C:\Users\excel\OneDrive\Desktop\september_offline\backend\servlet_project\pom.xml
+2025-12-12 14:16:20,830 [Worker-11: Creating maven-archetype-webapp] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.excelR:servlet_project:0.0.1-SNAPSHOT @ C:\Users\excel\OneDrive\Desktop\september_offline\backend\servlet_project\pom.xml.
+2025-12-12 14:16:26,734 [Worker-11: Creating maven-archetype-webapp] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /servlet_project/src/main/java
+2025-12-12 14:16:26,738 [Worker-11: Creating maven-archetype-webapp] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /servlet_project/src/main/resources
+2025-12-12 14:16:26,739 [Worker-11: Creating maven-archetype-webapp] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /servlet_project/src/test/java
+2025-12-12 14:16:26,741 [Worker-11: Creating maven-archetype-webapp] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /servlet_project/src/test/resources
+2025-12-12 14:16:31,089 [Worker-11: Creating maven-archetype-webapp] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 15 sec
+2025-12-12 14:16:32,573 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\excel\OneDrive\Desktop\september_offline\backend\servlet_project\src\main\resources
+2025-12-12 14:16:32,592 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\excel\OneDrive\Desktop\september_offline\backend\servlet_project\src\test\resources
+2025-12-12 14:42:37,523 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\excel\OneDrive\Desktop\september_offline\backend\servlet_project\src\main\resources
+2025-12-12 14:42:37,533 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\excel\OneDrive\Desktop\september_offline\backend\servlet_project\src\test\resources
+2025-12-12 14:43:27,314 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\excel\OneDrive\Desktop\september_offline\backend\servlet_project\src\main\resources
+2025-12-12 14:43:27,318 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\excel\OneDrive\Desktop\september_offline\backend\servlet_project\src\test\resources
+2025-12-12 14:44:15,773 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\excel\OneDrive\Desktop\september_offline\backend\servlet_project\src\main\resources
+2025-12-12 14:44:15,784 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\excel\OneDrive\Desktop\september_offline\backend\servlet_project\src\test\resources
+2025-12-12 14:47:12,722 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 14:47:12,742 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-12-12 14:49:17,344 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 14:49:17,365 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-12-12 14:55:34,130 [Worker-49: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.excelR:servlet_project:0.0.1-SNAPSHOT @ C:\Users\excel\OneDrive\Desktop\september_offline\backend\servlet_project\pom.xml.
+2025-12-12 14:55:34,365 [Worker-49: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar
+2025-12-12 14:55:34,434 [Worker-49: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar
+2025-12-12 14:55:34,885 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 14:55:34,901 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-12-12 14:55:35,691 [Worker-48: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0-sources.jar
+2025-12-12 14:55:35,812 [Worker-48: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0-sources.jar
+2025-12-12 14:55:35,819 [Worker-48: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for javax.servlet:javax.servlet-api:3.1.0
+2025-12-12 14:58:08,428 [Worker-41: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.excelR:servlet_project:0.0.1-SNAPSHOT @ C:\Users\excel\OneDrive\Desktop\september_offline\backend\servlet_project\pom.xml.
+2025-12-12 14:58:09,227 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 14:58:09,240 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-12-12 14:58:56,313 [Worker-40: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.excelR:servlet_project:0.0.1-SNAPSHOT @ C:\Users\excel\OneDrive\Desktop\september_offline\backend\servlet_project\pom.xml.
+2025-12-12 14:58:56,598 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 14:58:56,609 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-12-12 14:59:18,854 [Worker-52: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.excelR:servlet_project:0.0.1-SNAPSHOT @ C:\Users\excel\OneDrive\Desktop\september_offline\backend\servlet_project\pom.xml.
+2025-12-12 14:59:19,216 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 14:59:19,224 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-12-12 15:00:27,597 [Worker-41: Building] ERROR o.e.m.c.i.p.r.ProjectRegistryManager - Could not read pom.xml
+org.eclipse.core.runtime.CoreException: Could not read pom.xml
+	at org.eclipse.m2e.core.internal.IMavenToolbox.readModel(IMavenToolbox.java:245)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refreshPhase2(ProjectRegistryManager.java:591)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:491)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:370)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:322)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.getProjectFacade(MavenBuilder.java:146)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:84)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:83)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:192)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.maven.model.io.ModelParseException: end tag name </dependencies> must match start tag name <dependency> from line 29 (position: TEXT seen ...</scope>\r\n\r\n  </dependencies>... @35:18) 
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:96)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:74)
+	at org.eclipse.m2e.core.internal.IMavenToolbox.readModel(IMavenToolbox.java:243)
+	... 24 common frames omitted
+Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: end tag name </dependencies> must match start tag name <dependency> from line 29 (position: TEXT seen ...</scope>\r\n\r\n  </dependencies>... @35:18) 
+	at org.codehaus.plexus.util.xml.pull.MXParser.parseEndTag(MXParser.java:2151)
+	at org.codehaus.plexus.util.xml.pull.MXParser.nextImpl(MXParser.java:1418)
+	at org.codehaus.plexus.util.xml.pull.MXParser.next(MXParser.java:1375)
+	at org.codehaus.plexus.util.xml.pull.MXParser.nextTag(MXParser.java:1360)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parseDependency(MavenXpp3Reader.java:1422)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parseModel(MavenXpp3Reader.java:2321)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:623)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:654)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:93)
+	... 26 common frames omitted
+2025-12-12 15:00:28,968 [Worker-52: Building] ERROR o.e.m.c.i.p.r.ProjectRegistryManager - Could not read pom.xml
+org.eclipse.core.runtime.CoreException: Could not read pom.xml
+	at org.eclipse.m2e.core.internal.IMavenToolbox.readModel(IMavenToolbox.java:245)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refreshPhase2(ProjectRegistryManager.java:591)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:491)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:370)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:322)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.getProjectFacade(MavenBuilder.java:146)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:84)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:83)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:192)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.maven.model.io.ModelParseException: end tag name </dependencies> must match start tag name <dependency> from line 29 (position: TEXT seen ...</scope>\r\n\r\n  </dependencies>... @35:18) 
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:96)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:74)
+	at org.eclipse.m2e.core.internal.IMavenToolbox.readModel(IMavenToolbox.java:243)
+	... 24 common frames omitted
+Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: end tag name </dependencies> must match start tag name <dependency> from line 29 (position: TEXT seen ...</scope>\r\n\r\n  </dependencies>... @35:18) 
+	at org.codehaus.plexus.util.xml.pull.MXParser.parseEndTag(MXParser.java:2151)
+	at org.codehaus.plexus.util.xml.pull.MXParser.nextImpl(MXParser.java:1418)
+	at org.codehaus.plexus.util.xml.pull.MXParser.next(MXParser.java:1375)
+	at org.codehaus.plexus.util.xml.pull.MXParser.nextTag(MXParser.java:1360)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parseDependency(MavenXpp3Reader.java:1422)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parseModel(MavenXpp3Reader.java:2321)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:623)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:654)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:93)
+	... 26 common frames omitted
+2025-12-12 15:00:37,763 [Worker-49: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.excelR:servlet_project:0.0.1-SNAPSHOT @ C:\Users\excel\OneDrive\Desktop\september_offline\backend\servlet_project\pom.xml.
+2025-12-12 15:00:38,387 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 15:00:38,408 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-12-12 15:01:21,270 [Worker-49: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.excelR:servlet_project:0.0.1-SNAPSHOT @ C:\Users\excel\OneDrive\Desktop\september_offline\backend\servlet_project\pom.xml.
+2025-12-12 15:01:21,784 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 15:01:21,795 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-12-12 15:02:10,615 [Worker-51: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.excelR:servlet_project:0.0.1-SNAPSHOT @ C:\Users\excel\OneDrive\Desktop\september_offline\backend\servlet_project\pom.xml.
+2025-12-12 15:02:10,871 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 15:02:10,883 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-12-12 15:14:34,647 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 15:14:34,659 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-12-12 15:18:15,549 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 15:18:15,559 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-12-12 15:26:43,207 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 15:26:43,212 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-12-12 15:28:01,196 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 15:28:01,204 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-12-12 15:28:29,140 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 15:28:29,150 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-12-12 15:29:01,541 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 15:29:01,551 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
