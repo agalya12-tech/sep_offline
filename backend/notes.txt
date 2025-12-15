@@ -2918,3 +2918,38 @@ Session Tracking:
       4.Hidden Form Fields: hiding an input from user by making a 
                            field/input as hidden
 ==========================================================================
+
+Tokens: keywords , identifiers, operators,separators, literals, data types
+
+conditional and Looping statements
+
+methods and Constructors
+(object / instance/ non static )  (abstract belongs to object)
+(class / static)
+
+
+OOPS
+   class  : static and non static variables , static and non static methods , constructor
+   abstract class : class, abstract methods
+   interface: abstract methods   (static and default) , public static final variables
+
+ 
+   1> Encapsulation:(capsule with powder)
+                   : Wrapping data members and methods together as a single unit
+                   : Data Hiding (variable as private  -- scope inside class
+                                 provides data using public methods(getter and setter))
+   
+   2> Inheritance/is a relationship:(My Father - Me)
+                                   :extends  and implements
+                                   :inheriting data and methods from parent to child
+                                   :Types:  (possible using class)
+                                         1.Single level inheritance(Dad -me)
+                                         2.Multi level inheritance(Nanny -dad -me)
+                                         3.Hierarchical inheritance(Dad -me  and brother)
+            In class constructor is present , so calling super call statement is not possible 
+            so , we are using interface (no constructor) -- ambiguity problem/diamond problem
+                                            (possible using interface)
+                                         4.Multiple inheritance(me --->Dad and Mom)
+                                         5.hybrid inheritance(combination of all)
+   3> Polymorphism
+   4> Abstraction
