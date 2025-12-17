@@ -12,6 +12,19 @@
 table, th, td {
 	border: 1px solid black;
 	border-collapse: collapse;
+	padding: 10px;
+	font-size: 20px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 40px;
+	color: blue;
+}
+
+div {
+	display: flex;
+	justify-content: center;
 }
 </style>
 </head>
@@ -21,17 +34,33 @@ table, th, td {
 	ToyCrud crud = new ToyCrud();
 	List<Toy> toys = crud.fetchToys();
 	%>
-	<table>
-		<thead>
-			<tr>
-				<th>ID</th>
-				<th>NAME</th>
-				<th>PRICE</th>
-				<th>QUANTITY</th>
+	<div>
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>NAME</th>
+					<th>PRICE</th>
+					<th>QUANTITY</th>
 
-			</tr>
-		</thead>
-	</table>
+				</tr>
+			</thead>
+			<tbody>
+				<%
+				for (Toy toy : toys) {
+				%>
+				<tr>
+					<td><%=toy.getId()%></td>
+					<td><%=toy.getName()%></td>
+					<td><%=toy.getPrice()%></td>
+					<td><%=toy.getQuantity()%></td>
+				</tr>
+				<%
+				}
+				%>
+			</tbody>
+		</table>
+	</div>
 
 
 </body>
