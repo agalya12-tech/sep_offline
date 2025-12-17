@@ -31,6 +31,18 @@ public class Toy {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
+	public Toy(int id, String name, double price, int quantity) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.price = price;
+		this.quantity = quantity;
+	}
+	public Toy() {
+		super();
+	}
+	
+	
 	
 	
 }

@@ -1,13 +1,38 @@
+<%@page import="servlet_project.dto.Toy"%>
+<%@page import="java.util.List"%>
+<%@page import="servlet_project.dao.ToyCrud"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+</style>
 </head>
 <body>
-<h1>Naviagated to Dashboard</h1>
+	<h1>Toys Data</h1>
+	<%
+	ToyCrud crud = new ToyCrud();
+	List<Toy> toys = crud.fetchToys();
+	%>
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>NAME</th>
+				<th>PRICE</th>
+				<th>QUANTITY</th>
+
+			</tr>
+		</thead>
+	</table>
+
 
 </body>
 </html>
