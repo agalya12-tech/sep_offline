@@ -12,7 +12,14 @@ public class Program1 {
 			System.out.println(a);
 		}
 		System.out.println("-------------------------------------");
-		Resource r=new ClassPathResource("");
-		BeanFactory bf=new XmlBeanFactory(r);
+
+		Resource r = new ClassPathResource("bean.xml");
+		BeanFactory bf = new XmlBeanFactory(r);
+		System.out.println(bf);
+
+		for (int i = 1; i <= 10; i++) {
+			Animal a = bf.getBean(Animal.class);
+			System.out.println(a);
+		}
 	}
 }
