@@ -8,13 +8,22 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+	crossorigin="anonymous">
 <style>
 table, th, td {
 	border: 1px solid black;
 	border-collapse: collapse;
 	padding: 10px;
 	font-size: 20px;
+	text-align: center;
+	
+	
 }
+
 
 h1 {
 	text-align: center;
@@ -25,19 +34,21 @@ h1 {
 div {
 	display: flex;
 	justify-content: center;
+	
+	
 }
 </style>
 </head>
 <body>
 	<h1>Toys Data</h1>
-	<%
+	<% 
 	ToyCrud crud = new ToyCrud();
 	List<Toy> toys = crud.fetchToys();
 	%>
 	<div>
-		<table>
+		<table class="table table-striped table-hover">
 			<thead>
-				<tr>
+				<tr class="table-dark">
 					<th>ID</th>
 					<th>NAME</th>
 					<th>PRICE</th>

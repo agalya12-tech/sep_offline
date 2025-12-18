@@ -37,7 +37,7 @@ public class ToyCrud {
 		ResultSet rs = s.executeQuery(query);
 		List<Toy> list = new ArrayList<Toy>();
 		while (rs.next()) {
-			list.add(new Toy(rs.getInt("id"), rs.getString(2), 
+			list.add(new Toy(rs.getInt(6), rs.getString(2), 
 					rs.getDouble("price"), rs.getInt(4)));
 
 		}

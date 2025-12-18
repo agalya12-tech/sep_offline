@@ -2951,5 +2951,237 @@ OOPS
                                             (possible using interface)
                                          4.Multiple inheritance(me --->Dad and Mom)
                                          5.hybrid inheritance(combination of all)
-   3> Polymorphism
-   4> Abstraction
+   3> Polymorphism:(many forms)
+                  : performing a task in different ways
+                  : Types: 
+                          1.Run time polymorphism(run time binding)
+                                binding method signature with method body
+                                during run time
+                                ex: method overriding
+                           public class Animal{
+                               public void eat(){
+                                   System.out.println("eating");
+                               }
+                           }
+                           public class Dog extends Animal{
+                               public void eat(){
+                                   System.out.println("eats meat");
+                               }
+                           }
+
+                           Animal a=new Animal();
+                           a.eat();//eating
+                           Dog d=new Dog();
+                           d.eat();//eats meat
+                           Animal a2=new Dog();
+                           a2.eat(); //eats meat
+
+                        
+
+
+                          2.Compile time polymorphism(compile time binding)
+                                binding method signature with method body
+                                during compile time 
+                                ex: method overloading, constructor overloading
+
+                            public void moneyTransfer(){
+
+                            }
+                            public void moneyTransfer(int amount){
+                                
+                            }
+                            public void moneyTransfer(int amount,String name){
+                                
+                            }
+
+
+   4> Abstraction:
+                  the process of hiding the implementation details from the user
+                  and showing only functionality
+                  1.abstract keyword - for class and method
+                  2.interface keyword
+
+1.Can we create object for abstract class?
+No, Abstract means incomplete 
+2.can we make static method as abstract? 
+No , Static belongs to class , but abstract belongs to object
+3.Can we have non static concrete methods in interface?
+No
+4.Can we have variables in interface?
+yes , it will allow public static final variables ,  bcoz it doesn't have constructor
+
+
+
+
+
+
+
+
+Client -Server Architecture:
+----------------------------
+    - it is a model of communication between client and server
+    - it is a 3 tier architecture(client - server - database)
+    - it is a 2 tier architecture(client - database/client-server)
+===========================================================================
+
+Spring:
+-------
+  : it is a framework for java
+  : it is a free ,powerful ,lightweight and open source framework
+  : it is used to create web applications , desktop applications and mobile applications
+  : it is used to create web services
+  : it is used to create enterprise applications, microservices
+
+Spring is introduced by Rod Jhonson in  2003 by apache software foundation
+
+Why use spring:
+----------------
+   1.Reduces boilerplate code and complexity
+   2.easy to test and maintain
+   3.flexible, modular and extensible
+   4.Easy to learn and implement
+   5.supports microservices, cloud deployment and Rest APIs development
+   6.promote layer separation and separation of concerns
+
+Modules in spring:
+-----------------
+       1.Spring-core
+       2.Spring Aop
+       3.Spring web
+       4.Spring ORM
+       5.Spring mvc
+       6.Spring security
+       7.Spring boot
+       8.Spring cloud
+       9.Spring Test
+Spring -core:
+-------------
+    - it is a foundation of spring framework
+    - it provides basic building blocks for spring framework
+    - it provides fundamental features like creating a container and beans
+    - IOC (Inversion of Control)
+    - DI (Dependency Injection)
+
+IOC:(Inversion of Control)- container
+--------------------------
+           : it is a design pattern in spring framework
+           : it is used to manage the dependencies between objects by cresting a container
+           : can create a container using BeanFactory and ApplicationContext
+
+Hierarchy of IOC:
+----------------
+                        BeanFactory-i -core
+                          |
+                          |
+                ----------------------------
+                |                          |
+            XmlBeanFactory-c          ApplicationContext-i
+                                            |
+                    --------------------------------------------------------------
+                    |                                                      |
+                ClassPathXmlApplicationContext-c   AnnotationConfigApplicationContext-c
+
+
+
+
+
+---------------------------------------------------------------------------------------
+            BeanFactory                              ApplicationContext
+---------------------------------------------------------------------------------------
+    root interface                                  child interface
+    create core container                         create advance container
+    bean inilization is lazy                    bean inilization is eager
+    based on xml                               based on xml and java annotations
+    rarely used in springBoot and mvc          used in springBoot and mvc
+
+
+
+Dependency Injection:
+-------------------------
+     - the process of injecting /assigning the values into an object is called dependency injection
+     - it is a design pattern in spring framework
+     - it is used to manage the dependencies between objects
+     - types:
+        help to inject values into objects
+           1.setter injection ---<property name="" value=""> --setter methods are required
+           2.constructor injection ---<constructor-arg name="" value=""> --constructor arguments are required
+        help to inject references to objects
+           3.field injection ---<property name="" ref="">
+                                <constructor-arg name="" ref=""> 
+                             --field is required in class
+
+      annotation:
+      ----------
+           @Value-used to inject values into objects
+           @Autowired-used to inject references to objects
+
+
+RelationsShip:
+-------------
+               one class is having relationship with other class
+               Types: 1.Is - a relationship(Inheritance) 
+                      2.has - a relationship
+Has-a-relationship:(Association)
+-------------------
+              -one class is dependent on another class
+              -one object will act like a container for another object
+              Types:1.Composition 
+                    2.Aggregation
+    ex: Car has a Engine  , Bus has a Passengers
+
+     Men --------Father
+                    |
+                    |
+                   Son
+
+1.Composition: one class is dependent on another class strongly
+               ex: Car has a Engine
+2.Aggregation: one class is dependent on another class weakly
+               ex: Bus has a Passengers
+
+annotations used to create objects in spring:
+--------------------------------------------
+1.@Component - used to annotate on model class/ blue prints/pojo class/encapsulated class
+2.@Repository - used to annotate on dao class (data access object layer===db logic)
+3.@Service - used to annotate on service class (business logic)
+4.@Controller - used to annotate on controller class (web logic)
+5.@RestController - used to annotate on controller class (web logic===Rest APIs)
+
+
+POJO(plain old java object):
+---------------------------
+           -it is a class that contains properties and methods , constructor only
+
+
+--------------------------------------------------------------------------------------------
+                            Spring                                  Spring Boot 
+----------------------------------------------------------------------------------------------
+Configuration	      Requires manual configuration     	      Auto-configured — minimal setup
+Server Setup	     Needs external Tomcat/Jetty deployment	      Comes with embedded Tomcat/Jetty
+Dependencies	     You must manage them manually	              Uses “Starters” to bundle common dependencies
+Development Speed	Slower (more boilerplate)	                  Much faster and simplified
+Learning Curve     	Steeper (more configuration)	              Easier to start and use
+Application Type	Modular and flexible	                Opinionated and streamlined for rapid development
+----------------------------------------------------------------------------------------------------------------------------
+
+
+
+Spring mvc :
+------------
+           Spring mvc (model view controller) is a framework for web application
+        development which user servlets to handle user requests
+
+Architecture: 
+----------------   
+                 1.User/client send request to (backend-frontController)
+                 2.FrontController/Dispatcher servlets will send the request/url
+     to controller component with the help of HandlerMapper
+                 3.Controller will work on user request(service-dao) 
+                 4.Controller will return the response to front controller
+                 5.Front controller will return the response to view pages
+     (jsp,jstl,Apache velocity,thymeleaf etc.,) with the help of view resolver
+                6.from view pages it will display the response to user/client 
+
+Note : for transfering data from controller to view pages we use Model 
+
+

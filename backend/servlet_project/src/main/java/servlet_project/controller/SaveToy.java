@@ -9,12 +9,17 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import servlet_project.dao.ToyCrud;
 import servlet_project.dto.Toy;
 @WebServlet("/save")
-public class SaveToy extends GenericServlet {
+public class SaveToy extends HttpServlet {
 
+	
+	
 	@Override
 	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
     	String id=req.getParameter("id");	
