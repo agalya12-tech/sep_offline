@@ -3010,13 +3010,7 @@ No
 4.Can we have variables in interface?
 yes , it will allow public static final variables ,  bcoz it doesn't have constructor
 
-
-
-
-
-
-
-
+===================================================================================================================
 Client -Server Architecture:
 ----------------------------
     - it is a model of communication between client and server
