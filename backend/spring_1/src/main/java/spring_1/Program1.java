@@ -2,6 +2,8 @@ package spring_1;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
@@ -13,8 +15,9 @@ public class Program1 {
 		}
 		System.out.println("-------------------------------------");
 
-		Resource r = new ClassPathResource("bean.xml");
-		BeanFactory bf = new XmlBeanFactory(r);
+//		Resource r = new ClassPathResource("bean.xml");
+//		BeanFactory bf = new XmlBeanFactory(r);
+		ApplicationContext bf=new ClassPathXmlApplicationContext("bean.xml");
 		System.out.println(bf);
 
 		for (int i = 1; i <= 10; i++) {

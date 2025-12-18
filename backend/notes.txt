@@ -3069,7 +3069,7 @@ Hierarchy of IOC:
                           |
                 ----------------------------
                 |                          |
-            XmlBeanFactory-c          ApplicationContext-i
+            XmlBeanFactory-c          ApplicationContext-i - J2EE /advanced
                                             |
                     --------------------------------------------------------------
                     |                                                      |
