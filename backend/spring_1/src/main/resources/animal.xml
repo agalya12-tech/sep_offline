@@ -8,9 +8,13 @@
 
 
 	<bean class="spring_1.Animal" id="animal" scope="prototype">
-		<property name="legs" value="4"></property>
-		<property name="name" value="dog"></property>
-		<property name="color" value="brown"></property>
+		<!-- <property name="legs" value="4"></property>
+		     <property name="name" value="dog"></property>
+		     <property name="color" value="brown"></property> -->
+
+		<constructor-arg name="legs" value="4"></constructor-arg>
+		<constructor-arg name="name" value="dog"></constructor-arg>
+		<constructor-arg name="color" value="brown"></constructor-arg>
 
 	</bean>
 
