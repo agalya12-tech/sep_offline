@@ -1,5 +1,7 @@
 package com.excelR.spring_boot1.controller;
 
+import java.util.List;
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -53,6 +55,12 @@ public class EmployeeController {
     @DeleteMapping("/delete/{id}")
     public Employee deleteEmployee(@PathVariable int id) {
     	System.out.println(id);
+    	return null;
+    }
+    
+//    http://localhost:8080/fetchAll
+    @GetMapping("/fetchAll")
+    public List<Employee>fetchAll(){
     	return null;
     }
     
