@@ -27,5 +27,15 @@ public class EmployeeDao {
 			 throw new EmployeeNotFound();
 		}
 	}
+	
+	public Employee deleteEmployee(int id) {
+		Optional<Employee> op = repo.findById(id);
+		if(op.isPresent()) {
+			repo.deleteById(id);
+			return op.get();
+		}else {
+			 throw new EmployeeNotFound();
+		}
+	}
 }
 

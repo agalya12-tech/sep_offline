@@ -21,41 +21,40 @@ import com.excelR.spring_boot1.dto.Employee;
 
 @RestController
 public class EmployeeController {
-	
+
 	@Autowired
 	EmployeeDao dao;
 
-    
 //   http://localhost:8080/save 
-    @PostMapping("/save")
-    public Employee saveEmployee( @RequestBody Employee e) {
-    	e.setId(0);
-    	return dao.saveEmployee(e);
-    }
-    
-//    http://localhost:8080/fetchByID?id=1&email=tej@gmail.com
-    @GetMapping("/fetchByID")
-    public Employee fetchEmployee(@RequestParam int id ) {
-    	return dao.fetchEmployee(id);
-    }
-    
+	@PostMapping("/save")
+	public Employee saveEmployee(@RequestBody Employee e) {
+		e.setId(0);
+		return dao.saveEmployee(e);
+	}
+
+//    http://localhost:8080/fetchByID?id=1
+	@GetMapping("/fetchByID")
+	public Employee fetchEmployee(@RequestParam int id) {
+		return dao.fetchEmployee(id);
+	}
+
+//  http://localhost:8080/delete/1
+	@DeleteMapping("/delete/{id}")
+	public Employee deleteEmployee(@PathVariable int id) {
+		return dao.deleteEmployee(id);
+	}
+
 //  http://localhost:8080/update  
-    @PutMapping("/update")
-    public Employee updateEmployee(@RequestBody Employee e) {
-    	System.out.println(e);
-    	return e;
-    }
-//    http://localhost:8080/delete/1
-    @DeleteMapping("/delete/{id}")
-    public Employee deleteEmployee(@PathVariable int id) {
-    	System.out.println(id);
-    	return null;
-    }
-    
+	@PutMapping("/update")
+	public Employee updateEmployee(@RequestBody Employee e) {
+		System.out.println(e);
+		return e;
+	}
+
 //    http://localhost:8080/fetchAll
-    @GetMapping("/fetchAll")
-    public List<Employee>fetchAll(){
-    	return null;
-    }
-    
+	@GetMapping("/fetchAll")
+	public List<Employee> fetchAll() {
+		return null;
+	}
+
 }
