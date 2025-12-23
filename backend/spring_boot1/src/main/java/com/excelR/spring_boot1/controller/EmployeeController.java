@@ -35,9 +35,8 @@ public class EmployeeController {
     
 //    http://localhost:8080/fetchByID?id=1&email=tej@gmail.com
     @GetMapping("/fetchByID")
-    public Employee fetchEmployee(@RequestParam int id ,@RequestParam String email) {
-    	System.out.println(id+" "+email);
-    	return null;
+    public Employee fetchEmployee(@RequestParam int id ) {
+    	return dao.fetchEmployee(id);
     }
     
 //  http://localhost:8080/update  

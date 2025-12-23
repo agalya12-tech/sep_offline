@@ -8,8 +8,14 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 //  handles exception globally
 @RestControllerAdvice
 public class GlobalExceptionHandler {
-    @ExceptionHandler(SQLIntegrityConstraintViolationException.class)
+    
+	@ExceptionHandler(SQLIntegrityConstraintViolationException.class)
 	public String sqlExceptionHandling(SQLIntegrityConstraintViolationException e) {
+		 return e.getMessage();
+	}
+	
+	@ExceptionHandler(EmployeeNotFound.class)
+	public String employeeNotFound(EmployeeNotFound e) {
 		 return e.getMessage();
 	}
 }
