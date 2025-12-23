@@ -37,6 +37,14 @@ public class EmployeeController {
 	public Employee fetchEmployee(@RequestParam int id) {
 		return dao.fetchEmployee(id);
 	}
+	
+	
+//	http://localhost:8080/fetchByEmail?email=tej@gmail.com
+	@GetMapping("/fetchByEmail")
+	public Employee fetchEmployeeByEmail(@RequestParam String email) {
+		return dao.fetchEmployeeByEmail(email);
+	}
+	
 
 //  http://localhost:8080/delete/1
 	@DeleteMapping("/delete/{id}")

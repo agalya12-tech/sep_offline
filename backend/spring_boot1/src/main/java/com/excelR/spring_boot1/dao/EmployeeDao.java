@@ -29,6 +29,16 @@ public class EmployeeDao {
 		}
 	}
 	
+	
+	public Employee fetchEmployeeByEmail(String email) {
+		Optional<Employee> op = repo.findByEmail(email);
+		if(op.isPresent()) {
+			return op.get();
+		}else {
+			 throw new EmployeeNotFound();
+		}
+	}
+	
 	public Employee deleteEmployee(int id) {
 		Optional<Employee> op = repo.findById(id);
 		if(op.isPresent()) {
