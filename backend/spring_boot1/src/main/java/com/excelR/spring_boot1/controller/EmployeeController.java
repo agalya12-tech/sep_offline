@@ -29,6 +29,7 @@ public class EmployeeController {
 //   http://localhost:8080/save 
     @PostMapping("/save")
     public Employee saveEmployee( @RequestBody Employee e) {
+    	e.setId(0);
     	return dao.saveEmployee(e);
     }
     
