@@ -39,6 +39,17 @@ public class EmployeeDao {
 		}
 	}
 	
+	
+	public Employee updateEmployee(Employee e) {
+		Optional<Employee> op = repo.findById(e.getId());
+		if(op.isPresent()) {
+			return repo.save(e);
+		}else {
+			 throw new EmployeeNotFound();
+		}
+	}
+	
+	
 	public List<Employee>fetchAllEmployee(){
 		 List<Employee> list = repo.findAll();
 		 if(!list.isEmpty()) {

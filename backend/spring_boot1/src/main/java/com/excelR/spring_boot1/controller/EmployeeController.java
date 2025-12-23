@@ -47,10 +47,10 @@ public class EmployeeController {
 //  http://localhost:8080/update  
 	@PutMapping("/update")
 	public Employee updateEmployee(@RequestBody Employee e) {
-		System.out.println(e);
-		return e;
+		return dao.updateEmployee(e);
 	}
 
+	
 //    http://localhost:8080/fetchAll
 	@GetMapping("/fetchAll")
 	public List<Employee> fetchAll() {
