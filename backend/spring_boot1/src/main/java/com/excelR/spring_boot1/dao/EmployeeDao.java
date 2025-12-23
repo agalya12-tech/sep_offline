@@ -1,5 +1,6 @@
 package com.excelR.spring_boot1.dao;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +37,16 @@ public class EmployeeDao {
 		}else {
 			 throw new EmployeeNotFound();
 		}
+	}
+	
+	public List<Employee>fetchAllEmployee(){
+		 List<Employee> list = repo.findAll();
+		 if(!list.isEmpty()) {
+			return list; 
+		 }
+		 else {
+			 throw new EmployeeNotFound("In Employee database there is not data for employee");
+		 }
 	}
 }
 

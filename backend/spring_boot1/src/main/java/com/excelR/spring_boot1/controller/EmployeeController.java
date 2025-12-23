@@ -54,7 +54,7 @@ public class EmployeeController {
 //    http://localhost:8080/fetchAll
 	@GetMapping("/fetchAll")
 	public List<Employee> fetchAll() {
-		return null;
+		return dao.fetchAllEmployee();
 	}
 
 }
