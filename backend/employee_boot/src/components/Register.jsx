@@ -26,10 +26,8 @@ const Register = () => {
             if(err.status===400){
                 setMsg(err.response.data||"Your data is already exist pls try with another data")
             }
-        })~
+        })
     }
-  
-
   return <>
     <>
     {msg && <div className="alert alert-danger">{msg}</div>}
