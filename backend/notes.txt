@@ -3287,3 +3287,15 @@ annotations used to handle cors error:
 
 =====================================================================================================================================
 
+
+backend --- npm create vite@latest
+
+        --employee_boot
+
+        --react -- javascript
+
+        cd employee_boot
+
+        npm install axios react-router-dom bootstrap
+
+        npm run dev
