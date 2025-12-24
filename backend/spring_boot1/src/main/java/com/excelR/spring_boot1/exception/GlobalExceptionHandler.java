@@ -18,6 +18,6 @@ public class GlobalExceptionHandler {
 	
 	@ExceptionHandler(EmployeeNotFound.class)
 	public ResponseEntity<String> employeeNotFound(EmployeeNotFound e) {
-		 return new ResponseEntity<String>(e.getMessage(), HttpStatus.BAD_REQUEST);
+		 return new ResponseEntity<String>(e.getMessage(), HttpStatus.NOT_FOUND);
 	}
 }

@@ -3,6 +3,8 @@ package com.excelR.spring_boot1.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,9 +31,9 @@ public class EmployeeController {
 
 //   http://localhost:8080/save 
 	@PostMapping("/save")
-	public Employee saveEmployee(@RequestBody Employee e) {
+	public ResponseEntity<Employee> saveEmployee(@RequestBody Employee e) {
 		e.setId(0);
-		return dao.saveEmployee(e);
+		return new ResponseEntity<Employee>(dao.saveEmployee(e),HttpStatus.CREATED);
 	}
 
 //    http://localhost:8080/fetchByID?id=1

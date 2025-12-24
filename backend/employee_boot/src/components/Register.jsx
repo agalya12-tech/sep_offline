@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import { employeeRegister } from '../services/api'
+import { useNavigate } from 'react-router-dom'
 
 const Register = () => {
     let nameRef = useRef()
@@ -7,6 +8,7 @@ const Register = () => {
     let phoneRef = useRef()
     let deptRef = useRef()
     let [msg,setMsg]=React.useState("")
+    let navigate=useNavigate();
     function handleRegister(e) {
         e.preventDefault();
        let empData={
@@ -18,8 +20,10 @@ const Register = () => {
        }
         employeeRegister(empData)
         .then((res)=>{
-            console.log(res)
             alert('Employee Registered Successfully')
+            if(res.status===201){
+                navigate("/dashboard")
+            }
         })
         .catch((err)=>{
             alert('Error in Employee Registration')
