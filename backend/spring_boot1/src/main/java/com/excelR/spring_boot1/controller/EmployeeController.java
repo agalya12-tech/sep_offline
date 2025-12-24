@@ -22,7 +22,8 @@ import com.excelR.spring_boot1.dto.Employee;
 //@Controller
 //@ResponseBody
 
-@CrossOrigin(origins="*", methods= {RequestMethod.POST, RequestMethod.DELETE,RequestMethod.PUT })
+@CrossOrigin(origins="*", methods= {RequestMethod.POST, RequestMethod.DELETE,RequestMethod.PUT,
+		RequestMethod.GET})
 @RestController
 public class EmployeeController {
 
