@@ -5,7 +5,8 @@ const Register = () => {
     let emailRef = useRef()
     let phoneRef = useRef()
     let deptRef = useRef()
-    function handleRegister() {
+    function handleRegister(e) {
+        e.preventDefault();
        let empData={
             name: nameRef.current.value,
             email: emailRef.current.value,
