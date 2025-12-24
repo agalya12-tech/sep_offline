@@ -5,8 +5,19 @@ const Register = () => {
     let emailRef = useRef()
     let phoneRef = useRef()
     let deptRef = useRef()
-  return (
-   <>
+    function handleRegister() {
+       let empData={
+            name: nameRef.current.value,
+            email: emailRef.current.value,
+            phone: phoneRef.current.value,
+            dept: deptRef.current.value
+       }
+        console.log(empData)
+    }
+  
+
+  return <>
+    <>
     <div className="container">
       <h2>Register Form</h2>
           <label htmlFor="name">Name:</label>
@@ -21,11 +32,11 @@ const Register = () => {
           <label htmlFor="dept">Department:</label>
           <input type="text" id="dept" ref={deptRef} />
          <br /> <br />
-        <button  className="btn btn-primary">Register</button>
+        <button onClick={handleRegister} className="btn btn-primary">Register</button>
     </div>
 
    </>
-  )
+  </>
 }
 
 export default Register
