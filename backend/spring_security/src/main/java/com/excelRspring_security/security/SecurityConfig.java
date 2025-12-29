@@ -9,19 +9,19 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 public class SecurityConfig {
 	
-	
-	@Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http
-            .csrf(csrf -> csrf.disable())
-            .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/auth/**", "/oauth2/**").permitAll()
-                .requestMatchers("/admin/**").hasRole("ADMIN")
-                .requestMatchers("/user/**").hasAnyRole("USER", "ADMIN")
-                .anyRequest().authenticated()
-            );
-        return http.build();
-    }
+//	
+//	@Bean
+//    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+//        http
+//            .csrf(csrf -> csrf.disable())
+//            .authorizeHttpRequests(auth -> auth
+//                .requestMatchers("/auth/**", "/oauth2/**").permitAll()
+//                .requestMatchers("/admin/**").hasRole("ADMIN")
+//                .requestMatchers("/user/**").hasAnyRole("USER", "ADMIN")
+//                .anyRequest().authenticated()
+//            );
+//        return http.build();
+//    }
 
 	@Bean
 	public PasswordEncoder encode() {
