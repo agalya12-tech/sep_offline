@@ -15,7 +15,7 @@ public class UserDao {
 	PasswordEncoder encoder;
 	
 	public User saveUser(User user) {
-		encoder.encode(user.getPassword());
+		user.setPassword(encoder.encode(user.getPassword()));
 		return repo.save(user);
 	}
 }
