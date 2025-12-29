@@ -14,11 +14,11 @@ public class SpringBoot1Application {
 
 	public static void main(String[] args) {
 		ApplicationContext ac=SpringApplication.run(SpringBoot1Application.class, args);
-		System.out.println("Hello world");
-		System.out.println(ac.getBean(Employee.class));
-		System.out.println(ac.getBean(EmployeeDao.class));
-		System.out.println(ac.getBean(EmployeeService.class));
-		System.out.println(ac.getBean(EmployeeController.class));
+//		System.out.println("Hello world");
+//		System.out.println(ac.getBean(Employee.class));
+//		System.out.println(ac.getBean(EmployeeDao.class));
+//		System.out.println(ac.getBean(EmployeeService.class));
+//		System.out.println(ac.getBean(EmployeeController.class));
 
 
 
