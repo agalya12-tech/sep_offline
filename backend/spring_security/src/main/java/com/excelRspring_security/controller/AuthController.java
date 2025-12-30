@@ -1,5 +1,6 @@
 package com.excelRspring_security.controller;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,45 +24,52 @@ import com.excelRspring_security.security.JwtUtil;
 @RequestMapping("/auth")
 public class AuthController {
 
-
 	@Autowired
 	AuthenticationManager manager;
-	
+
 	@Autowired
 	JwtUtil util;
-	
+
 	@Autowired
 	UserDao dao;
 	@Autowired
-	ResponseStructure<User>structure;
-	
+	ResponseStructure<User> structure;
+
 //	 http://localhost:8080/auth/register
 	@PostMapping("/register")
-	public ResponseEntity<ResponseStructure<User>>registerUser(@RequestBody User user){
-		
+	public ResponseEntity<ResponseStructure<User>> registerUser(@RequestBody User user) {
+
 		structure.setData(dao.saveUser(user));
 		structure.setStatus(HttpStatus.CREATED.value());
-		structure.setMessage(user.getName()+" data saved successfully");
+		structure.setMessage(user.getName() + " data saved successfully");
 		return new ResponseEntity<ResponseStructure<User>>(structure, HttpStatus.CREATED);
 	}
-	
-//	http://localhost:8080/auth/login
+
 	@PostMapping("/login")
-	public ResponseEntity<ResponseStructure<Map<String, String>>>
-	  login(@RequestBody Map<String , String>user){
-		 String userName=user.get("email");
-		 String password=user.get("password");
-		 
-//		 Authentication authenticate = manager.authenticate
-//				 (new UsernamePasswordAuthenticationToken(userName, password));
-//		 
-//		 UserDetails details=(UserDetails)authenticate.getPrincipal();
-		 String token=util.generateTokenFromEmail(userName);
-		 System.out.println(token);
-		return null;
+	public ResponseEntity<?> login(@RequestBody Map<String, String> user) {
+
+		String userName = user.get("email");
+		String password = user.get("password");
+
+		Authentication authentication = manager
+				.authenticate(new UsernamePasswordAuthenticationToken(userName, password));
+
+		UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+//		String token = util.generateToken(userDetails);
+
+		String token=util.generateTokenFromEmail(userName);
+		User userData = dao.fetchByEmail(userName).orElseThrow();
+		Map<String, String> map = new HashMap<>();
+		map.put("token", token);
+		map.put("role", userData.getRole());
+		map.put("name", userData.getName());
+		map.put("email", userData.getEmail());
+		ResponseStructure<Map<String, String>> structure = new ResponseStructure<Map<String, String>>();
+		structure.setData(map);
+		structure.setStatus(HttpStatus.OK.value());
+		structure.setMessage(userData.getName() + " login successfully");
+		return ResponseEntity.ok(structure);
+
 	}
-	
-	
+
 }
-
-
