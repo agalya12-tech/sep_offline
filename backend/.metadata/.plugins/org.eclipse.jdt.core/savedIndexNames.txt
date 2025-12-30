@@ -70,7 +70,6 @@ INDEX VERSION 1.134+C:\Users\excel\OneDrive\Desktop\september_offline\backend\.m
 3831229073.index
 2889695215.index
 3962193559.index
-756476423.index
 2714570371.index
 4053009272.index
 1477847083.index

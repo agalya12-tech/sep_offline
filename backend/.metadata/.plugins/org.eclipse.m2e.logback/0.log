@@ -3166,3 +3166,12 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: expected ST
 2025-12-30 16:22:51,108 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2025-12-30 16:22:51,122 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2025-12-30 16:22:51,128 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\excel\OneDrive\Desktop\september_offline\backend\spring_security\src\test\resources
+2025-12-30 16:26:45,336 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-30 16:26:45,345 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-30 16:26:45,349 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\excel\OneDrive\Desktop\september_offline\backend\spring_security\src\test\resources
+2025-12-30 16:27:38,380 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-30 16:27:38,394 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-30 16:27:38,401 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\excel\OneDrive\Desktop\september_offline\backend\spring_security\src\test\resources
+2025-12-30 16:29:32,609 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-30 16:29:32,625 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-30 16:29:32,631 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\excel\OneDrive\Desktop\september_offline\backend\spring_security\src\test\resources

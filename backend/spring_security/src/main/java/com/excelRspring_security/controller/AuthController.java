@@ -47,7 +47,7 @@ public class AuthController {
 
 	@PostMapping("/login")
 	public ResponseEntity<?> login(@RequestBody Map<String, String> user) {
-
+        try {
 		String userName = user.get("email");
 		String password = user.get("password");
 
@@ -55,9 +55,9 @@ public class AuthController {
 				.authenticate(new UsernamePasswordAuthenticationToken(userName, password));
 
 		UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-//		String token = util.generateToken(userDetails);
+		String token = util.generateToken(userDetails);
 
-		String token=util.generateTokenFromEmail(userName);
+//		String token=util.generateTokenFromEmail(userName);
 		User userData = dao.fetchByEmail(userName).orElseThrow();
 		Map<String, String> map = new HashMap<>();
 		map.put("token", token);
@@ -70,6 +70,15 @@ public class AuthController {
 		structure.setMessage(userData.getName() + " login successfully");
 		return ResponseEntity.ok(structure);
 
+        }
+        catch (Exception e) {
+        	ResponseStructure<String>structure=new  ResponseStructure<String>();
+        	structure.setData(e.getMessage());
+    		structure.setStatus(HttpStatus.BAD_REQUEST.value());
+    		structure.setMessage( " login failed");
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST.value()).body(structure);
+					
+		}
 	}
 
 }
