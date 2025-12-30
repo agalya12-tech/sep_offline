@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -46,7 +49,15 @@ public class AuthController {
 	@PostMapping("/login")
 	public ResponseEntity<ResponseStructure<Map<String, String>>>
 	  login(@RequestBody Map<String , String>user){
-		
+		 String userName=user.get("email");
+		 String password=user.get("password");
+		 
+//		 Authentication authenticate = manager.authenticate
+//				 (new UsernamePasswordAuthenticationToken(userName, password));
+//		 
+//		 UserDetails details=(UserDetails)authenticate.getPrincipal();
+		 String token=util.generateTokenFromEmail(userName);
+		 System.out.println(token);
 		return null;
 	}
 	
