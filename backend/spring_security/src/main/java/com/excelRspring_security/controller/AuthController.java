@@ -16,6 +16,7 @@ import com.excelRspring_security.entity.User;
 @RequestMapping("/auth")
 public class AuthController {
 
+
 	@Autowired
 	UserDao dao;
 	@Autowired
@@ -30,6 +31,10 @@ public class AuthController {
 		structure.setMessage(user.getName()+" data saved successfully");
 		return new ResponseEntity<ResponseStructure<User>>(structure, HttpStatus.CREATED);
 	}
+	
+	
+	
+	
 }
 
 

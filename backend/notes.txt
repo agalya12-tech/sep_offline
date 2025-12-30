@@ -3425,8 +3425,8 @@ Testing the Application:
 • Access /public without any authentication.
 
 ------------------------------------------------------------------------------------------
-JWT Authentication in Spring Boot 4.x
------------------------------------------
+JWT Authentication
+---------------------
 
 
 Why JWT with Spring Security?
@@ -3694,3 +3694,44 @@ JWT Token Structure:
 
 
 =========================================================================================================
+
+What is SecurityFilterChain?
+----------------------------
+
+The SecurityFilterChain is a critical interface within Spring Security that defines a sequence of 
+filters which will be applied to every HTTP request coming into the application. It is the backbone
+for handling security concerns in a web-based application.
+
+Each filter in the chain is responsible for a specific task such as checking if a user is authenticated,
+enforcing access controls, or performing actions related to security exceptions. The filters are
+invoked in a specific order, and their role is to either permit the request to continue to the next
+filter or to block the request, depending on the result of the security processing.
+
+
+Understanding the Role of Security Filters
+------------------------------------------
+
+Filters are integral components of the SecurityFilterChain. Filters are the mechanisms through
+which Spring Security applies its security policies on incoming HTTP requests. The filters in the security filter chain perform various tasks such as−
+
+1.Authentication− Ensuring the user is properly authenticated.
+
+2.Authorization− Ensuring the user has the appropriate permissions to access a given resource.
+
+3.CSRF Protection− Preventing Cross-Site Request Forgery (CSRF) attacks.
+
+4.Session Management− Managing and securing user sessions.
+
+5.Exception Handling− Dealing with unauthorized access or other security-related issues.
+
+
+Components of SecurityFilterChain
+----------------------------------
+
+            Authentication Filters
+
+            Authorization Filters
+
+            Exception Handling Filters
+
+            Session Management Filters
