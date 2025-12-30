@@ -12,10 +12,8 @@ import com.excelRspring_security.repository.UserRepo;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
-
     @Autowired
     private UserRepo userRepo;
-
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepo.findByEmail(username)
@@ -23,7 +21,7 @@ public class CustomUserDetailsService implements UserDetailsService {
                     User newUser = new User();
                     newUser.setEmail(username);
                     newUser.setPassword(""); 
-                    newUser.setRole("USER");
+                    newUser.setRole("STUDENT");
                     newUser.setPhone(0);
                     userRepo.save(newUser);
                     return newUser;
