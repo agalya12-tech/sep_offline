@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import com.excelRspring_security.dto.ResponseStructure;
-import com.excelRspring_security.entity.User;
 
 @RestControllerAdvice
 public class ExceptionHandlerForUser {
