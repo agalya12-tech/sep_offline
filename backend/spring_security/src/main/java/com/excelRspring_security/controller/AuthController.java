@@ -54,7 +54,6 @@ public class AuthController {
 				.authenticate(new UsernamePasswordAuthenticationToken(userName, password));
 		UserDetails userDetails = (UserDetails) authentication.getPrincipal();
 		String token = util.generateToken(userDetails);
-//		String token=util.generateTokenFromEmail(userName);
 		User userData = dao.fetchByEmail(userName).orElseThrow();
 		Map<String, String> map = new HashMap<>();
 		map.put("token", token);
