@@ -33,6 +33,7 @@ public class SecurityConfig {
 				
 				.exceptionHandling(ex -> ex.authenticationEntryPoint((request, response, authException) -> response
 						.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Unauthorized")));
+		
 		http.addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
 
 		return http.build();
