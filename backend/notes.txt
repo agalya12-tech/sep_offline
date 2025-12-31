@@ -3735,3 +3735,99 @@ Components of SecurityFilterChain
             Exception Handling Filters
 
             Session Management Filters
+
+=========================================================================================================================
+                                                        
+OAuth2 (Open Authorization)
+-----------------------------------
+            is a protocol for authorization that enables third-party applications to
+            obtain limited access to a user’s resources without exposing the user’s credentials.
+Key Concepts:
+--------------
+• Resource Owner: The user who owns the data.
+• Client: The application requesting access on behalf of the user.
+• Authorization Server: Issues tokens after verifying credentials.
+• Resource Server: Serves the requested resources, validating the token.
+
+How OAuth2 Works:
+-----------------
+1. The client sends an authorization request to the Authorization Server.
+2. The user authenticates and authorizes access.
+3. The server provides an Access Token to the client.
+4. The client uses the token to access resources from the Resource Server.
+
+Steps to Implement OAuth2 Authentication in Spring Boot 4.x
+-----------------------------------------------------------
+1. Add Dependencies:
+            Add the required dependencies to your pom.xml for Spring Security and OAuth2.
+            <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-oauth2-client</artifactId>
+            </dependency>
+            <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+            </dependency>
+2. Configure Application Properties:
+--------------------------------------
+Add client registration details for your OAuth2 provider (e.g., Google, GitHub).
+
+spring.security.oauth2.client.registration.google.client-id=your-client-id
+spring.security.oauth2.client.registration.google.client-secret=your-client-secret
+spring.security.oauth2.client.registration.google.redirect-uri={baseUrl}/login/oauth2/code/google
+spring.security.oauth2.client.registration.google.scope=email,profile
+
+3. Create Security Configuration:
+--------------------------------
+Implement custom security settings using SecurityFilterChain.
+
+            import org.springframework.context.annotation.Bean;
+            import org.springframework.context.annotation.Configuration;
+            import
+            org.springframework.security.config.annotation.web.builders.HttpSecurity;
+            import org.springframework.security.web.SecurityFilterChain;
+            @Configuration
+            public class SecurityConfig {
+            @Bean
+            public SecurityFilterChain securityFilterChain(HttpSecurity http)
+            throws Exception {
+            http
+            .authorizeHttpRequests(auth -> auth
+            .requestMatchers("/").permitAll()
+            .anyRequest().authenticated()
+            )
+            .oauth2Login(); // Enable OAuth2 Login
+            return http.build();
+            }
+            }
+4. Create a Controller:
+---------------------------
+Add a controller to handle authenticated requests and display user information.
+            import org.springframework.security.oauth2.core.user.OAuth2User;
+            import org.springframework.web.bind.annotation.GetMapping;
+            import org.springframework.web.bind.annotation.RestController;
+            import java.util.Map;
+            @RestController
+            public class UserController {
+            @GetMapping("/user")
+            public Map<String, Object> user(OAuth2User principal) {
+            return principal.getAttributes(); // Return user details
+            }
+            }
+5. Run the Application:
+            • Navigate to the base URL.
+            • Log in using the OAuth2 provider.
+            • Access the /user endpoint to view user details.
+
+
+
+creating oauth in github :
+
+  github-->profile-->settings-->developer settings--->oauth apps-->create new
+
+creating oauth in google :
+  
+  google cloud console -->select project-->new project-->provide details and create
+
+  --->select project--->api and services--->credentials-->+ create credentials-->oauth client id-->concern about
+  web application--->select-->done

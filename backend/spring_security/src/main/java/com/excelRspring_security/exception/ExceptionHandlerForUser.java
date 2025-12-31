@@ -24,4 +24,7 @@ public class ExceptionHandlerForUser {
 		return new ResponseEntity<ResponseStructure<String>>(structure, HttpStatus.BAD_REQUEST);
 	
 	}
+	
+	
+	
 }
