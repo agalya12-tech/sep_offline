@@ -10,15 +10,18 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.excelRspring_security.dao.UserDao;
 import com.excelRspring_security.dto.ResponseStructure;
 import com.excelRspring_security.entity.User;
 import com.excelRspring_security.security.JwtUtil;
+import com.excelRspring_security.service.MailService;
 
 @RestController
 @RequestMapping("/auth")
@@ -82,4 +85,13 @@ public class AuthController {
 		}
 	}
 
+	@Autowired
+	MailService service;
+	
+//	http://localhost:8080/auth/sendEmail?email=radha.b@excelr.com
+	@GetMapping("/sendEmail")
+	public String sendEmail(@RequestParam String email) {
+		return service.sendSimpleMail(email);
+	}
+	
 }
