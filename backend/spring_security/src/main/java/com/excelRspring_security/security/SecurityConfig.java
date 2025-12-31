@@ -13,6 +13,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+import com.excelRspring_security.service.CustomOAuth2SuccessHandler;
+import com.excelRspring_security.service.CustomOAuth2UserService;
+
 import jakarta.servlet.http.HttpServletResponse;
 
 @Configuration
@@ -22,23 +25,39 @@ public class SecurityConfig {
 	@Autowired
 	private JwtAuthenticateFilter jwtAuthFilter;
 
-	@Bean
-	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-		http.csrf(csrf -> csrf.disable())
-		
-		.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-				.authorizeHttpRequests(auth -> auth.requestMatchers("/auth/**", "/oauth2/**").permitAll()
-						.requestMatchers("/admin/**").hasRole("ADMIN").requestMatchers("/student/**")
-						.hasAnyRole("STUDENT", "ADMIN").anyRequest().authenticated())
-				
-				.exceptionHandling(ex -> ex.authenticationEntryPoint((request, response, authException) -> response
-						.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Unauthorized")));
-		
-		http.addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
 
-		return http.build();
-	}
+	
+	
+	@Autowired
+    private CustomOAuth2UserService auth2UserService;
+ 
+    @Autowired
+    private CustomOAuth2SuccessHandler successHandler;
 
+@Bean
+public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+	http.csrf(csrf -> csrf.disable())
+	
+	.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+			.authorizeHttpRequests(auth -> auth
+					.requestMatchers("/auth/**", "/oauth2/**").permitAll()
+					.requestMatchers("/admin/**").hasRole("ADMIN")
+					.requestMatchers("/student/**")
+					.hasAnyRole("STUDENT", "ADMIN").anyRequest().authenticated())
+			   .oauth2Login(oauth2 -> oauth2
+		                .userInfoEndpoint(userInfo -> userInfo.userService(auth2UserService))
+		                .successHandler(successHandler)
+		            )
+			.exceptionHandling(ex -> ex.authenticationEntryPoint((request, response, authException) -> response
+					.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Unauthorized")));
+	
+	http.addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
+
+	return http.build();
+}
+	
+	
+	
 	@Bean
 	public AuthenticationManager authenticationManager
 	(AuthenticationConfiguration authConfig) throws Exception {
