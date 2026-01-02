@@ -25,10 +25,10 @@ const Register = () => {
     <>
 
       <h3>Register Account with </h3>
-      <button onClick={()=>{handleOauth('google')}}>Google</button>
+      <button onClick={()=>{handleOauth('google')} }>Google</button>
       <button onClick={()=>{handleOauth('github')}}>Github</button>
 
-      
+
       <h1>Register Component</h1>
       <input type="text" placeholder='name' ref={nameRef} /> <br /><br />
       <input type="email" placeholder='email' ref={emailRef} /> <br /><br />
