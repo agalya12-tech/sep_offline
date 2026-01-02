@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Register = () => {
     let nameRef=React.useRef();
@@ -16,7 +17,7 @@ const Register = () => {
     }
     console.log(user);
   }
-  
+
   return (
     <>
       <h1>Register Component</h1>
@@ -28,7 +29,8 @@ const Register = () => {
         <option value="STUDENT">STUDENT</option>
         <option value="ADMIN">ADMIN</option>
       </select> <br /><br />
-      <button onClick={handleSubmit}>Register</button>
+      <p>Already have an account <Link to="/login">Login</Link></p>
+      <button className='btn btn-outline-success' onClick={handleSubmit}>Register</button>
     </>
 
   )
