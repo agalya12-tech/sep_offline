@@ -9,7 +9,8 @@ const Register = () => {
   let phoneRef = React.useRef();
   let roleRef = React.useRef();
   let navigate = useNavigate();
-  let handleSubmit = () => {
+  let handleSubmit = (e) => {
+    e.preventDefault();
     let user = {
       name: nameRef.current.value,
       email: emailRef.current.value,

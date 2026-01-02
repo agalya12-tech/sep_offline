@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './components/Login';
 import AdminDashboard from './components/AdminDashboard';
 import StudentDashboard from './components/StudentDashboard';
+import OAuthSuccess from './services/OAuthSuccess';
 const App = () => {
   return (
    <BrowserRouter>
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/admin" element={<AdminDashboard />}></Route>
         <Route path="/student" element={<StudentDashboard />}></Route>
+        <Route path="/oauth-success" element={<OAuthSuccess />}></Route>
       </Routes>
    </BrowserRouter>
   )
