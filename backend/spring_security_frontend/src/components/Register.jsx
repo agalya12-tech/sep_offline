@@ -18,8 +18,17 @@ const Register = () => {
     console.log(user);
   }
 
+  let   handleOauth=(provider)=>{
+    window.location.href=`http://localhost:8080/oauth2/authorization/${provider}`;
+  }
   return (
     <>
+
+      <h3>Register Account with </h3>
+      <button onClick={()=>{handleOauth('google')}}>Google</button>
+      <button onClick={()=>{handleOauth('github')}}>Github</button>
+
+      
       <h1>Register Component</h1>
       <input type="text" placeholder='name' ref={nameRef} /> <br /><br />
       <input type="email" placeholder='email' ref={emailRef} /> <br /><br />
@@ -31,6 +40,9 @@ const Register = () => {
       </select> <br /><br />
       <p>Already have an account <Link to="/login">Login</Link></p>
       <button className='btn btn-outline-success' onClick={handleSubmit}>Register</button>
+
+
+      
     </>
 
   )
